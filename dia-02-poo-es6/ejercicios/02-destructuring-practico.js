@@ -1,0 +1,43 @@
+// Ejercicio 2 — Refactoriza usando destructuring, spread y rest
+//
+// Enunciado:
+// Refactoriza las tres funciones de abajo para que usen destructuring,
+// spread y/o rest en vez de acceder a propiedades/índices manualmente.
+
+// Función 1: acceso manual a propiedades de objeto
+function mostrarAlumno(alumno) {
+  console.log(alumno.nombre + ' - ' + alumno.grupo);
+}
+// TODO: refactoriza usando destructuring en los parámetros
+
+// Función 2: combinar dos arreglos de calificaciones sin duplicar código
+function combinarCalificaciones(arr1, arr2) {
+  const resultado = [];
+  for (let i = 0; i < arr1.length; i++) resultado.push(arr1[i]);
+  for (let i = 0; i < arr2.length; i++) resultado.push(arr2[i]);
+  return resultado;
+}
+// TODO: refactoriza usando spread
+
+// Función 3: sumar un número variable de argumentos
+function sumarTodo() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) total += arguments[i];
+  return total;
+}
+// TODO: refactoriza usando rest parameters
+
+// ---------------------------------------------------------------------------
+// Solución sugerida:
+//
+// function mostrarAlumno({ nombre, grupo }) {
+//   console.log(`${nombre} - ${grupo}`);
+// }
+//
+// function combinarCalificaciones(arr1, arr2) {
+//   return [...arr1, ...arr2];
+// }
+//
+// function sumarTodo(...numeros) {
+//   return numeros.reduce((total, n) => total + n, 0);
+// }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Task Manager — Proyecto integrador</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 480px; margin: 2rem auto; }
+  li { display: flex; justify-content: space-between; align-items: center; padding: .4rem 0; }
+  li.completada span { text-decoration: line-through; color: gray; }
+  li span { cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <p>Proyecto integrador — JavaScript Intermedio (UNAM · FES Cuautitlán · REDEC)</p>
+
+  <form id="form-nueva-tarea">
+    <input id="input-nueva-tarea" placeholder="Nueva tarea..." required />
+    <button type="submit">Agregar</button>
+  </form>
+
+  <ul id="lista-tareas"></ul>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

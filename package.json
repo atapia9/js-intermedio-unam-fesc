@@ -1,0 +1,13 @@
+{
+  "name": "js-intermedio-unam-fesc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ejemplos y ejercicios del curso JavaScript Intermedio (UNAM · FES Cuautitlán · REDEC)",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

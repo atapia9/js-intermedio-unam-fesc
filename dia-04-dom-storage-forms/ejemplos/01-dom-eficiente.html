@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Día 4 — DOM eficiente</title>
+</head>
+<body>
+  <h1>Manipulación eficiente del DOM</h1>
+  <button id="btn-lento">Insertar 2000 items (uno por uno)</button>
+  <button id="btn-rapido">Insertar 2000 items (con DocumentFragment)</button>
+  <p id="resultado"></p>
+  <ul id="lista"></ul>
+
+  <script>
+    const lista = document.querySelector('#lista');
+    const resultado = document.querySelector('#resultado');
+
+    function limpiar() {
+      lista.innerHTML = '';
+    }
+
+    // Forma lenta: cada appendChild puede forzar un reflow
+    document.querySelector('#btn-lento').addEventListener('click', () => {
+      limpiar();
+      const inicio = performance.now();
+      for (let i = 0; i < 2000; i++) {
+        const li = document.createElement('li');
+        li.textContent = `Item ${i}`;
+        lista.appendChild(li); // inserción directa al DOM en cada iteración
+      }
+      resultado.textContent = `Uno por uno: ${(performance.now() - inicio).toFixed(2)}ms`;
+    });
+
+    // Forma eficiente: se arma todo en memoria (fragment) y se inserta una sola vez
+    document.querySelector('#btn-rapido').addEventListener('click', () => {
+      limpiar();
+      const inicio = performance.now();
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < 2000; i++) {
+        const li = document.createElement('li');
+        li.textContent = `Item ${i}`;
+        fragment.appendChild(li); // no toca el DOM real todavía
+      }
+      lista.appendChild(fragment); // una sola inserción al DOM real
+      resultado.textContent = `Con fragment: ${(performance.now() - inicio).toFixed(2)}ms`;
+    });
+  </script>
+</body>
+</html>

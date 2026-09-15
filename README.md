@@ -1,0 +1,79 @@
+# JavaScript Intermedio — UNAM · FES Cuautitlán · REDEC
+
+Versión electrónica y de refuerzo del **Manual del curso "JavaScript Intermedio"** (Educación Continua FESC, modalidad presencial, 20 horas / 5 sesiones de 4 horas).
+
+Este repositorio acompaña el manual con **ejemplos de código ejecutables y ejercicios prácticos organizados por día de sesión**, para que cada participante pueda clonar, experimentar y practicar fuera del salón.
+
+> El manual es un documento de trabajo sujeto a ajustes del instructor titular según el ritmo del grupo. Este repositorio se actualiza en paralelo al avance del curso.
+
+## Objetivo general del curso
+
+Desarrollar en los participantes las habilidades necesarias para aplicar conceptos intermedios y avanzados de JavaScript: modelo de ejecución del lenguaje, programación orientada a objetos con ES6+, asincronía, manipulación eficiente del DOM y buenas prácticas de desarrollo y pruebas.
+
+## Estructura del repositorio
+
+```
+├── dia-01-fundamentos/            Call stack, event loop, hoisting, scope, closures, this
+├── dia-02-poo-es6/                Prototipos, clases ES6, destructuring, spread/rest, módulos ESM
+├── dia-03-asincronia/             Callbacks, promesas, async/await, Fetch API
+├── dia-04-dom-storage-forms/      DOM eficiente, delegación de eventos, Web Storage, formularios
+├── dia-05-testing-debug-patrones/ Jest, DevTools, patrones Singleton y Módulo
+├── proyecto-integrador/           Task Manager: proyecto final que integra los 5 temas
+└── anexos/                        Glosario y bibliografía del manual
+```
+
+Cada carpeta `dia-XX` contiene:
+
+- **`README.md`** — resumen teórico de la sesión (agenda, temas, puntos clave), con enlaces a los ejemplos.
+- **`ejemplos/`** — código comentado y ejecutable que ilustra cada tema.
+- **`ejercicios/`** — retos prácticos con enunciado; cada uno incluye un archivo de solución sugerida.
+
+## Cómo usar este repositorio durante el curso
+
+1. Clona el repositorio antes de la primera sesión:
+   ```bash
+   git clone https://github.com/atapia9/js-intermedio-unam-fesc.git
+   cd js-intermedio-unam-fesc
+   ```
+2. Antes de cada sesión, revisa el `README.md` del `dia-XX` correspondiente.
+3. Ejecuta los ejemplos en Node.js (`node archivo.js`) o abriéndolos en el navegador cuando el tema lo requiera (DOM, Fetch, Storage).
+4. Intenta resolver cada ejercicio en `ejercicios/` **antes** de mirar la solución sugerida.
+5. Al final de la sesión 5, aborda el `proyecto-integrador/`.
+
+## Requisitos
+
+- Node.js 18+ (para ejecutar ejemplos de consola y `async/await`/Fetch nativo).
+- Navegador moderno (Chrome recomendado, por las DevTools).
+- Editor de código (VS Code recomendado).
+- Conocimientos previos: lógica de programación, variables, funciones básicas, ciclos, HTML/CSS básico.
+
+## Evaluación del curso
+
+| Rubro | Puntos |
+|---|---|
+| Asistencia | 40 |
+| Actividades de aprendizaje | 40 |
+| Evaluación final | 20 |
+| **Total** | **100** |
+
+Calificación mínima aprobatoria: **8.00** (escala 0–10, dos decimales).
+
+## Temario por sesión
+
+| Día | Tema central |
+|---|---|
+| [Día 1](dia-01-fundamentos/README.md) | Contexto de ejecución: Call Stack, Event Loop, Hoisting, Scope, Closures, `this` |
+| [Día 2](dia-02-poo-es6/README.md) | Prototipos, Clases ES6, Destructuring, Spread/Rest, Módulos ESM |
+| [Día 3](dia-03-asincronia/README.md) | Callbacks, Promesas, Async/Await, Fetch API |
+| [Día 4](dia-04-dom-storage-forms/README.md) | DOM eficiente, Delegación de eventos, Web Storage, Formularios |
+| [Día 5](dia-05-testing-debug-patrones/README.md) | Testing con Jest, Debugging con DevTools, Patrones de diseño |
+| [Proyecto integrador](proyecto-integrador/README.md) | Task Manager — aplicación que integra los 5 temas |
+
+## Anexos
+
+- [Glosario de términos](anexos/glosario.md)
+- [Bibliografía y referencias recomendadas](anexos/bibliografia.md)
+
+## Licencia y uso
+
+Material de apoyo elaborado para el curso de Educación Continua FESC — REDEC, UNAM. Uso educativo para los participantes del curso.

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Día 4 — Delegación de eventos</title>
+</head>
+<body>
+  <h1>Delegación de eventos</h1>
+  <button id="agregar">Agregar tarea</button>
+  <ul id="tareas">
+    <li>Tarea inicial 1 <button data-accion="eliminar">Eliminar</button></li>
+    <li>Tarea inicial 2 <button data-accion="eliminar">Eliminar</button></li>
+  </ul>
+
+  <script>
+    const lista = document.querySelector('#tareas');
+    let contador = 3;
+
+    // Un único listener en el contenedor padre, en vez de uno por cada <li>
+    // Funciona incluso para elementos agregados dinámicamente después.
+    lista.addEventListener('click', (evento) => {
+      if (evento.target.dataset.accion === 'eliminar') {
+        evento.target.closest('li').remove();
+      }
+    });
+
+    document.querySelector('#agregar').addEventListener('click', () => {
+      const li = document.createElement('li');
+      li.innerHTML = `Tarea nueva ${contador++} <button data-accion="eliminar">Eliminar</button>`;
+      lista.appendChild(li);
+      // No hace falta agregar un listener nuevo: la delegación ya lo cubre.
+    });
+  </script>
+</body>
+</html>

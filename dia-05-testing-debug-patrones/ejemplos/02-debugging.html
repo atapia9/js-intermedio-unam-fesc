@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><title>Día 5 — Debugging con DevTools</title></head>
+<body>
+  <h1>Debugging con Chrome DevTools</h1>
+  <p>Abre las DevTools (F12), ve a la pestaña "Sources" y coloca un breakpoint
+     en la línea marcada, o simplemente ejecuta esta página: la sentencia
+     <code>debugger;</code> pausará automáticamente si las DevTools están abiertas.</p>
+  <button id="calcular">Calcular total del carrito</button>
+  <pre id="salida"></pre>
+
+  <script>
+    function calcularTotal(items) {
+      let total = 0;
+      for (const item of items) {
+        debugger; // pausa aquí si DevTools está abierto: inspecciona `item` y `total` en el panel Scope
+        total += item.precio * item.cantidad;
+      }
+      return total;
+    }
+
+    document.querySelector('#calcular').addEventListener('click', () => {
+      const carrito = [
+        { nombre: 'Teclado', precio: 350, cantidad: 1 },
+        { nombre: 'Mouse', precio: 150, cantidad: 2 },
+      ];
+      const total = calcularTotal(carrito);
+      document.querySelector('#salida').textContent = `Total: $${total}`;
+    });
+
+    // Sugerencia de práctica: agrega un breakpoint condicional en la línea
+    // "total += ..." que solo se dispare cuando item.cantidad > 1.
+  </script>
+</body>
+</html>

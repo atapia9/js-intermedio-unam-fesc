@@ -1,0 +1,31 @@
+Enunciado — Ejercicio 3: dividir un archivo en módulos ESM
+
+El siguiente código vive hoy en un solo archivo. Sepáralo en:
+  - validaciones.js  -> exports nombrados: esCorreoValido, esTelefonoValido
+  - Formulario.js     -> export default de la clase Formulario
+  - main.js            -> importa ambos módulos y los usa
+
+Código original (monolítico):
+
+  function esCorreoValido(correo) {
+    return /\S+@\S+\.\S+/.test(correo);
+  }
+
+  function esTelefonoValido(telefono) {
+    return /^\d{10}$/.test(telefono);
+  }
+
+  class Formulario {
+    constructor(correo, telefono) {
+      this.correo = correo;
+      this.telefono = telefono;
+    }
+    esValido() {
+      return esCorreoValido(this.correo) && esTelefonoValido(this.telefono);
+    }
+  }
+
+  const f = new Formulario('ana@ejemplo.com', '5512345678');
+  console.log(f.esValido()); // true
+
+La solución sugerida está en los archivos .solucion.js de esta misma carpeta.

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><title>Ejercicio 2 — Delegación de eventos</title></head>
+<body>
+  <!--
+    Enunciado:
+    Implementa un único listener en #lista (delegado) que:
+      - marque/desmarque como completada una tarea al hacer click en su texto
+        (agrega/quita la clase "completada")
+      - la elimine al hacer click en su botón "x"
+    No agregues listeners individuales a cada <li> ni a cada botón.
+  -->
+  <style>.completada { text-decoration: line-through; color: gray; }</style>
+  <button id="agregar">Agregar tarea</button>
+  <ul id="lista">
+    <li><span>Repasar closures</span> <button data-accion="eliminar">x</button></li>
+    <li><span>Practicar promesas</span> <button data-accion="eliminar">x</button></li>
+  </ul>
+
+  <script>
+    const lista = document.querySelector('#lista');
+    let n = 3;
+
+    // TODO: agrega el listener delegado en `lista`
+
+    document.querySelector('#agregar').addEventListener('click', () => {
+      const li = document.createElement('li');
+      li.innerHTML = `<span>Nueva tarea ${n++}</span> <button data-accion="eliminar">x</button>`;
+      lista.appendChild(li);
+    });
+
+    // -----------------------------------------------------------------------
+    // Solución sugerida:
+    //
+    // lista.addEventListener('click', (evento) => {
+    //   if (evento.target.dataset.accion === 'eliminar') {
+    //     evento.target.closest('li').remove();
+    //   } else if (evento.target.tagName === 'SPAN') {
+    //     evento.target.classList.toggle('completada');
+    //   }
+    // });
+  </script>
+</body>
+</html>

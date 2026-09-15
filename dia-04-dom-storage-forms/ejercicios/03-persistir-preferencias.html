@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><title>Ejercicio 3 — Persistir preferencias</title></head>
+<body>
+  <!--
+    Enunciado:
+    Al cargar la página, si existen preferencias guardadas en localStorage
+    (clave "preferenciasUsuario", un objeto { tema, tamanoFuente }), aplícalas.
+    Al cambiar el select o el input, guarda el nuevo estado en localStorage
+    serializado con JSON.stringify. Recarga la página para comprobar que
+    persiste.
+  -->
+  <label>Tema:
+    <select id="tema">
+      <option value="claro">Claro</option>
+      <option value="oscuro">Oscuro</option>
+    </select>
+  </label>
+  <label>Tamaño de fuente:
+    <input id="tamano" type="range" min="12" max="24" value="16" />
+  </label>
+  <p id="muestra">Texto de ejemplo</p>
+
+  <script>
+    const selectTema = document.querySelector('#tema');
+    const inputTamano = document.querySelector('#tamano');
+    const muestra = document.querySelector('#muestra');
+
+    function aplicarPreferencias({ tema, tamanoFuente }) {
+      document.body.style.background = tema === 'oscuro' ? '#222' : '#fff';
+      document.body.style.color = tema === 'oscuro' ? '#eee' : '#000';
+      muestra.style.fontSize = tamanoFuente + 'px';
+      selectTema.value = tema;
+      inputTamano.value = tamanoFuente;
+    }
+
+    function guardarPreferencias() {
+      const preferencias = {
+        tema: selectTema.value,
+        tamanoFuente: Number(inputTamano.value),
+      };
+      // TODO: guarda `preferencias` en localStorage bajo la clave "preferenciasUsuario"
+      aplicarPreferencias(preferencias);
+    }
+
+    // TODO: al cargar, lee localStorage y aplica preferencias si existen
+    // (si no existen, usa el valor por defecto de los controles)
+
+    selectTema.addEventListener('change', guardarPreferencias);
+    inputTamano.addEventListener('input', guardarPreferencias);
+
+    // -----------------------------------------------------------------------
+    // Solución sugerida:
+    //
+    // function guardarPreferencias() {
+    //   const preferencias = {
+    //     tema: selectTema.value,
+    //     tamanoFuente: Number(inputTamano.value),
+    //   };
+    //   localStorage.setItem('preferenciasUsuario', JSON.stringify(preferencias));
+    //   aplicarPreferencias(preferencias);
+    // }
+    //
+    // const guardadas = localStorage.getItem('preferenciasUsuario');
+    // if (guardadas) {
+    //   aplicarPreferencias(JSON.parse(guardadas));
+    // }
+  </script>
+</body>
+</html>

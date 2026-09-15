@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8" /><title>Ejercicio 1 — DocumentFragment</title></head>
+<body>
+  <!--
+    Enunciado:
+    Completa la función generarLista(cantidad) para que cree `cantidad`
+    elementos <li> con texto "Tarea N" usando un DocumentFragment, y los
+    inserte todos de una sola vez en #lista. Usa performance.now() para
+    medir cuánto tarda con 5000 elementos.
+  -->
+  <button id="generar">Generar 5000 tareas</button>
+  <p id="tiempo"></p>
+  <ul id="lista"></ul>
+
+  <script>
+    function generarLista(cantidad) {
+      const lista = document.querySelector('#lista');
+      lista.innerHTML = '';
+      // TODO: usa un DocumentFragment
+    }
+
+    document.querySelector('#generar').addEventListener('click', () => {
+      const inicio = performance.now();
+      generarLista(5000);
+      document.querySelector('#tiempo').textContent =
+        `Tiempo: ${(performance.now() - inicio).toFixed(2)}ms`;
+    });
+
+    // -----------------------------------------------------------------------
+    // Solución sugerida:
+    //
+    // function generarLista(cantidad) {
+    //   const lista = document.querySelector('#lista');
+    //   lista.innerHTML = '';
+    //   const fragment = document.createDocumentFragment();
+    //   for (let i = 1; i <= cantidad; i++) {
+    //     const li = document.createElement('li');
+    //     li.textContent = `Tarea ${i}`;
+    //     fragment.appendChild(li);
+    //   }
+    //   lista.appendChild(fragment);
+    // }
+  </script>
+</body>
+</html>
