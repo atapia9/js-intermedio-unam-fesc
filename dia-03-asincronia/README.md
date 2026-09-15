@@ -44,3 +44,7 @@ Ver [`ejemplos/04-fetch.js`](ejemplos/04-fetch.js).
 1. [`ejercicios/01-refactor-callback-a-promesa.js`](ejercicios/01-refactor-callback-a-promesa.js)
 2. [`ejercicios/02-promise-all.js`](ejercicios/02-promise-all.js)
 3. [`ejercicios/03-consumir-api.js`](ejercicios/03-consumir-api.js)
+
+## Hacia el proyecto integrador
+
+Este tema aterriza en [`proyecto-integrador/src/nucleo/api.js`](../proyecto-integrador/src/nucleo/api.js): carga el feed inicial con `async/await` y **no confía en datos externos** — valida el esquema de la respuesta antes de aceptarla y cae a datos de ejemplo si algo falla, sin exponer el error original.

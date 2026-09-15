@@ -47,3 +47,7 @@ Bajo la sintaxis `class` sigue habiendo prototipos. Destructuring y spread/rest 
 1. [`ejercicios/01-herencia-clases.js`](ejercicios/01-herencia-clases.js) — modelar `Vehiculo` → `Auto`/`Motocicleta` con `extends`.
 2. [`ejercicios/02-destructuring-practico.js`](ejercicios/02-destructuring-practico.js) — refactorizar código usando destructuring y spread/rest.
 3. [`ejercicios/03-modulos/`](ejercicios/03-modulos/) — dividir un archivo monolítico en módulos ESM.
+
+## Hacia el proyecto integrador
+
+Este tema aterriza en [`proyecto-integrador/src/nucleo/Registro.js`](../proyecto-integrador/src/nucleo/Registro.js) (clase base ES6) y en [`proyecto-integrador/src/variantes/a-incidentes/Incidente.js`](../proyecto-integrador/src/variantes/a-incidentes/Incidente.js), que la extiende con los campos y transiciones de estado de un incidente.

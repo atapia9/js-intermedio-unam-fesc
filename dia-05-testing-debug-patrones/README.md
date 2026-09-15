@@ -49,6 +49,10 @@ Ver [`ejemplos/03-singleton.js`](ejemplos/03-singleton.js) y [`ejemplos/04-patro
 2. [`ejercicios/02-debug-bug.js`](ejercicios/02-debug-bug.js) — encontrar y corregir un bug usando `debugger;`/breakpoints.
 3. [`ejercicios/03-singleton-config.js`](ejercicios/03-singleton-config.js) — implementar un Singleton de configuración.
 
+## Hacia el proyecto integrador
+
+Este tema aterriza en [`proyecto-integrador/tests/`](../proyecto-integrador/tests/): la función de puntaje (`riesgo.test.js`) y la sanitización (`sanitizar.test.js`) se prueban sin tocar el DOM, siguiendo el mismo patrón que las pruebas de esta sesión. La suite corre en CI (`.github/workflows/ci.yml`) en cada Pull Request.
+
 ## Proyecto integrador final
 
 Ver [`../proyecto-integrador/README.md`](../proyecto-integrador/README.md).
