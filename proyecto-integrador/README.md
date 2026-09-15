@@ -78,6 +78,12 @@ proyecto-integrador/
 | 4 | DOM, delegación, Storage, formularios | Sanitización, enmascarado de PII | `nucleo/app.js`, `nucleo/sanitizar.js` |
 | 5 | Jest, DevTools, patrones | Prueba de seguridad dentro de la suite | `tests/` |
 
+## Plantilla de entrega
+
+Usa [docs/plantilla-entrega.md](docs/plantilla-entrega.md) como guion para preparar
+tu entrega y tu exposición de 5 minutos: checklist de requisitos, tabla de
+trazabilidad y registro de decisiones.
+
 Este scaffold es un punto de partida — se espera que cada participante lo extienda
 (filtros, más categorías, adjuntos, edición de registros, etc.), y que quien elija
 variante B o C complete su función de puntaje siguiendo el mismo patrón que
