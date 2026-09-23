@@ -17,3 +17,5 @@ labels: bis
 
 > No incluyas nombres reales, correos, teléfonos ni cualquier dato que identifique a
 > una persona. Usa siempre datos de ejemplo ficticios.
+
+> **Nota de divulgación:** Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. El contenido que completes es de tu autoría.
