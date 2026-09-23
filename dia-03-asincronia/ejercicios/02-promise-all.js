@@ -1,5 +1,10 @@
 // Ejercicio 2 — Cargar varios recursos en paralelo
 //
+// Videos de apoyo (ficha 3.3 del README del día):
+//   - Promesas: new Promise, resolve, reject, then, catch: https://www.youtube.com/watch?v=W-HPYsmHG6U
+//   - Cómo usar promesas en JavaScript – JS en Español: https://www.youtube.com/watch?v=urapbZL9knY
+//   - Promesas: métodos Promise.all y race en JavaScript: https://www.youtube.com/watch?v=-xhWDNm3XvY
+//
 // Enunciado:
 // Dadas tres funciones que simulan cargar recursos con distintos tiempos,
 // escribe `cargarTodo()` que use Promise.all para esperar a las tres y

@@ -1,5 +1,13 @@
 // Ejercicio 1 — De callbacks a promesas
 //
+// Videos de apoyo (ficha 3.2 y 3.3 del README del día):
+//   - Asincronismo en JS: ¿qué es el Callback Hell? – JS desde cero #15: https://www.youtube.com/watch?v=iAq9SOEODvo
+//   - Callbacks: ¿qué son y cómo utilizarlos? – Evitar callback hell: https://www.youtube.com/watch?v=WYVOvwTZ7Bo
+//   - Qué es el antipatrón Callback Hell en JavaScript: https://www.youtube.com/watch?v=TcEjFk1cDzU
+//   - Promesas: new Promise, resolve, reject, then, catch: https://www.youtube.com/watch?v=W-HPYsmHG6U
+//   - Cómo usar promesas en JavaScript – JS en Español: https://www.youtube.com/watch?v=urapbZL9knY
+//   - Promesas: métodos Promise.all y race en JavaScript: https://www.youtube.com/watch?v=-xhWDNm3XvY
+//
 // Enunciado:
 // Convierte la función `leerConfiguracion(callback)` (estilo callback) en
 // una función `leerConfiguracionPromesa()` que devuelva una Promise.

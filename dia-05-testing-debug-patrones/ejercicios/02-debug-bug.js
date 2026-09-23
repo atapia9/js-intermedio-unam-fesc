@@ -1,5 +1,10 @@
 // Ejercicio 2 — Encuentra y corrige el bug usando el debugger
 //
+// Videos de apoyo (ficha 5.3 del README del día):
+//   - Basta de console.log(): domina el debugger del navegador paso a paso: https://www.youtube.com/watch?v=ps1WhgelV_E
+//   - Curso de JavaScript #10: Debug y DevTools: https://www.youtube.com/watch?v=Oz3InVBI_K4
+//   - Depurar JavaScript con el navegador y con Visual Studio Code: https://www.youtube.com/watch?v=CRXMli2ZkS8
+//
 // Enunciado:
 // La función `calcularPromedio` debería devolver el promedio de un arreglo
 // de calificaciones, pero tiene un bug. Usa `debugger;` (ejecutando este

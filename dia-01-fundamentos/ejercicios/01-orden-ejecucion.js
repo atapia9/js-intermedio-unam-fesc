@@ -1,5 +1,10 @@
 // Ejercicio 1 — Orden de ejecución
 //
+// Videos de apoyo (ficha 1.1 del README del día):
+//   - La pila de ejecución (Call Stack) – JS en Español: https://www.youtube.com/watch?v=ygA5U7Wgsg8
+//   - Entiende el Event Loop de JavaScript en 10 minutos: https://www.youtube.com/watch?v=XdzDDRF8_mY
+//   - Qué es el Event Loop en JavaScript – paso a paso: https://www.youtube.com/watch?v=rvzItyLuh28
+//
 // Enunciado:
 // Antes de ejecutar este archivo, escribe en un papel (o comentario) el orden
 // en que crees que se imprimirán los números. Luego ejecuta con:

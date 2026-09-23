@@ -104,8 +104,16 @@ Datos → `DocumentFragment` (pintado óptimo) → DOM → Delegación (escucha 
 ## Ejercicios
 
 1. [`ejercicios/01-lista-tareas-fragment.html`](ejercicios/01-lista-tareas-fragment.html) — insertar 100 elementos usando `DocumentFragment`.
+   - Video: [DOM – Curso JavaScript Moderno #04: Fragment + createElement](https://www.youtube.com/watch?v=kUpx6ovPILc)
+   - Video: [DocumentFragment en JavaScript (short)](https://www.youtube.com/shorts/o21LBIEn8EA)
 2. [`ejercicios/02-delegacion-practica.html`](ejercicios/02-delegacion-practica.html) — lista dinámica con un solo listener delegado.
+   - Video: [Delegación de eventos en JavaScript con ejemplo práctico](https://www.youtube.com/watch?v=M48MZv60ZPs)
+   - Video: [¿Cómo funciona el Event Bubbling? – JavaScript DOM](https://www.youtube.com/watch?v=xlci1S08Cww)
+   - Video: [¿Qué es y para qué sirve la delegación de eventos en JavaScript?](https://www.youtube.com/watch?v=5MUHJNSCeGU)
 3. [`ejercicios/03-persistir-preferencias.html`](ejercicios/03-persistir-preferencias.html) — guardar preferencias de usuario en `localStorage`.
+   - Video: [LocalStorage y SessionStorage ¿cómo funcionan? – Curso JavaScript #48](https://www.youtube.com/watch?v=ZlpA2hez92Y)
+   - Video: [Guarda objetos y arrays en LocalStorage como un PRO (JSON explicado fácil)](https://www.youtube.com/watch?v=EZWY9EOzzG4)
+   - Video: [API localStorage – guardar y recuperar objetos con formato JSON](https://www.youtube.com/watch?v=sL0RHt_QK3I)
 
 ## Hacia el proyecto integrador
 

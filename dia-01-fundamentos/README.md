@@ -127,8 +127,17 @@ Tiempo (Event Loop) · Espacio (Scope) · Contexto (`this`) → los closures son
 ## Ejercicios
 
 1. [`ejercicios/01-orden-ejecucion.js`](ejercicios/01-orden-ejecucion.js) — predecir el orden de ejecución con `setTimeout` y promesas.
+   - Video: [La pila de ejecución (Call Stack) – JS en Español](https://www.youtube.com/watch?v=ygA5U7Wgsg8)
+   - Video: [Entiende el Event Loop de JavaScript en 10 minutos](https://www.youtube.com/watch?v=XdzDDRF8_mY)
+   - Video: [Qué es el Event Loop en JavaScript – paso a paso](https://www.youtube.com/watch?v=rvzItyLuh28)
 2. [`ejercicios/02-contador-privado.js`](ejercicios/02-contador-privado.js) — construir un contador con estado privado usando closures.
+   - Video: [Closures en JavaScript: qué son y cómo funcionan](https://www.youtube.com/watch?v=xa8lhVwQBw4)
+   - Video: [3 ejemplos REALES de Closures en JavaScript](https://www.youtube.com/watch?v=ubS-ejTrSRc)
+   - Video: [¿Qué son los Closures y por qué dan tanto miedo?](https://www.youtube.com/watch?v=bPZpjI2tzRo)
 3. [`ejercicios/03-this-practico.js`](ejercicios/03-this-practico.js) — corregir el valor de `this` en distintos contextos.
+   - Video: [This en JavaScript (bind, call, apply y más)](https://www.youtube.com/watch?v=bS71_W_BDFE)
+   - Video: [¿Para qué sirve call(), bind() y apply()?](https://www.youtube.com/watch?v=OZ02GSH9QkY)
+   - Video: [¿Cómo usar call, apply y bind? This a profundidad](https://www.youtube.com/watch?v=j1Zs_o32uo4)
 
 ## Hacia el proyecto integrador
 

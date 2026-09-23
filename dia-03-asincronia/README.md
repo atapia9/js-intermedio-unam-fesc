@@ -117,8 +117,23 @@ No bloquear → Callbacks (solución histórica) → Promesas (cadena plana, err
 ## Ejercicios
 
 1. [`ejercicios/01-refactor-callback-a-promesa.js`](ejercicios/01-refactor-callback-a-promesa.js)
+   - Video: [Asincronismo en JS: ¿qué es el Callback Hell? – JS desde cero #15](https://www.youtube.com/watch?v=iAq9SOEODvo)
+   - Video: [Callbacks: ¿qué son y cómo utilizarlos? – Evitar callback hell](https://www.youtube.com/watch?v=WYVOvwTZ7Bo)
+   - Video: [Qué es el antipatrón Callback Hell en JavaScript](https://www.youtube.com/watch?v=TcEjFk1cDzU)
+   - Video: [Promesas: new Promise, resolve, reject, then, catch](https://www.youtube.com/watch?v=W-HPYsmHG6U)
+   - Video: [Cómo usar promesas en JavaScript – JS en Español](https://www.youtube.com/watch?v=urapbZL9knY)
+   - Video: [Promesas: métodos Promise.all y race en JavaScript](https://www.youtube.com/watch?v=-xhWDNm3XvY)
 2. [`ejercicios/02-promise-all.js`](ejercicios/02-promise-all.js)
+   - Video: [Promesas: new Promise, resolve, reject, then, catch](https://www.youtube.com/watch?v=W-HPYsmHG6U)
+   - Video: [Cómo usar promesas en JavaScript – JS en Español](https://www.youtube.com/watch?v=urapbZL9knY)
+   - Video: [Promesas: métodos Promise.all y race en JavaScript](https://www.youtube.com/watch?v=-xhWDNm3XvY)
 3. [`ejercicios/03-consumir-api.js`](ejercicios/03-consumir-api.js)
+   - Video: [Promesas y async-await: then y catch – JS desde cero #16](https://www.youtube.com/watch?v=ksg6SDwllDs)
+   - Video: [Callback, Promesas, Async Await y Try Catch | JavaScript](https://www.youtube.com/watch?v=p3Oq3AfuteA)
+   - Video: [JavaScript asíncrono con Async Await](https://www.youtube.com/watch?v=za8Z6saKVdw)
+   - Video: [Cómo consumir una API REST con Fetch + Promises con gestión de errores](https://www.youtube.com/watch?v=FJ-w0tf3d_w)
+   - Video: [Curso de JavaScript: API fetch – manejo de errores](https://www.youtube.com/watch?v=U0Qoq3hYPZA)
+   - Video: [Javascript Fetch API: qué es y cómo consumir un API](https://www.youtube.com/watch?v=lkMq_qzCV_M)
 
 ## Hacia el proyecto integrador
 

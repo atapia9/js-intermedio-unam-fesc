@@ -1,5 +1,10 @@
 // Ejercicio 2 — Contador con estado privado
 //
+// Videos de apoyo (ficha 1.3 del README del día):
+//   - Closures en JavaScript: qué son y cómo funcionan: https://www.youtube.com/watch?v=xa8lhVwQBw4
+//   - 3 ejemplos REALES de Closures en JavaScript: https://www.youtube.com/watch?v=ubS-ejTrSRc
+//   - ¿Qué son los Closures y por qué dan tanto miedo?: https://www.youtube.com/watch?v=bPZpjI2tzRo
+//
 // Enunciado:
 // Implementa la función `crearContadorRango(min, max)` que devuelva un
 // objeto con los métodos:

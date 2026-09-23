@@ -1,5 +1,10 @@
 // Ejercicio 3 — Implementa un Singleton de conexión
 //
+// Videos de apoyo (ficha 5.4 del README del día):
+//   - Patrón Singleton – Patrones de diseño – Programación en español: https://www.youtube.com/watch?v=YRLvJfItAT4
+//   - #1 Singleton – Patrones de diseño con JavaScript: https://www.youtube.com/watch?v=OuKl1HwD1x8
+//   - Patrón Module en JavaScript: ejemplo paso a paso: https://www.youtube.com/watch?v=uNBZ8ohLnxM
+//
 // Enunciado:
 // Implementa la clase `ConexionBD` como Singleton: sin importar cuántas
 // veces se llame a `ConexionBD.obtenerInstancia()`, debe devolver siempre

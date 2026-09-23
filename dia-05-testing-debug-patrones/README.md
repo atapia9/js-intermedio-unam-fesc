@@ -108,8 +108,19 @@ Testing permite comprobar; debugging, comprender; la arquitectura, evolucionar. 
 ## Ejercicios
 
 1. [`ejercicios/01-pruebas-validaciones.js`](ejercicios/01-pruebas-validaciones.js) + su `.test.js` — escribir pruebas para funciones de validación.
+   - Video: [Aprende en 3 minutos: pruebas unitarias y pruebas de integración](https://www.youtube.com/watch?v=UwoCR0eJNgo)
+   - Video: [Pruebas unitarias y de integración – Curso de Tester de Software](https://www.youtube.com/watch?v=4Ulc8FcmfnQ)
+   - Video: [Jest JS tutorial en español para principiantes – Curso de Testing](https://www.youtube.com/watch?v=tgWBQZNCOT0)
+   - Video: [Introducción al Testing desde cero con Jest](https://www.youtube.com/watch?v=_DzBez4qMi0)
+   - Video: [¿Cómo se escribe una buena prueba unitaria en JavaScript? 10 buenas prácticas](https://www.youtube.com/watch?v=Rqyg8kjpzX0)
 2. [`ejercicios/02-debug-bug.js`](ejercicios/02-debug-bug.js) — encontrar y corregir un bug usando `debugger;`/breakpoints.
+   - Video: [Basta de console.log(): domina el debugger del navegador paso a paso](https://www.youtube.com/watch?v=ps1WhgelV_E)
+   - Video: [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4)
+   - Video: [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8)
 3. [`ejercicios/03-singleton-config.js`](ejercicios/03-singleton-config.js) — implementar un Singleton de configuración.
+   - Video: [Patrón Singleton – Patrones de diseño – Programación en español](https://www.youtube.com/watch?v=YRLvJfItAT4)
+   - Video: [#1 Singleton – Patrones de diseño con JavaScript](https://www.youtube.com/watch?v=OuKl1HwD1x8)
+   - Video: [Patrón Module en JavaScript: ejemplo paso a paso](https://www.youtube.com/watch?v=uNBZ8ohLnxM)
 
 ## Hacia el proyecto integrador
 

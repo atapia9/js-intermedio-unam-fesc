@@ -1,5 +1,10 @@
 // Ejercicio 3 — Corrige el valor de `this`
 //
+// Videos de apoyo (ficha 1.4 del README del día):
+//   - This en JavaScript (bind, call, apply y más): https://www.youtube.com/watch?v=bS71_W_BDFE
+//   - ¿Para qué sirve call(), bind() y apply()?: https://www.youtube.com/watch?v=OZ02GSH9QkY
+//   - ¿Cómo usar call, apply y bind? This a profundidad: https://www.youtube.com/watch?v=j1Zs_o32uo4
+//
 // Enunciado:
 // El siguiente código tiene un bug: `this` no apunta a lo que se espera
 // dentro del setTimeout. Corrígelo SIN cambiar la estructura general
