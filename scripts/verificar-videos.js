@@ -40,15 +40,19 @@ async function comprobar(url, fetchFn = fetch, { ms = 15000 } = {}) {
       const estadoPagina = /"playabilityStatus":\{"status":"([A-Z_]+)"/.exec(pagina)?.[1];
       const titulo = decodificar(/<title>([^<]*)<\/title>/.exec(pagina)?.[1] ?? '').replace(/ - YouTube$/, '');
       if (estadoPagina === 'OK') return { url, estado: 'ok-sin-insercion', tituloReal: titulo };
-      if (estadoPagina) return { url, estado: 'problema', detalle: `HTTP ${r.status}: YouTube indica que no se reproduce (${estadoPagina})` };
-      // La página no dijo nada útil (desde un servidor, YouTube puede mostrar un muro de consentimiento o de bots):
-      // se confirma con la miniatura, que sale de un CDN sin esos muros y no existe para videos borrados.
+      if (estadoPagina === 'ERROR') return { url, estado: 'problema', detalle: `HTTP ${r.status}: YouTube indica que el video no está disponible (ERROR)` };
+      // Cualquier otro caso es ambiguo: desde un servidor YouTube pide iniciar sesión o mostrar un muro de consentimiento
+      // (LOGIN_REQUIRED), y un video privado responde igual. Se confirma con la miniatura, que sale de un CDN sin esos
+      // muros y no existe para videos borrados.
       const id = idDeVideo(url);
       if (id) {
         const m = await pedir(fetchFn, `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, ms, 'HEAD');
-        if (m.status === 200) return { url, estado: 'ok-sin-insercion', tituloReal: '', nota: 'confirmado por la miniatura' };
+        if (m.status === 200) {
+          const nota = estadoPagina ? `YouTube pidió iniciar sesión (${estadoPagina}): el video existe, pero desde aquí no se pudo confirmar que se reproduzca` : 'el video existe (confirmado por la miniatura)';
+          return { url, estado: 'ok-sin-insercion', tituloReal: '', nota };
+        }
       }
-      return { url, estado: 'problema', detalle: `HTTP ${r.status} y no se pudo confirmar que se reproduzca (título de la página: "${titulo || 'vacío'}")` };
+      return { url, estado: 'problema', detalle: `HTTP ${r.status}${estadoPagina ? ` (${estadoPagina})` : ''} y no se encontró la miniatura: el video parece no existir o ser privado (título de la página: "${titulo || 'vacío'}")` };
     }
     return { url, estado: 'problema', detalle: `HTTP ${r.status}: el video no existe o no está disponible` };
   } catch (e) {
@@ -93,7 +97,7 @@ async function principal(args = process.argv.slice(2)) {
 
   console.log(`Videos que responden: ${r.total - r.problemas.length} de ${r.total}`);
   for (const p of r.problemas) console.log(`  PROBLEMA  ${p.url}\n            ${p.ficha} — "${p.titulo}"\n            ${p.detalle}`);
-  for (const v of r.sinInsercion) console.log(`  aviso     se reproduce, pero el autor desactivó insertarlo en otros sitios: "${v.titulo}"`);
+  for (const v of r.sinInsercion) console.log(`  aviso     ${v.nota ?? 'se reproduce, pero el autor desactivó insertarlo en otros sitios'}: "${v.titulo}"`);
   for (const t of r.titulosDistintos) console.log(`  aviso     el título cambió: escrito "${t.titulo}"\n            real     "${t.tituloReal}"\n            ${t.url}`);
   console.log(`Lista de reproducción: ${r.lista.estado === 'ok' ? 'responde' : `PROBLEMA (${r.lista.detalle})`}`);
 

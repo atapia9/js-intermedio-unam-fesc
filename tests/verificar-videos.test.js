@@ -34,15 +34,15 @@ describe('comprobar(url)', () => {
     expect(r.tituloReal).toBe("Mi video & m's");
   });
 
-  test('401 y la página pide iniciar sesión (video privado): es un problema', async () => {
-    const r = await comprobar(V(3), simulado({ oembed: respuesta(401), 'watch?v=vid00000003': respuesta(200, { texto: PAGINA_PRIVADA }) }));
+  test('401, la página pide iniciar sesión (LOGIN_REQUIRED) y la miniatura no existe: es un problema', async () => {
+    const r = await comprobar(V(3), simulado({ oembed: respuesta(401), 'watch?v=vid00000003': respuesta(200, { texto: PAGINA_PRIVADA }), 'i.ytimg.com': respuesta(404) }));
     expect(r.estado).toBe('problema');
-    expect(r.detalle).toMatch(/401/);
+    expect(r.detalle).toMatch(/401.*LOGIN_REQUIRED.*miniatura/);
   });
 
   test('401 y la página no dice nada útil (muro de consentimiento) pero la miniatura existe: se acepta', async () => {
     const r = await comprobar(V(7), simulado({ oembed: respuesta(401), 'watch?v=vid00000007': respuesta(200, { texto: '<title>Antes de ir a YouTube</title>' }), 'i.ytimg.com': respuesta(200) }));
-    expect(r).toMatchObject({ estado: 'ok-sin-insercion', nota: 'confirmado por la miniatura' });
+    expect(r).toMatchObject({ estado: 'ok-sin-insercion', nota: 'el video existe (confirmado por la miniatura)' });
   });
 
   test('401, la página no dice nada útil y la miniatura no existe: es un problema con el título de la página como pista', async () => {
@@ -55,6 +55,12 @@ describe('comprobar(url)', () => {
     const r = await comprobar(V(9), simulado({ oembed: respuesta(401), 'watch?v=vid00000009': respuesta(200, { texto: '"playabilityStatus":{"status":"ERROR"}' }), 'i.ytimg.com': respuesta(200) }));
     expect(r.estado).toBe('problema');
     expect(r.detalle).toMatch(/ERROR/);
+  });
+
+  test('401 y LOGIN_REQUIRED pero la miniatura existe (así responde YouTube a los servidores de GitHub): se acepta con aviso, no como fallo', async () => {
+    const r = await comprobar(V(10), simulado({ oembed: respuesta(401), 'watch?v=vid00000010': respuesta(200, { texto: PAGINA_PRIVADA }), 'i.ytimg.com': respuesta(200) }));
+    expect(r.estado).toBe('ok-sin-insercion');
+    expect(r.nota).toMatch(/pidió iniciar sesión \(LOGIN_REQUIRED\)/);
   });
 
   test('404: el video no existe', async () => {
