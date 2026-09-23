@@ -1,5 +1,7 @@
 # JavaScript Intermedio — UNAM · FES Cuautitlán · REDEC
 
+[![CI](https://github.com/atapia9/js-intermedio-unam-fesc/actions/workflows/ci.yml/badge.svg)](https://github.com/atapia9/js-intermedio-unam-fesc/actions/workflows/ci.yml)
+
 Versión electrónica y de refuerzo del **Manual del curso "JavaScript Intermedio"** (Educación Continua FESC, modalidad presencial, 20 horas / 5 sesiones de 4 horas).
 
 Este repositorio acompaña el manual con **ejemplos de código ejecutables y ejercicios prácticos organizados por día de sesión**, para que cada participante pueda clonar, experimentar y practicar fuera del salón.
