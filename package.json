@@ -8,7 +8,8 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "indice": "node scripts/generar-indice-videos.js",
-    "verificar-videos": "node scripts/verificar-videos.js"
+    "verificar-videos": "node scripts/verificar-enlaces.js --solo-videos",
+    "verificar-enlaces": "node scripts/verificar-enlaces.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"

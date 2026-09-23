@@ -1,10 +1,10 @@
 # Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 #
-# Revisión semanal de los enlaces de los videos (mismo comando que "npm run verificar-videos").
-# Si algún enlace falla, abre un issue con la etiqueta "videos" (o agrega un comentario al que ya esté abierto);
+# Revisión semanal de los enlaces del curso: los videos y la bibliografía (mismo comando que "npm run verificar-enlaces").
+# Si algún enlace falla, abre un issue con la etiqueta "enlaces" (o agrega un comentario al que ya esté abierto);
 # cuando una revisión posterior sale limpia, cierra ese issue. También se puede lanzar a mano desde la pestaña Actions.
 
-name: Verificar videos
+name: Verificar enlaces
 
 on:
   schedule:
@@ -36,7 +36,7 @@ jobs:
         id: verificar
         run: |
           set +e
-          node scripts/verificar-videos.js > resultado.txt 2>&1
+          node scripts/verificar-enlaces.js > resultado.txt 2>&1
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
           cat resultado.txt
 
@@ -46,17 +46,17 @@ jobs:
           CODIGO: ${{ steps.verificar.outputs.codigo }}
           EJECUCION: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          gh label create videos --description "Enlaces de videos con problema" --color d93f0b 2>/dev/null || true
-          abierto=$(gh issue list --label videos --state open --limit 1 --json number --jq '.[0].number // empty')
+          gh label create enlaces --description "Enlaces del curso con problema" --color d93f0b 2>/dev/null || true
+          abierto=$(gh issue list --label enlaces --state open --limit 1 --json number --jq '.[0].number // empty')
           if [ "$CODIGO" = "1" ]; then
             {
-              echo "La revisión semanal de los videos encontró enlaces con problema."
+              echo "La revisión semanal de los enlaces del curso (videos y bibliografía) encontró enlaces con problema."
               echo
               echo '```'
               cat resultado.txt
               echo '```'
               echo
-              echo "Cómo corregirlo: edita el enlace en el README del día que corresponda, ejecuta \`npm run indice\` y sube el cambio."
+              echo "Cómo corregirlo: en un video, edita el enlace en el README del día que corresponda, ejecuta \`npm run indice\` y sube el cambio; en la bibliografía, edita anexos/bibliografia.md."
               echo "Este issue se cierra solo cuando una revisión posterior no encuentre problemas."
               echo
               echo "Ejecución: $EJECUCION"
@@ -64,7 +64,7 @@ jobs:
             if [ -n "$abierto" ]; then
               gh issue comment "$abierto" --body-file cuerpo.md
             else
-              gh issue create --title "Enlaces de videos con problema" --label videos --body-file cuerpo.md
+              gh issue create --title "Enlaces del curso con problema" --label enlaces --body-file cuerpo.md
             fi
           elif [ "$CODIGO" = "0" ] && [ -n "$abierto" ]; then
             gh issue comment "$abierto" --body "Todos los enlaces funcionan de nuevo ($EJECUCION). Se cierra el aviso."

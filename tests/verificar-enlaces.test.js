@@ -1,11 +1,11 @@
-// Pruebas de la lógica de "npm run verificar-videos" con respuestas simuladas (no usan internet).
+// Pruebas de la lógica de "npm run verificar-enlaces" (videos y bibliografía) con respuestas simuladas (no usan internet).
 //
 // Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { comprobar, verificarTodos, coincidenciaDeTitulos, registrarFecha, fechaDeHoy } = require('../scripts/verificar-videos');
+const { comprobar, verificarTodos, coincidenciaDeTitulos, registrarFecha, fechaDeHoy, extraerEnlaces, enlacesDeBibliografia, comprobarEnlace, verificarBibliografia } = require('../scripts/verificar-enlaces');
 const { formatearFecha, RUTA_VERIFICACION } = require('../scripts/generar-indice-videos');
 
 const respuesta = (status, { json, texto } = {}) => ({ status, json: async () => json, text: async () => texto ?? '' });
@@ -142,5 +142,85 @@ describe('fecha de verificación', () => {
     const { fecha } = JSON.parse(fs.readFileSync(RUTA_VERIFICACION, 'utf8'));
     expect(fecha).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     expect(() => formatearFecha(fecha)).not.toThrow();
+  });
+});
+
+describe('bibliografía: extraerEnlaces', () => {
+  test('toma solo los enlaces externos, sin repetidos', () => {
+    const texto = '- [A](https://a.example/x) y [de nuevo](https://a.example/x)\n- [B](http://b.example)\n- [local](../otro.md) y [ancla](#seccion) y [correo](mailto:a@b.c)';
+    expect(extraerEnlaces(texto)).toEqual([{ titulo: 'A', url: 'https://a.example/x' }, { titulo: 'B', url: 'http://b.example' }]);
+  });
+
+  test('el anexo real tiene enlaces válidos, incluidos los de los dos libros', () => {
+    const enlaces = enlacesDeBibliografia();
+    expect(enlaces.length).toBeGreaterThanOrEqual(8);
+    for (const { url } of enlaces) expect(() => new URL(url)).not.toThrow();
+    const urls = enlaces.map((e) => e.url).join(' ');
+    expect(urls).toMatch(/eloquentjavascript\.net/);
+    expect(urls).toMatch(/getify\/You-Dont-Know-JS/);
+  });
+});
+
+describe('bibliografía: comprobarEnlace(url)', () => {
+  const A = 'https://sitio.example/docs';
+  const resp = (status, extra = {}) => ({ status, url: A, redirected: false, body: null, ...extra });
+
+  test('2xx: funciona', async () => {
+    expect(await comprobarEnlace(A, simulado({ sitio: resp(200) }))).toMatchObject({ estado: 'ok', destino: undefined });
+  });
+
+  test('redirige a otra dirección: funciona, pero avisa el destino', async () => {
+    const r = await comprobarEnlace(A, simulado({ sitio: resp(200, { redirected: true, url: 'https://otro.example/nuevo' }) }));
+    expect(r).toMatchObject({ estado: 'ok', destino: 'https://otro.example/nuevo' });
+  });
+
+  test('una redirección que solo agrega un parámetro de idioma, una barra final o un ancla no merece aviso', async () => {
+    for (const destino of [`${A}?hl=es-419`, `${A}/`, `${A}#inicio`, 'HTTPS://SITIO.EXAMPLE/DOCS']) {
+      const r = await comprobarEnlace(A, simulado({ sitio: resp(200, { redirected: true, url: destino }) }));
+      expect(r.destino).toBeUndefined();
+    }
+  });
+
+  test('401, 403 y 429: el sitio bloquea las comprobaciones automáticas, es un aviso y no un enlace roto', async () => {
+    for (const status of [401, 403, 429]) {
+      const r = await comprobarEnlace(A, simulado({ sitio: resp(status) }));
+      expect(r.estado).toBe('no-verificable');
+      expect(r.detalle).toMatch(new RegExp(String(status)));
+    }
+  });
+
+  test('404 y 500 son problemas', async () => {
+    for (const status of [404, 410, 500, 503]) expect((await comprobarEnlace(A, simulado({ sitio: resp(status) }))).estado).toBe('problema');
+  });
+
+  test('sin conexión o tiempo agotado: es un problema', async () => {
+    expect(await comprobarEnlace(A, simulado({ sitio: new Error('ENOTFOUND') }))).toMatchObject({ estado: 'problema', sinRed: true });
+    const colgado = (url, { signal }) => new Promise((_, rechazar) => signal.addEventListener('abort', () => rechazar(Object.assign(new Error('abortado'), { name: 'AbortError' }))));
+    expect((await comprobarEnlace(A, colgado, { ms: 20 })).detalle).toMatch(/tiempo agotado/);
+  });
+});
+
+describe('bibliografía: verificarBibliografia(enlaces)', () => {
+  const e = (n, titulo = `Sitio ${n}`) => ({ titulo, url: `https://s${n}.example/` });
+  const resp = (status, extra = {}) => ({ status, redirected: false, body: null, ...extra });
+
+  test('cuenta problemas, enlaces que bloquean y redirecciones', async () => {
+    const fetchFn = simulado({
+      's1.example': resp(200),
+      's2.example': resp(404),
+      's3.example': resp(403),
+      's4.example': resp(200, { redirected: true, url: 'https://nuevo.example/' }),
+    });
+    const r = await verificarBibliografia([e(1), e(2), e(3), e(4)], fetchFn);
+    expect(r.total).toBe(4);
+    expect(r.problemas.map((p) => p.url)).toEqual(['https://s2.example/']);
+    expect(r.noVerificables.map((p) => p.url)).toEqual(['https://s3.example/']);
+    expect(r.redirigen.map((p) => p.destino)).toEqual(['https://nuevo.example/']);
+    expect(r.todoSinRed).toBe(false);
+  });
+
+  test('si nada responde por falta de red, lo distingue de enlaces rotos', async () => {
+    const sinRed = async () => { throw new Error('fetch failed'); };
+    expect((await verificarBibliografia([e(1), e(2)], sinRed)).todoSinRed).toBe(true);
   });
 });

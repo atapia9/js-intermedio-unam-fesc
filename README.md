@@ -80,7 +80,7 @@ Calificación mínima aprobatoria: **8.00** (escala 0–10, dos decimales).
 - [Glosario de términos](anexos/glosario.md)
 - [Bibliografía y referencias recomendadas](anexos/bibliografia.md)
 - [Anexo de videos de apoyo (PDF)](documentos/Anexo_Videos_JS_Intermedio.pdf) y la [lista de reproducción del curso en YouTube](https://www.youtube.com/playlist?list=PLBN8bJQ3f4w4)
-- [Índice de todos los videos](documentos/videos.md), organizado por día y ficha, con los ejercicios donde se usa cada uno. Se regenera con `npm run indice` y el CI comprueba que esté al día; `npm run verificar-videos` comprueba que los enlaces sigan vivos (necesita internet) y una revisión semanal en GitHub Actions abre un issue si alguno falla
+- [Índice de todos los videos](documentos/videos.md), organizado por día y ficha, con los ejercicios donde se usa cada uno. Se regenera con `npm run indice` y el CI comprueba que esté al día; `npm run verificar-enlaces` comprueba que los videos y los enlaces de la bibliografía sigan vivos (necesita internet; `npm run verificar-videos` solo revisa los videos) y una revisión semanal en GitHub Actions abre un issue si alguno falla
 
 ## Ecosistema de repositorios
 
