@@ -2,6 +2,8 @@
 
 > Reemplaza este texto con tu explicación (unas 100 palabras como mínimo, con tus propias palabras).
 
+> **Nota de divulgación:** Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. La explicación que escribas es de tu autoría.
+
 Responde:
 
 1. ¿Por qué la versión con async/await es más legible y fácil de mantener que la de callbacks? Apóyate en `obtenerUsuarioConPosts`, donde una petición depende de la anterior.
