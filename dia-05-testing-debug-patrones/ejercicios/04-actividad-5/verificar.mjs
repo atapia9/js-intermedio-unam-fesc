@@ -1,13 +1,17 @@
-// Verificador local de la Actividad 5 (proyecto integrador). Ejecuta: node verificar.mjs [ruta-al-proyecto]
-// Sin argumentos revisa ../../../proyecto-integrador. Node.js 18+, sin dependencias.
-// Audita de forma ESTÁTICA los criterios del anexo (Temas 1 a 5); no sustituye tu exposición ni la revisión del instructor.
+// Verificador local de la Actividad 5 (proyecto integrador). Ejecuta: node verificar.mjs [ruta-al-proyecto] [--sin-pruebas]
+// Sin argumentos revisa ../../../proyecto-integrador. Node.js 18+, sin dependencias propias.
+// Audita de forma ESTÁTICA los criterios del anexo (Temas 1 a 5) y además EJECUTA `npm test` (necesita `npm install` previo;
+// con --sin-pruebas solo hace la auditoría estática). No sustituye tu exposición ni la revisión del instructor.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve, relative } from 'node:path';
 
 const aqui = dirname(fileURLToPath(import.meta.url));
-const raiz = resolve(process.argv[2] ?? join(aqui, '../../../proyecto-integrador'));
-if (!existsSync(join(raiz, 'src'))) { console.error(`\nNo encuentro una carpeta src/ en ${raiz}\nUso: node verificar.mjs [ruta-al-proyecto]\n`); process.exit(2); }
+const args = process.argv.slice(2);
+const sinPruebas = args.includes('--sin-pruebas');
+const raiz = resolve(args.find((a) => !a.startsWith('--')) ?? join(aqui, '../../../proyecto-integrador'));
+if (!existsSync(join(raiz, 'src'))) { console.error(`\nNo encuentro una carpeta src/ en ${raiz}\nUso: node verificar.mjs [ruta-al-proyecto] [--sin-pruebas]\n`); process.exit(2); }
 
 const listar = (dir, ext) => readdirSync(dir).flatMap((n) => {
   if (n === 'node_modules' || n.startsWith('.')) return [];
@@ -85,11 +89,42 @@ console.log('\nTema 5 — pruebas con Jest');
   revisa('hay pruebas de casos frontera del puntaje', pruebas.some((x) => /puntaje|riesgo|score/i.test(x.f + x.c)), 'prueba la función de puntaje con valores límite');
 }
 
+console.log('\nEjecución de las pruebas (npm test)');
+if (sinPruebas) console.log('  omitido  (--sin-pruebas)');
+else {
+  // El script "test" puede vivir en el proyecto o en una carpeta superior (en este repositorio, la raíz).
+  let dir = raiz, raizPruebas = null;
+  for (let i = 0; i < 4 && !raizPruebas; i++) {
+    const pj = join(dir, 'package.json');
+    if (existsSync(pj)) { try { if (JSON.parse(readFileSync(pj, 'utf8')).scripts?.test) raizPruebas = dir; } catch { /* package.json ilegible */ } }
+    const arriba = dirname(dir); if (arriba === dir) break; dir = arriba;
+  }
+  if (!raizPruebas) mal('npm test en verde', 'no encontré un package.json con el script "test" (busqué desde el proyecto hacia arriba)');
+  else if (!existsSync(join(raizPruebas, 'node_modules'))) mal('npm test en verde', `faltan las dependencias: ejecuta "npm install" en ${raizPruebas} y vuelve a correr el verificador`);
+  else {
+    const filtro = raizPruebas === raiz ? [] : ['--', relative(raizPruebas, raiz)];
+    console.log(`  ...   ejecutando npm test en ${raizPruebas}${filtro.length ? ` (solo ${filtro[1]})` : ''}`);
+    const r = spawnSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['test', ...filtro], {
+      cwd: raizPruebas, encoding: 'utf8', timeout: 180000, shell: process.platform === 'win32',
+      env: { ...process.env, CI: 'true', FORCE_COLOR: '0', NO_COLOR: '1' },
+    });
+    const salida = `${r.stdout ?? ''}\n${r.stderr ?? ''}`;
+    const resumen = salida.match(/^Tests:\s+(.+)$/m)?.[1];
+    if (r.error?.code === 'ETIMEDOUT') mal('npm test en verde', 'las pruebas tardaron más de 3 minutos: revisa que no haya un bucle infinito o una prueba que espere sin fin');
+    else if (r.error) mal('npm test en verde', `no se pudo ejecutar npm: ${r.error.message}`);
+    else if (r.status === 0) ok('npm test en verde', resumen);
+    else {
+      const claves = salida.split('\n').filter((l) => /^\s*(FAIL|●)|^Tests:|No tests found/.test(l)).slice(0, 6).map((l) => `        ${l.trim()}`);
+      mal('npm test en verde', `las pruebas terminaron con errores (código ${r.status}); ejecuta "npm test" tú mismo para ver el detalle\n${claves.join('\n')}`);
+    }
+  }
+}
+
 console.log('\nRevisión manual (el verificador no puede comprobarlo)');
 const entrega = ['docs/entrega.md'].find((f) => existsSync(join(raiz, f)));
 console.log(`  ver   docs/entrega.md: ${entrega ? 'encontrado, revisa que lo hayas completado' : 'no existe todavía (copia docs/plantilla-entrega.md como docs/entrega.md y complétalo)'}`);
 console.log('  ver   depuración con DevTools: prepara una demostración (breakpoint, panel Scope o Network) con un bug real que encontraste');
-console.log('  ver   npm test en verde y CI en verde en el último Pull Request');
+console.log('  ver   CI en verde en el último Pull Request');
 console.log('  ver   presentación de 5 minutos con defensa técnica (guion en la plantilla de entrega)');
 
 console.log(fallos === 0 ? '\nTodos los criterios comprobables se cumplen.\n' : `\n${fallos} criterio(s) pendiente(s).\n`);

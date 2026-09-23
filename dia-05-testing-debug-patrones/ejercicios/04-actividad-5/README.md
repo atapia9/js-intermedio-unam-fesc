@@ -17,7 +17,7 @@ Esta actividad se evalúa, por eso el repositorio incluye un verificador de crit
 | 3 | `fetch`, `async/await` y `try/catch` | `nucleo/api.js` | verificador |
 | 4 | Delegación de eventos y `localStorage` | `nucleo/app.js`, `nucleo/almacenamiento.js` | verificador |
 | 4 | Sanitización del texto libre (capa de seguridad de BIS) | `nucleo/sanitizar.js` | verificador |
-| 5 | Al menos 4 pruebas con Jest | `tests/` | verificador (`npm test` para ejecutarlas) |
+| 5 | Al menos 4 pruebas con Jest | `tests/` | verificador (las cuenta y las ejecuta con `npm test`) |
 | 5 | Depuración con DevTools | tu demostración | manual: en tu exposición |
 | — | Presentación de 5 minutos con defensa técnica | guion en la plantilla de entrega | manual: instructor |
 
@@ -30,19 +30,31 @@ El scaffold ya cumple los criterios comprobables del verificador; lo que falte e
 3. Corre el verificador y resuelve lo pendiente.
 4. Copia [docs/plantilla-entrega.md](../../../proyecto-integrador/docs/plantilla-entrega.md) como `docs/entrega.md` en tu proyecto y complétala: checklist, trazabilidad, decisiones por día, evidencia de seguridad y extensión propia.
 5. Prepara una demostración de **depuración con DevTools**: un bug real que encontraste, con un breakpoint, el panel Scope o el panel Network.
-6. Deja `npm test` y el CI en verde.
+6. Deja `npm test` y el CI en verde (el verificador ejecuta `npm test` por ti).
 7. Prepara tu presentación de 5 minutos (el guion está en la plantilla de entrega).
 
 ## Cómo verificar
 
-Necesitas Node.js 18+ y no hay que instalar nada. Desde esta carpeta:
+Necesitas Node.js 18+. Para que el verificador pueda ejecutar las pruebas, instala antes las dependencias **una vez** en la raíz del repositorio (o en la de tu propio proyecto):
+
+```bash
+npm install
+```
+
+Después, desde esta carpeta:
 
 ```bash
 node verificar.mjs                       # revisa ../../../proyecto-integrador
 node verificar.mjs ruta/a/tu/proyecto    # revisa tu propia copia
+node verificar.mjs --sin-pruebas         # solo la auditoría estática, sin ejecutar npm test
 ```
 
-El verificador revisa el código de `src/` y las pruebas de forma **estática** (no ejecuta tu proyecto) y muestra cada criterio como `ok` o `FALLA` con el motivo. Al final lista lo que debes revisar tú a mano. Para ejecutar las pruebas usa `npm test` en tu proyecto.
+El verificador hace dos cosas:
+
+1. **Audita el código** de `src/` y de las pruebas de forma estática y muestra cada criterio como `ok` o `FALLA` con el motivo.
+2. **Ejecuta `npm test`** y da `FALLA` si alguna prueba falla, si faltan las dependencias o si tardan más de 3 minutos. Busca el `package.json` con el script `test` desde tu proyecto hacia arriba; si está en una carpeta superior (como en este repositorio), ejecuta solo las pruebas de tu proyecto.
+
+Al final lista lo que debes revisar tú a mano.
 
 ## Qué se evalúa
 
