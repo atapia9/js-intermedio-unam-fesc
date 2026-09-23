@@ -54,7 +54,7 @@ El verificador hace dos cosas:
 1. **Audita el código** de `src/` y de las pruebas de forma estática y muestra cada criterio como `ok` o `FALLA` con el motivo.
 2. **Ejecuta `npm test`** y da `FALLA` si alguna prueba falla, si faltan las dependencias o si tardan más de 3 minutos. Busca el `package.json` con el script `test` desde tu proyecto hacia arriba; si está en una carpeta superior (como en este repositorio), ejecuta solo las pruebas de tu proyecto.
 
-Al final lista lo que debes revisar tú a mano.
+Al final lista lo que debes revisar tú a mano y, si ya copiaste la plantilla como `docs/entrega.md`, **avisa (`pend`) si la sección 6 de DevTools sigue sin completar**: falta la sección, algún campo está vacío o no marcaste ninguna herramienta. Es solo un aviso: no cambia el resultado del verificador ni verifica que la evidencia sea real, eso lo valora el instructor en tu exposición.
 
 ## Qué se evalúa
 

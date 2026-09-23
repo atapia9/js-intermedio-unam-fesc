@@ -120,9 +120,35 @@ else {
   }
 }
 
+// Aviso (no cambia el resultado): ¿la sección de DevTools de docs/entrega.md sigue sin completar?
+function revisarSeccionDevTools(texto) {
+  const lineas = texto.replace(/<!--[\s\S]*?-->/g, '').split('\n');
+  const i = lineas.findIndex((l) => /^##\s+\d+\.\s.*DevTools/i.test(l));
+  if (i < 0) return { estado: 'sin-seccion', faltan: [] };
+  let j = lineas.findIndex((l, k) => k > i && /^##\s/.test(l)); if (j < 0) j = lineas.length;
+  const bloques = lineas.slice(i + 1, j).join('\n').split(/\n(?=- \*\*)/).filter((b) => /^- \*\*/.test(b));
+  const requeridos = [['Síntoma', /Síntoma/i], ['Herramienta(s)', /Herramienta/i], ['Qué observaste', /observaste/i],
+    ['Causa', /^Causa/i], ['Corrección', /Correcci[oó]n/i], ['Captura de pantalla', /Captura/i]];
+  const faltan = [];
+  for (const [nombre, re] of requeridos) {
+    const b = bloques.find((x) => re.test(x.match(/^- \*\*([^*]+)\*\*/)?.[1] ?? ''));
+    if (!b) { faltan.push(nombre); continue; }
+    if (nombre === 'Herramienta(s)') { if (!/^\s*-\s*\[[xX]\]/m.test(b)) faltan.push('Herramienta(s): marca al menos una'); continue; }
+    const contenido = b.replace(/^- \*\*[^*]+\*\*/, '').replace(/^\s*\([^)]*\)/, '').replace(/^\s*:/, '').trim();
+    if (!contenido || /^(TODO|\.\.\.|-|_+)$/i.test(contenido)) faltan.push(nombre);
+  }
+  return { estado: faltan.length ? 'incompleta' : 'completa', faltan };
+}
+
 console.log('\nRevisión manual (el verificador no puede comprobarlo)');
 const entrega = ['docs/entrega.md'].find((f) => existsSync(join(raiz, f)));
 console.log(`  ver   docs/entrega.md: ${entrega ? 'encontrado, revisa que lo hayas completado' : 'no existe todavía (copia docs/plantilla-entrega.md como docs/entrega.md y complétalo)'}`);
+if (entrega) {
+  const r = revisarSeccionDevTools(readFileSync(join(raiz, entrega), 'utf8'));
+  if (r.estado === 'sin-seccion') console.log('  pend  docs/entrega.md no tiene la sección de depuración con DevTools: agrégala desde la plantilla actual (sección 6)');
+  else if (r.estado === 'incompleta') console.log(`  pend  sección 6 (DevTools) de docs/entrega.md sin completar: ${r.faltan.join('; ')}`);
+  else console.log('  ok    sección 6 (DevTools) de docs/entrega.md completa (revisa que la evidencia sea real)');
+}
 console.log('  ver   depuración con DevTools: prepara una demostración (breakpoint, panel Scope, Call Stack o Network) con un bug real y documéntala en la sección 6 de docs/entrega.md');
 console.log('  ver   CI en verde en el último Pull Request');
 console.log('  ver   presentación de 5 minutos con defensa técnica (guion en la plantilla de entrega)');
