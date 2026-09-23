@@ -12,6 +12,8 @@
 // Convierte la función `leerConfiguracion(callback)` (estilo callback) en
 // una función `leerConfiguracionPromesa()` que devuelva una Promise.
 // Luego consúmela tanto con .then/.catch como con async/await.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 function leerConfiguracion(callback) {
   setTimeout(() => {

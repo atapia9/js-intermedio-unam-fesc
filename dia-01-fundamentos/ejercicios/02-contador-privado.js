@@ -18,6 +18,8 @@
 //   const c = crearContadorRango(0, 3);
 //   c.incrementar(); c.incrementar(); c.incrementar(); c.incrementar();
 //   c.valor(); // 3 (no pasa de max)
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 function crearContadorRango(min, max) {
   // TODO: implementa aquí usando un closure

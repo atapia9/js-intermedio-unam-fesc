@@ -1,5 +1,7 @@
 // Día 1 — Ejemplo: Call Stack, Microtask Queue y Callback Queue
 // Ejecuta con: node 01-event-loop.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 console.log('1: síncrono (call stack)');
 

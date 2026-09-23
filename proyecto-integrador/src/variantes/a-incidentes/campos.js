@@ -1,3 +1,5 @@
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 import Incidente, { CATEGORIAS } from './Incidente.js';
 
 // Descripción declarativa del formulario y de las columnas de la lista,

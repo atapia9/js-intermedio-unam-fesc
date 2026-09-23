@@ -1,5 +1,7 @@
 // Día 1 — Ejemplo: Closures
 // Ejecuta con: node 03-closures.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 // 1. Encapsulamiento de estado privado
 function crearContador(inicial = 0) {

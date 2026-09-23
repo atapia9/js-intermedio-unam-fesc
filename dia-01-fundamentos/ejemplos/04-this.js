@@ -1,5 +1,7 @@
 // Día 1 — Ejemplo: el valor de `this` según cómo se invoca la función
 // Ejecuta con: node 04-this.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 const persona = {
   nombre: 'Marina',

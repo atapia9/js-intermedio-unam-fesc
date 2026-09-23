@@ -1,5 +1,7 @@
 // Día 5 — Ejemplo: patrón Singleton
 // Ejecuta con: node 03-singleton.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 class ConfiguracionApp {
   static #instancia; // campo estático privado: guarda la única instancia

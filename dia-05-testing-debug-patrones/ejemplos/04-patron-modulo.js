@@ -1,5 +1,7 @@
 // Día 5 — Ejemplo: patrón Módulo (con closures, sin ESM)
 // Ejecuta con: node 04-patron-modulo.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 // El patrón Módulo encapsula estado y expone solo una API pública controlada,
 // usando una IIFE (Immediately Invoked Function Expression) y closures.

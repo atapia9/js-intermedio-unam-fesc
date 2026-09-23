@@ -1,6 +1,8 @@
 // Día 3 — Ejemplo: Fetch API y manejo correcto de errores HTTP
 // Ejecuta con: node 04-fetch.js  (Node 18+ trae fetch nativo)
 // Usa la API pública gratuita JSONPlaceholder para pruebas.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 async function obtenerUsuario(id) {
   const respuesta = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);

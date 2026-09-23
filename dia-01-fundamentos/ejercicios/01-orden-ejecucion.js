@@ -10,6 +10,8 @@
 // en que crees que se imprimirán los números. Luego ejecuta con:
 //   node 01-orden-ejecucion.js
 // y compara tu predicción contra la salida real.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 console.log('A');
 

@@ -1,5 +1,7 @@
 // Día 2 — Ejemplo: clases ES6, herencia, getters/setters, static
 // Ejecuta con: node 02-clases.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 class Animal {
   #energia = 100; // campo privado (moderno)

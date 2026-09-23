@@ -1,5 +1,8 @@
 // Día 4: DOM + delegación de eventos. Arma la interfaz leyendo `campos.js`
 // de la variante activa, con un único listener delegado por la lista.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 import { sanitizarTextoLibre } from './sanitizar.js';
 
 export function iniciarApp({ ClaseRegistro, almacenamiento, cargarInicial, campos, calcularPuntaje }) {

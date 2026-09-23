@@ -1,3 +1,5 @@
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 const { esCorreoValido, esPasswordSegura } = require('./01-pruebas-validaciones');
 
 // Videos de apoyo (ficha 5.1 y 5.2 del README del día):

@@ -1,5 +1,7 @@
 // Día 1 — Ejemplo: Hoisting y diferencias var / let / const
 // Ejecuta con: node 02-hoisting-scope.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 function demoVar() {
   console.log(mensaje); // undefined (hoisted e inicializado)

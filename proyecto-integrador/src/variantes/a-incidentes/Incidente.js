@@ -1,3 +1,5 @@
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 import Registro from '../../nucleo/Registro.js';
 
 export const CATEGORIAS = ['phishing', 'malware', 'acceso-sospechoso', 'equipo-extraviado', 'otro'];

@@ -1,4 +1,7 @@
 // Día 4: contraste textContent vs innerHTML — payload de prueba neutralizado.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 describe('sanitizar', () => {
   test('escaparHTML neutraliza un payload XSS tipo <img onerror>', async () => {
     const { escaparHTML } = await import('../src/nucleo/sanitizar.js');

@@ -1,4 +1,7 @@
 // Día 2: clase base ES6, extendida por cada variante (Incidente, Correo, Equipo)
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 let siguienteIdAutogenerado = 1;
 
 export default class Registro {

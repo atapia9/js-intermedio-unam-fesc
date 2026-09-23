@@ -9,6 +9,8 @@
 // El siguiente código tiene un bug: `this` no apunta a lo que se espera
 // dentro del setTimeout. Corrígelo SIN cambiar la estructura general
 // (puedes usar arrow functions, bind, o guardar una referencia a `this`).
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 const cronometro = {
   segundos: 0,

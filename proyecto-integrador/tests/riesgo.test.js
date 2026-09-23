@@ -1,4 +1,7 @@
 // Día 5: la función de puntaje es pura y no toca el DOM — se prueba directo.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 describe('calcularPuntaje (variante A — incidentes)', () => {
   test('impacto=1, urgencia=1 → severidad baja', async () => {
     const { calcularPuntaje } = await import('../src/variantes/a-incidentes/riesgo.js');

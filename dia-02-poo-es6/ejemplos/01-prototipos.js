@@ -1,5 +1,7 @@
 // Día 2 — Ejemplo: herencia prototípica "manual" (sin class)
 // Ejecuta con: node 01-prototipos.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 function Animal(nombre) {
   this.nombre = nombre;

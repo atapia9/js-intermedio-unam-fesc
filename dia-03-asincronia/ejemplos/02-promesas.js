@@ -1,5 +1,7 @@
 // Día 3 — Ejemplo: creación, encadenamiento y combinación de promesas
 // Ejecuta con: node 02-promesas.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 function esperar(ms, valor, fallar = false) {
   return new Promise((resolve, reject) => {

@@ -11,6 +11,8 @@
 // el mismo objeto. Agrega un método `consultar(sql)` que solo imprima
 // `Ejecutando: ${sql}` y un contador `totalConsultas` que se comparta entre
 // todas las "instancias" (porque en realidad es la misma).
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 class ConexionBD {
   // TODO

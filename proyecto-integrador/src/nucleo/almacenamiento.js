@@ -1,5 +1,8 @@
 // Día 1 (closures) + Día 5 (patrón Módulo): la clave de localStorage queda
 // encapsulada; el resto de la app solo conoce cargar()/guardar().
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 export function crearAlmacenamiento(clave, ClaseRegistro) {
   return {
     cargar() {

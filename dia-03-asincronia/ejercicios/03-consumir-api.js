@@ -14,6 +14,8 @@
 // y devuelva solo un arreglo con los títulos de los posts (usa .map).
 // Maneja correctamente el caso en que response.ok sea false.
 // Ejecuta con: node 03-consumir-api.js (Node 18+)
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 async function obtenerPostsDeUsuario(usuarioId) {
   // TODO

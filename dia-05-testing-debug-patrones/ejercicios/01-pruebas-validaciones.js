@@ -1,3 +1,5 @@
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 function esCorreoValido(correo) {
   return /\S+@\S+\.\S+/.test(correo);
 }

@@ -1,5 +1,8 @@
 // Datos de ejemplo para sembrar la app cuando no hay conexión al feed inicial.
 // Ficticios y evidentes como tales — ver mock.json para el mismo contenido en formato plano.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 export default [
   {
     id: 'inc-001',

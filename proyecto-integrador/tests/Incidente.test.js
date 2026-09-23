@@ -1,3 +1,5 @@
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
+
 describe('Incidente', () => {
   test('se crea en estado "nuevo" por defecto', async () => {
     const { default: Incidente } = await import('../src/variantes/a-incidentes/Incidente.js');

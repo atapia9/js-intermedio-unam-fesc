@@ -1,5 +1,7 @@
 // Día 2 — Ejemplo: destructuring, spread y rest
 // Ejecuta con: node 03-destructuring-spread-rest.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 // Destructuring de objetos (con alias y valor por defecto)
 const curso = { titulo: 'JavaScript Intermedio', horas: 20, sede: 'FESC' };

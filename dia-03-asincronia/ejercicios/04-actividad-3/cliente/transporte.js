@@ -1,4 +1,7 @@
 // Responsabilidad: hace una petición GET con callbacks (node:http); lo usa la versión de callbacks. Ya está completo.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 import http from 'node:http';
 
 // peticion(url, callback)

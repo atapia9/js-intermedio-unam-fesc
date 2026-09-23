@@ -14,6 +14,8 @@
 // Crea `Auto extends Vehiculo` que agregue `numPuertas` y sobrescriba
 // `describir()` para incluir el número de puertas, reutilizando `super.describir()`.
 // Crea `Motocicleta extends Vehiculo` que agregue `cilindrada` de forma similar.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 class Vehiculo {
   // TODO

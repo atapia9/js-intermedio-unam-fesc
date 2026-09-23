@@ -83,7 +83,7 @@ await prueba('async-await.js: usa fetch con async, await y try/catch, sin .then'
 });
 for (const f of ['callbacks.js', 'promesas.js', 'async-await.js']) {
   await prueba(`${f}: está comentada (al menos 6 líneas de comentario reales)`, () => {
-    const n = leer(f).split('\n').filter((l) => /^\s*\/\//.test(l) && l.trim().length > 12 && !/TODO/.test(l)).length;
+    const n = leer(f).split('\n').filter((l) => /^\s*\/\//.test(l) && l.trim().length > 12 && !/TODO|Nota de divulgación/.test(l)).length;
     assert.ok(n >= 6, `tiene ${n}; explica qué hace cada paso y por qué`);
   });
 }

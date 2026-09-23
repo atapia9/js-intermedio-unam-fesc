@@ -1,5 +1,7 @@
 // Día 3 — Ejemplo: callbacks y "callback hell"
 // Ejecuta con: node 01-callbacks.js
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 function obtenerUsuario(id, callback) {
   setTimeout(() => {

@@ -8,6 +8,8 @@
 // Enunciado:
 // Refactoriza las tres funciones de abajo para que usen destructuring,
 // spread y/o rest en vez de acceder a propiedades/índices manualmente.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 // Función 1: acceso manual a propiedades de objeto
 function mostrarAlumno(alumno) {

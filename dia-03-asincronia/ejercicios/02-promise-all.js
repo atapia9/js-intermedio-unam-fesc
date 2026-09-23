@@ -10,6 +10,8 @@
 // escribe `cargarTodo()` que use Promise.all para esperar a las tres y
 // regrese un objeto { curso, instructor, sede }. Mide el tiempo total y
 // verifica que sea aproximadamente el de la más lenta (no la suma de todas).
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 function cargarCurso() {
   return new Promise((resolve) => setTimeout(() => resolve('JS Intermedio'), 300));

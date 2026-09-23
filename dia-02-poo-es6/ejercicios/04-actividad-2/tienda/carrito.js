@@ -8,6 +8,8 @@
 //     total()                          -> suma de precio * cantidad
 //     get items()                      -> COPIA del contenido: [{ id, nombre, precio, cantidad }, ...]
 //                                         (modificar el arreglo devuelto no debe alterar el carrito)
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 export default class Carrito {
   // TODO

@@ -1,3 +1,5 @@
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 const { sumar } = require('./01-suma');
 
 // describe() agrupa pruebas relacionadas

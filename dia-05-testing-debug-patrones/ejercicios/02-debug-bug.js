@@ -11,6 +11,8 @@
 // archivo con `node inspect 02-debug-bug.js`, o pegando el código en
 // DevTools) o simplemente añade console.log para encontrar el error.
 // No mires la solución sugerida hasta intentarlo.
+//
+// Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 function calcularPromedio(calificaciones) {
   let suma = 0;

@@ -1,5 +1,7 @@
 // Ejecuta con: node main.js
 // (requiere el package.json de esta carpeta con "type": "module")
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 import { sumar, restar, PI } from './matematicas.js'; // export nombrado, entre llaves
 import Curso from './Curso.js'; // export default, sin llaves

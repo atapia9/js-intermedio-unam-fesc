@@ -1,4 +1,6 @@
 // Responsabilidad: define los dos tipos de error que distingue el cliente (red y HTTP). Ya está completo.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 // No hubo respuesta: servidor caído, sin conexión, puerto cerrado.
 export class ErrorRed extends Error {
