@@ -3,6 +3,9 @@
 // Audita de forma ESTÁTICA los criterios del anexo (Temas 1 a 5) y además EJECUTA `npm test` (necesita `npm install` previo;
 // con --sin-pruebas solo hace la auditoría estática). Si existe docs/entrega.md, exige la captura de DevTools en docs/evidencias/.
 // No sustituye tu exposición ni la revisión del instructor.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';

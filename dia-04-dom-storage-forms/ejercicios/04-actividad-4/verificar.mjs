@@ -1,6 +1,9 @@
 // Verificador local de la Actividad 4. Ejecuta (una vez): npm install     y luego: node verificar.mjs
 // Carga tu index.html en jsdom (un navegador simulado), ejecuta tu app.js y simula al usuario.
 // Comprueba el contrato, no el diseño visual ni la calidad de tu código: eso lo valora el instructor.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';

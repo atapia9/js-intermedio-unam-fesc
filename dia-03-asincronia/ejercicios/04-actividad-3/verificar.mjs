@@ -1,6 +1,9 @@
 // Verificador local de la Actividad 3. Ejecuta: node verificar.mjs   (Node.js 18+, sin internet)
 // Levanta un servidor HTTP de prueba y comprueba las TRES versiones del cliente contra el mismo contrato.
 // Comprueba el contrato, no la calidad de tus comentarios ni de tu explicación: eso lo valora el instructor.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 import assert from 'node:assert/strict';
 import http from 'node:http';
 import { readFileSync } from 'node:fs';

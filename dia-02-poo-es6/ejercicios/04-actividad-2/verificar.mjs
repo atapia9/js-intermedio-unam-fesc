@@ -1,5 +1,7 @@
 // Verificador local de la Actividad 2. Ejecuta: node verificar.mjs
 // No sustituye la revisión del instructor: comprueba el contrato, no la calidad del diseño.
+//
+// Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
