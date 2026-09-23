@@ -123,7 +123,7 @@ else {
 console.log('\nRevisión manual (el verificador no puede comprobarlo)');
 const entrega = ['docs/entrega.md'].find((f) => existsSync(join(raiz, f)));
 console.log(`  ver   docs/entrega.md: ${entrega ? 'encontrado, revisa que lo hayas completado' : 'no existe todavía (copia docs/plantilla-entrega.md como docs/entrega.md y complétalo)'}`);
-console.log('  ver   depuración con DevTools: prepara una demostración (breakpoint, panel Scope o Network) con un bug real que encontraste');
+console.log('  ver   depuración con DevTools: prepara una demostración (breakpoint, panel Scope, Call Stack o Network) con un bug real y documéntala en la sección 6 de docs/entrega.md');
 console.log('  ver   CI en verde en el último Pull Request');
 console.log('  ver   presentación de 5 minutos con defensa técnica (guion en la plantilla de entrega)');
 

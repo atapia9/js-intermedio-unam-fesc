@@ -30,6 +30,8 @@ guion en la exposición de 5 minutos.
 - [ ] Mínimo 3 pruebas por variante con Jest (puntaje con casos frontera, payload XSS,
       enmascarado de PII), ninguna sobre el DOM.
 - [ ] `npm test` en verde.
+- [ ] Depuración con DevTools documentada (sección 6): un bug real encontrado con un
+      breakpoint, el panel Scope, Call Stack o Network.
 - [ ] CI en verde en el último Pull Request.
 - [ ] Rama `main` protegida (PR aprobado + CI en verde como requisito).
 - [ ] Tag y release `v1.0.0` creados.
@@ -65,17 +67,39 @@ decisiones, no las del scaffold.
 - **Confirmación de que ningún dato real (nombre, correo, teléfono) quedó
   persistido:**
 
-## 6. Extensión propia
+## 6. Evidencia de depuración con DevTools (día 5)
+
+Documenta **un bug real** que encontraste en tu proyecto usando las herramientas de
+desarrollo del navegador (no `console.log`). Es lo que mostrarás en vivo en la
+exposición.
+
+- **Síntoma** (qué veías y dónde; *ej.: la lista no mostraba datos de la API*):
+- **Herramienta(s) que usaste** (marca las que apliquen):
+  - [ ] Breakpoint en el panel Sources (archivo y línea: )
+  - [ ] `debugger;` en el código
+  - [ ] Breakpoint condicional (condición: )
+  - [ ] Panel Scope (qué variable revisaste: )
+  - [ ] Panel Call Stack (qué llamadas seguiste: )
+  - [ ] Panel Network (qué petición revisaste y qué respondió: )
+- **Qué observaste** (el valor de la variable, el orden de las llamadas o la respuesta
+  de la petición, con evidencia, no con suposiciones):
+- **Causa** (dónde se originó el error; puede ser distinta de dónde lo veías):
+- **Corrección** (enlace al commit o Pull Request):
+- **Captura de pantalla** (guardar en `docs/evidencias/`):
+
+## 7. Extensión propia
 
 Describe brevemente qué agregaste más allá del scaffold base (filtros, categorías
 adicionales, edición de registros, etc.):
 
-## 7. Guion de exposición (5 minutos)
+## 8. Guion de exposición (5 minutos)
 
 1. Caso y variante elegida (30 s).
-2. Recorrido rápido del flujo de estados (1 min).
+2. Recorrido rápido del flujo de estados (30 s).
 3. Una regla de la tabla de trazabilidad, señalada en vivo: política → línea de código
    (1 min).
-4. La prueba de seguridad del día 4, corriendo en vivo (`npm test`) (1 min).
-5. Una decisión técnica que te costó trabajo y por qué la tomaste así (1 min).
-6. Cierre: qué extendiste y qué harías distinto (30 s).
+4. La prueba de seguridad del día 4, corriendo en vivo (`npm test`) (45 s).
+5. Depuración con DevTools en vivo: el bug de la sección 6, del síntoma a la causa
+   (1 min).
+6. Una decisión técnica que te costó trabajo y por qué la tomaste así (45 s).
+7. Cierre: qué extendiste y qué harías distinto (30 s).

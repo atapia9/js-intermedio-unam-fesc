@@ -18,7 +18,7 @@ Esta actividad se evalúa, por eso el repositorio incluye un verificador de crit
 | 4 | Delegación de eventos y `localStorage` | `nucleo/app.js`, `nucleo/almacenamiento.js` | verificador |
 | 4 | Sanitización del texto libre (capa de seguridad de BIS) | `nucleo/sanitizar.js` | verificador |
 | 5 | Al menos 4 pruebas con Jest | `tests/` | verificador (las cuenta y las ejecuta con `npm test`) |
-| 5 | Depuración con DevTools | tu demostración | manual: en tu exposición |
+| 5 | Depuración con DevTools | sección 6 de tu `docs/entrega.md` y tu demostración | manual: en tu exposición |
 | — | Presentación de 5 minutos con defensa técnica | guion en la plantilla de entrega | manual: instructor |
 
 El scaffold ya cumple los criterios comprobables del verificador; lo que falte es tu parte. `Registro` ya protege su `#estado` con un campo privado y un getter (solo `cambiarEstado()` lo modifica), que es el ejemplo a seguir: cuando definas la entidad de tu variante, protege también sus datos sensibles con campos privados, y conserva esa protección al extender el proyecto.
@@ -28,8 +28,8 @@ El scaffold ya cumple los criterios comprobables del verificador; lo que falte e
 1. Elige tu variante y decláralo ([docs/01-variantes.md](../../../proyecto-integrador/docs/01-variantes.md)).
 2. Trabaja en tu propia copia del proyecto (rama y Pull Request, como en el curso de Git y GitHub).
 3. Corre el verificador y resuelve lo pendiente.
-4. Copia [docs/plantilla-entrega.md](../../../proyecto-integrador/docs/plantilla-entrega.md) como `docs/entrega.md` en tu proyecto y complétala: checklist, trazabilidad, decisiones por día, evidencia de seguridad y extensión propia.
-5. Prepara una demostración de **depuración con DevTools**: un bug real que encontraste, con un breakpoint, el panel Scope o el panel Network.
+4. Copia [docs/plantilla-entrega.md](../../../proyecto-integrador/docs/plantilla-entrega.md) como `docs/entrega.md` en tu proyecto y complétala: checklist, trazabilidad, decisiones por día, evidencia de seguridad, **evidencia de depuración con DevTools** y extensión propia.
+5. Prepara una demostración de **depuración con DevTools**: un bug real que encontraste, con un breakpoint, el panel Scope, Call Stack o Network. Documéntalo en la sección 6 de tu `docs/entrega.md`.
 6. Deja `npm test` y el CI en verde (el verificador ejecuta `npm test` por ti).
 7. Prepara tu presentación de 5 minutos (el guion está en la plantilla de entrega).
 

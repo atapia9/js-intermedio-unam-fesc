@@ -84,7 +84,8 @@ proyecto-integrador/
 
 Usa [docs/plantilla-entrega.md](docs/plantilla-entrega.md) como guion para preparar
 tu entrega y tu exposición de 5 minutos: checklist de requisitos, tabla de
-trazabilidad y registro de decisiones.
+trazabilidad, registro de decisiones y evidencias de seguridad y de depuración con
+DevTools.
 
 Este scaffold es un punto de partida — se espera que cada participante lo extienda
 (filtros, más categorías, adjuntos, edición de registros, etc.), y que quien elija
