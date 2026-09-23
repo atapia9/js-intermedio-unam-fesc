@@ -16,7 +16,7 @@ endobj
 3 0 obj
 <<
 /Annots [ 4 0 R ]
-/Contents 125 0 R
+/Contents 5 0 R
 /Type /Page
 /Resources <<
 /Font <<
@@ -51,7 +51,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Length 6441
+/Length 6440
 >>
 stream
 q
@@ -104,7 +104,7 @@ q
 q
 .101961 .372549 .705882 RG
 n 0 2.3125 m 344.185 2.3125 l S
-BT 1 0 0 1 0 29.5 Tm 13 TL /F1 9.5 Tf 0 0 0 rg (Todos los videos est\341n organizados en una lista de reproducci\363n:) Tj  T*  T* /F2 9.5 Tf .101961 .372549 .705882 rg (https://youtube.com/playlist?list=PLBN8bJQ3f4w4) Tj (&si;) Tj (=EaNHFKV2oJEhtuP1) Tj T* ET
+BT 1 0 0 1 0 29.5 Tm 13 TL /F1 9.5 Tf 0 0 0 rg (Todos los videos est\341n organizados en una lista de reproducci\363n:) Tj  T*  T* /F2 9.5 Tf .101961 .372549 .705882 rg (https://youtube.com/playlist?list=PLBN8bJQ3f4w4) Tj (&si) Tj (=EaNHFKV2oJEhtuP1) Tj T* ET
 Q
 Q
 q
@@ -1537,7 +1537,7 @@ endobj
 103 0 obj
 <<
 /Annots [ 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R ]
-/Contents 113 0 R
+/Contents 125 0 R
 /Type /Page
 /Resources <<
 /Font 114 0 R
@@ -1637,7 +1637,7 @@ endobj
 /URI (https\072\057\057www\056youtube\056com\057watch\077v\075ps1WhgelV\137E)
 >>
 /Border [ 0 0 0 ]
-/Rect [ 149.0079 223.0832 418.3219 234.0832 ]
+/Rect [ 149.0079 223.0832 539.7189 234.0832 ]
 /Subtype /Link
 /Type /Annot
 >>
@@ -1792,255 +1792,120 @@ endobj
 endobj
 125 0 obj
 <<
-/Length 6440
+/Length 8837
 >>
 stream
-q
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 7.5 Tf 9 TL ET
 .501961 .501961 .501961 rg
-BT 1 0 0 1 56.69291 34.01575 Tm (JavaScript Intermedio \267 Anexo de videos de apoyo) Tj T* ET
+BT 1 0 0 1 56.69291 34.01575 Tm (JavaScript Intermedio \267 Sesi\363n 5 \267 Material de apoyo) Tj T* ET
+BT 1 0 0 1 533.9081 34.01575 Tm (P\341g. 1) Tj T* ET
+q
+1 0 0 1 62.69291 718.6457 cm
+q
+.121569 .227451 .372549 rg
+BT 1 0 0 1 0 4 Tm /F2 18 Tf 22 TL 63.74809 0 Td (Videos de apoyo \227 JavaScript Intermedio) Tj T* -63.74809 0 Td ET
+Q
+Q
 q
 1 0 0 1 62.69291 700.6457 cm
-Q
-q
-1 0 0 1 62.69291 678.6457 cm
-q
-.121569 .227451 .372549 rg
-BT 1 0 0 1 0 4 Tm /F2 18 Tf 22 TL 130.2761 0 Td (Anexo \227 Videos de apoyo) Tj T* -130.2761 0 Td ET
-Q
-Q
-q
-1 0 0 1 62.69291 660.6457 cm
 q
 .501961 .501961 .501961 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 51.02209 0 Td (Manual del curso JavaScript Intermedio \267 REDEC-UNAM / FESC \267 Educaci\363n Continua) Tj T* -51.02209 0 Td ET
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 37.11209 0 Td (Sesi\363n 5: Testing, Depuraci\363n y Arquitectura \267 REDEC-UNAM / FESC \267 2 de octubre de 2026) Tj T* -37.11209 0 Td ET
 Q
 Q
 q
-1 0 0 1 62.69291 640.6457 cm
+1 0 0 1 62.69291 692.6457 cm
 Q
 q
-1 0 0 1 62.69291 612.6457 cm
+1 0 0 1 62.69291 653.6457 cm
 q
-.121569 .227451 .372549 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Prop\363sito) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 554.6457 cm
-q
-BT 1 0 0 1 0 42.5 Tm 13 TL /F1 9.5 Tf 0 0 0 rg (Este anexo re\372ne una selecci\363n de videos en YouTube que complementan, con lenguaje directo y sin exceso de) Tj T* (tecnicismos, cada tema del manual. Cada ficha relaciona el tema con un ) Tj /F2 9.5 Tf (caso de uso real) Tj /F1 9.5 Tf ( y una ) Tj /F2 9.5 Tf (pregunta para) Tj T* (pensar) Tj /F1 9.5 Tf (, con el fin de favorecer el aprendizaje significativo: entender para qu\351 sirve cada concepto antes de) Tj T* (memorizar su sintaxis.) Tj T* ET
+BT 1 0 0 1 0 29.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (C\363mo usar esta ficha:) Tj /F1 9.5 Tf ( antes de ver cada video, intenta predecir qu\351 va a pasar. Despu\351s, piensa en el caso de) Tj T* (uso y responde la pregunta. Idea del d\355a: ) Tj /F3 9.5 Tf (el c\363digo funcional resuelve el problema de hoy; el c\363digo robusto est\341) Tj T* (preparado para los cambios de ma\361ana.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 526.6457 cm
+1 0 0 1 62.69291 625.6457 cm
 q
 .121569 .227451 .372549 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Lista de reproducci\363n del curso) Tj T* ET
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (5.1 \267 Testing: la pir\341mide de pruebas) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 481.6457 cm
+1 0 0 1 62.69291 593.6457 cm
 q
-.101961 .372549 .705882 RG
-n 0 2.3125 m 344.185 2.3125 l S
-BT 1 0 0 1 0 29.5 Tm 13 TL /F1 9.5 Tf 0 0 0 rg (Todos los videos est\341n organizados en una lista de reproducci\363n:) Tj  T*  T* /F2 9.5 Tf .101961 .372549 .705882 rg (https://youtube.com/playlist?list=PLBN8bJQ3f4w4) Tj (&si) Tj (=EaNHFKV2oJEhtuP1) Tj T* ET
+BT 1 0 0 1 0 16.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (Idea clave:) Tj /F1 9.5 Tf ( Muchas pruebas peque\361as y r\341pidas en la base \(unitarias\), menos de integraci\363n y pocas de flujo) Tj T* (completo \(E2E\).) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 453.6457 cm
-q
-.121569 .227451 .372549 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (C\363mo usar las fichas) Tj T* ET
-Q
+1 0 0 1 62.69291 589.6457 cm
 Q
 q
-1 0 0 1 62.69291 395.6457 cm
-q
-BT 1 0 0 1 0 42.5 Tm 13 TL /F1 9.5 Tf 0 0 0 rg (1. Antes de cada video, intenta predecir qu\351 va a pasar.) Tj  T* (2. Mira el video ) Tj /F2 9.5 Tf (Principal) Tj /F1 9.5 Tf (; los de ) Tj /F2 9.5 Tf (Refuerzo) Tj /F1 9.5 Tf ( sirven para repasar o como tarea previa.) Tj  T* (3. Relaciona el tema con el caso de uso y responde la pregunta.) Tj  T* (4. Los videos marcados como ) Tj /F3 9.5 Tf (opcional \(ingl\351s\)) Tj /F1 9.5 Tf ( se pueden ver con subt\355tulos.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 367.6457 cm
-q
-.121569 .227451 .372549 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Contenido) Tj T* ET
-Q
-Q
-q
-1 0 0 1 69.30709 259.6457 cm
+1 0 0 1 57.9685 521.6457 cm
 q
 .909804 .933333 .960784 rg
-n 0 102 473.3858 -17 re f*
+n 0 68 496.063 -17 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Sesi\363n) Tj T* ET
-Q
-Q
-q
-1 0 0 1 51.35433 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Tema) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Fecha) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (P\341g.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 6 71 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (1) Tj T* ET
-Q
-Q
-q
-1 0 0 1 51.35433 71 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Fundamentos avanzados: Event Loop, scope, closures y this) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 71 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (28 sep 2026) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 71 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (2) Tj T* ET
-Q
-Q
 q
 1 0 0 1 6 54 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (2) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Tipo) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 54 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (POO y ES6+: prototipos, clases, desestructuraci\363n y m\363dulos) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 54 cm
+1 0 0 1 91.03937 54 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (29 sep 2026) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 54 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (4) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Video \(clic para abrir\)) Tj T* ET
 Q
 Q
 q
 1 0 0 1 6 37 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (3) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Principal) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 37 cm
+1 0 0 1 91.03937 37 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Programaci\363n as\355ncrona: callbacks, promesas, async/await y Fetch) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 37 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (30 sep 2026) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 37 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (6) Tj T* ET
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 248.5145 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Aprende en 3 minutos: pruebas unitarias y pruebas de integraci\363n) Tj T* ET
 Q
 Q
 q
 1 0 0 1 6 20 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (4) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Refuerzo) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 20 cm
+1 0 0 1 91.03937 20 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (DOM, eventos, Web Storage y formularios) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 20 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (1 oct 2026) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 20 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (8) Tj T* ET
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 246.6105 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Pruebas unitarias y de integraci\363n \226 Curso de Tester de Software) Tj T* ET
 Q
 Q
 q
 1 0 0 1 6 3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (5) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Opcional \(ingl\351s\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 3 cm
+1 0 0 1 91.03937 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Testing, depuraci\363n y arquitectura profesional) Tj T* ET
-Q
-Q
-q
-1 0 0 1 368.8346 3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (2 oct 2026) Tj T* ET
-Q
-Q
-q
-1 0 0 1 445.3701 3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (10) Tj T* ET
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 222.513 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Testing Pyramid \226 Unit Test, Integration Test and E2E Test) Tj T* ET
 Q
 Q
 q
@@ -2048,80 +1913,265 @@ q
 1 j
 .721569 .768627 .823529 RG
 .4 w
-n 0 102 m 473.3858 102 l S
-n 0 0 m 473.3858 0 l S
-n 0 0 m 0 102 l S
-n 473.3858 0 m 473.3858 102 l S
-n 0 85 m 473.3858 85 l S
-n 0 68 m 473.3858 68 l S
-n 0 51 m 473.3858 51 l S
-n 0 34 m 473.3858 34 l S
-n 0 17 m 473.3858 17 l S
-n 45.35433 0 m 45.35433 102 l S
-n 362.8346 0 m 362.8346 102 l S
-n 439.3701 0 m 439.3701 102 l S
+n 0 68 m 496.063 68 l S
+n 0 0 m 496.063 0 l S
+n 0 0 m 0 68 l S
+n 496.063 0 m 496.063 68 l S
+n 0 51 m 496.063 51 l S
+n 0 34 m 496.063 34 l S
+n 0 17 m 496.063 17 l S
+n 85.03937 0 m 85.03937 68 l S
 Q
 Q
 Q
 q
-1 0 0 1 62.69291 245.6457 cm
+1 0 0 1 62.69291 517.6457 cm
 Q
 q
-1 0 0 1 62.69291 232.6457 cm
+1 0 0 1 62.69291 491.6457 cm
 q
-.501961 .501961 .501961 rg
-BT 1 0 0 1 0 5 Tm /F1 8 Tf 13 TL (Nota: los enlaces pueden cambiar o dejar de estar disponibles con el tiempo; se recomienda verificarlos antes de cada edici\363n del curso.) Tj T* ET
+BT 1 0 0 1 0 16.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (Caso de uso real:) Tj /F1 9.5 Tf ( Un carrito de compras: la prueba unitaria revisa que el total sea 200; la E2E simula a un cliente) Tj T* (que entra, agrega un producto y paga.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 478.6457 cm
+q
+BT 1 0 0 1 0 3.5 Tm 13 TL /F2 9.5 Tf .788235 .541176 .043137 rg (Pregunta para pensar:) Tj /F1 9.5 Tf 0 0 0 rg ( \277Qu\351 es una regresi\363n y c\363mo te protegen de ella las pruebas autom\341ticas?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 450.6457 cm
+q
+.121569 .227451 .372549 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (5.2 \267 Jest: describe, test, expect y matchers) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 431.6457 cm
+q
+BT 1 0 0 1 0 3.5 Tm -0.122522 Tw 13 TL /F2 9.5 Tf 0 0 0 rg (Idea clave:) Tj /F1 9.5 Tf ( Una prueba es una especificaci\363n que se ejecuta: \253dado este escenario, espero este comportamiento\273.) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 62.69291 427.6457 cm
+Q
+q
+1 0 0 1 57.9685 359.6457 cm
+q
+.909804 .933333 .960784 rg
+n 0 68 496.063 -17 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Tipo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Video \(clic para abrir\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 37 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Principal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 37 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 243.304 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Jest JS tutorial en espa\361ol para principiantes \226 Curso de Testing) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 20 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Refuerzo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 20 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 163.9395 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Introducci\363n al Testing desde cero con Jest) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Buenas pr\341cticas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 307.564 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (\277C\363mo se escribe una buena prueba unitaria en JavaScript? 10 buenas pr\341cticas) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.721569 .768627 .823529 RG
+.4 w
+n 0 68 m 496.063 68 l S
+n 0 0 m 496.063 0 l S
+n 0 0 m 0 68 l S
+n 496.063 0 m 496.063 68 l S
+n 0 51 m 496.063 51 l S
+n 0 34 m 496.063 34 l S
+n 0 17 m 496.063 17 l S
+n 85.03937 0 m 85.03937 68 l S
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 355.6457 cm
+Q
+q
+1 0 0 1 62.69291 329.6457 cm
+q
+BT 1 0 0 1 0 16.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (Caso de uso real:) Tj /F1 9.5 Tf ( Proteger carrito.js con cinco casos: carrito vac\355o, agregar, eliminar un producto inexistente,) Tj T* (calcular el total y rechazar cantidades negativas \(toThrow\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 316.6457 cm
+q
+BT 1 0 0 1 0 3.5 Tm 13 TL /F2 9.5 Tf .788235 .541176 .043137 rg (Pregunta para pensar:) Tj /F1 9.5 Tf 0 0 0 rg ( Si una prueba falla, \277cambias la prueba o el c\363digo? \277C\363mo decides?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 288.6457 cm
+q
+.121569 .227451 .372549 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (5.3 \267 Depuraci\363n profesional con Chrome DevTools) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 256.6457 cm
+q
+BT 1 0 0 1 0 16.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (Idea clave:) Tj /F1 9.5 Tf ( M\341s all\341 de console.log: det\351n el programa y observa Scope, Call Stack y Network con evidencia, no) Tj T* (con suposiciones.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 252.6457 cm
+Q
+q
+1 0 0 1 57.9685 184.6457 cm
+q
+.909804 .933333 .960784 rg
+n 0 68 496.063 -17 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Tipo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F2 8.5 Tf 11 TL (Video \(clic para abrir\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 37 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Principal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 37 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 390.711 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Debugging como un profesional en JavaScript con DevTools del navegador \226 Programaci\363n en espa\361ol) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 20 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Refuerzo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 20 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 167.705 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Curso de JavaScript #10: Debug y DevTools) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Refuerzo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+.101961 .372549 .705882 rg
+.101961 .372549 .705882 RG
+n 0 1.4375 m 237.6345 1.4375 l S
+BT 1 0 0 1 0 2.5 Tm /F1 8.5 Tf 11 TL (Depurar JavaScript con el navegador y con Visual Studio Code) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.721569 .768627 .823529 RG
+.4 w
+n 0 68 m 496.063 68 l S
+n 0 0 m 496.063 0 l S
+n 0 0 m 0 68 l S
+n 496.063 0 m 496.063 68 l S
+n 0 51 m 496.063 51 l S
+n 0 34 m 496.063 34 l S
+n 0 17 m 496.063 17 l S
+n 85.03937 0 m 85.03937 68 l S
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 180.6457 cm
+Q
+q
+1 0 0 1 62.69291 154.6457 cm
+q
+BT 1 0 0 1 0 16.5 Tm 13 TL /F2 9.5 Tf 0 0 0 rg (Caso de uso real:) Tj /F1 9.5 Tf ( Una lista que no muestra datos de la API: Network dice si la petici\363n sali\363 y qu\351 respondi\363; un) Tj T* (breakpoint muestra que el valor se us\363 antes de que la promesa terminara.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 141.6457 cm
+q
+BT 1 0 0 1 0 3.5 Tm 13 TL /F2 9.5 Tf .788235 .541176 .043137 rg (Pregunta para pensar:) Tj /F1 9.5 Tf 0 0 0 rg ( \277Qu\351 diferencia hay entre el s\355ntoma \(d\363nde ves el error\) y la causa \(d\363nde se origin\363\)?) Tj T* ET
 Q
 Q
  
-
-Q
-
-q
-0.0 0.0 612 792 re
-W
-n
-1 0 0 1 0 0 cm
-BT
-/F1-0 12 Tf
-14.4 TL
-ET
-0.952941 0.964706 0.980392 rg
-0.721569 0.780392 0.862745 RG
-n
-67 120 m
-545 120 l
-547.2112 120 549 121.7888 549 124 c
-549 160 l
-549 162.2112 547.2112 164 545 164 c
-67 164 l
-64.7888 164 63 162.2112 63 160 c
-63 124 l
-63 121.7888 64.7888 120 67 120 c
-h
-B*
-0.121569 0.227451 0.372549 rg
-BT
-/F2-0 8.5 Tf
-10.2 TL
-ET
-BT
-1 0 0 1 73 149 Tm
-(Nota de divulgaci\363n) Tj
-T*
-ET
-0.2 0.2 0.2 rg
-BT
-/F1-0 8.5 Tf
-10.2 TL
-ET
-BT
-1 0 0 1 73 132 Tm
-(Este material fue elaborado con asistencia de Claude \050Anthropic\051 y revisado por Jes\372s Armando Tapia Gallegos\056) Tj
-T*
-ET
-Q
-
 
 endstream
 endobj
@@ -2131,128 +2181,128 @@ xref
 0000000015 00000 n 
 0000000064 00000 n 
 0000000196 00000 n 
-0000000485 00000 n 
-0000000731 00000 n 
-0000007224 00000 n 
-0000007331 00000 n 
-0000007438 00000 n 
-0000007550 00000 n 
-0000007662 00000 n 
-0000007778 00000 n 
-0000008077 00000 n 
-0000008297 00000 n 
-0000008520 00000 n 
-0000008740 00000 n 
-0000008960 00000 n 
-0000009180 00000 n 
-0000009400 00000 n 
-0000009620 00000 n 
-0000009840 00000 n 
-0000010063 00000 n 
-0000010283 00000 n 
-0000012811 00000 n 
-0000012888 00000 n 
-0000012996 00000 n 
-0000013109 00000 n 
-0000013225 00000 n 
-0000013331 00000 n 
-0000013409 00000 n 
-0000013659 00000 n 
-0000013885 00000 n 
-0000014105 00000 n 
-0000014328 00000 n 
-0000015917 00000 n 
-0000016209 00000 n 
-0000016429 00000 n 
-0000016649 00000 n 
-0000016869 00000 n 
-0000017092 00000 n 
-0000017315 00000 n 
-0000017538 00000 n 
-0000017758 00000 n 
-0000017981 00000 n 
-0000018201 00000 n 
-0000020804 00000 n 
-0000020870 00000 n 
-0000020978 00000 n 
-0000021091 00000 n 
-0000021207 00000 n 
-0000021285 00000 n 
-0000021556 00000 n 
-0000021776 00000 n 
-0000021996 00000 n 
-0000022216 00000 n 
-0000022439 00000 n 
-0000022659 00000 n 
-0000022879 00000 n 
-0000025092 00000 n 
-0000025384 00000 n 
-0000025604 00000 n 
-0000025824 00000 n 
-0000026044 00000 n 
-0000026264 00000 n 
-0000026484 00000 n 
-0000026704 00000 n 
-0000026927 00000 n 
-0000027147 00000 n 
-0000027370 00000 n 
-0000029995 00000 n 
-0000030061 00000 n 
-0000030169 00000 n 
-0000030282 00000 n 
-0000030398 00000 n 
-0000030476 00000 n 
-0000030747 00000 n 
-0000030967 00000 n 
-0000031187 00000 n 
-0000031407 00000 n 
-0000031633 00000 n 
-0000031853 00000 n 
-0000032079 00000 n 
-0000034342 00000 n 
-0000034634 00000 n 
-0000034854 00000 n 
-0000035070 00000 n 
-0000035290 00000 n 
-0000035510 00000 n 
-0000035730 00000 n 
-0000035950 00000 n 
-0000036170 00000 n 
-0000036390 00000 n 
-0000036613 00000 n 
-0000039347 00000 n 
-0000039413 00000 n 
-0000039521 00000 n 
-0000039634 00000 n 
-0000039750 00000 n 
-0000039828 00000 n 
-0000040081 00000 n 
-0000040301 00000 n 
-0000040525 00000 n 
-0000040746 00000 n 
-0000042467 00000 n 
-0000042771 00000 n 
-0000042992 00000 n 
-0000043213 00000 n 
-0000043437 00000 n 
-0000043658 00000 n 
-0000043882 00000 n 
-0000044103 00000 n 
-0000044327 00000 n 
-0000044551 00000 n 
-0000044772 00000 n 
-0000047533 00000 n 
-0000047604 00000 n 
-0000047713 00000 n 
-0000047827 00000 n 
-0000047944 00000 n 
-0000048023 00000 n 
-0000048279 00000 n 
-0000048500 00000 n 
-0000048721 00000 n 
-0000048942 00000 n 
-0000050887 00000 n 
-0000050928 00000 n 
+0000000483 00000 n 
+0000000729 00000 n 
+0000007221 00000 n 
+0000007328 00000 n 
+0000007435 00000 n 
+0000007547 00000 n 
+0000007659 00000 n 
+0000007775 00000 n 
+0000008074 00000 n 
+0000008294 00000 n 
+0000008517 00000 n 
+0000008737 00000 n 
+0000008957 00000 n 
+0000009177 00000 n 
+0000009397 00000 n 
+0000009617 00000 n 
+0000009837 00000 n 
+0000010060 00000 n 
+0000010280 00000 n 
+0000012808 00000 n 
+0000012885 00000 n 
+0000012993 00000 n 
+0000013106 00000 n 
+0000013222 00000 n 
+0000013328 00000 n 
+0000013406 00000 n 
+0000013656 00000 n 
+0000013882 00000 n 
+0000014102 00000 n 
+0000014325 00000 n 
+0000015914 00000 n 
+0000016206 00000 n 
+0000016426 00000 n 
+0000016646 00000 n 
+0000016866 00000 n 
+0000017089 00000 n 
+0000017312 00000 n 
+0000017535 00000 n 
+0000017755 00000 n 
+0000017978 00000 n 
+0000018198 00000 n 
+0000020801 00000 n 
+0000020867 00000 n 
+0000020975 00000 n 
+0000021088 00000 n 
+0000021204 00000 n 
+0000021282 00000 n 
+0000021553 00000 n 
+0000021773 00000 n 
+0000021993 00000 n 
+0000022213 00000 n 
+0000022436 00000 n 
+0000022656 00000 n 
+0000022876 00000 n 
+0000025089 00000 n 
+0000025381 00000 n 
+0000025601 00000 n 
+0000025821 00000 n 
+0000026041 00000 n 
+0000026261 00000 n 
+0000026481 00000 n 
+0000026701 00000 n 
+0000026924 00000 n 
+0000027144 00000 n 
+0000027367 00000 n 
+0000029992 00000 n 
+0000030058 00000 n 
+0000030166 00000 n 
+0000030279 00000 n 
+0000030395 00000 n 
+0000030473 00000 n 
+0000030744 00000 n 
+0000030964 00000 n 
+0000031184 00000 n 
+0000031404 00000 n 
+0000031630 00000 n 
+0000031850 00000 n 
+0000032076 00000 n 
+0000034339 00000 n 
+0000034631 00000 n 
+0000034851 00000 n 
+0000035067 00000 n 
+0000035287 00000 n 
+0000035507 00000 n 
+0000035727 00000 n 
+0000035947 00000 n 
+0000036167 00000 n 
+0000036387 00000 n 
+0000036610 00000 n 
+0000039344 00000 n 
+0000039410 00000 n 
+0000039518 00000 n 
+0000039631 00000 n 
+0000039747 00000 n 
+0000039825 00000 n 
+0000040078 00000 n 
+0000040298 00000 n 
+0000040522 00000 n 
+0000040743 00000 n 
+0000042464 00000 n 
+0000042768 00000 n 
+0000042989 00000 n 
+0000043210 00000 n 
+0000043434 00000 n 
+0000043655 00000 n 
+0000043879 00000 n 
+0000044100 00000 n 
+0000044324 00000 n 
+0000044548 00000 n 
+0000044769 00000 n 
+0000047530 00000 n 
+0000047601 00000 n 
+0000047710 00000 n 
+0000047824 00000 n 
+0000047941 00000 n 
+0000048020 00000 n 
+0000048276 00000 n 
+0000048497 00000 n 
+0000048718 00000 n 
+0000048939 00000 n 
+0000050884 00000 n 
+0000050925 00000 n 
 trailer
 <<
 /Size 126
@@ -2260,5 +2310,5 @@ trailer
 /Info 124 0 R
 >>
 startxref
-57422
+59816
 %%EOF
