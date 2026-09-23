@@ -13,6 +13,11 @@ import { ErrorRed, ErrorHTTP, ErrorJSON } from './errores.js';
 export const config = { retardoMs: 500 };
 
 // ===== Bloque 3.1 — Identificar el problema =====
+// Videos de apoyo (ficha 3.2 del README del día):
+//   - Asincronismo en JS: ¿qué es el Callback Hell? – JS desde cero #15: https://www.youtube.com/watch?v=iAq9SOEODvo
+//   - Callbacks: ¿qué son y cómo utilizarlos? – Evitar callback hell: https://www.youtube.com/watch?v=WYVOvwTZ7Bo
+//   - Qué es el antipatrón Callback Hell en JavaScript: https://www.youtube.com/watch?v=TcEjFk1cDzU
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -42,6 +47,11 @@ export function procesarArchivos(callback) {
 }
 
 // ===== Bloque 3.2 — Migración de callbacks a promesas =====
+// Videos de apoyo (ficha 3.3 del README del día):
+//   - Promesas: new Promise, resolve, reject, then, catch: https://www.youtube.com/watch?v=W-HPYsmHG6U
+//   - Cómo usar promesas en JavaScript – JS en Español: https://www.youtube.com/watch?v=urapbZL9knY
+//   - Promesas: métodos Promise.all y race en JavaScript: https://www.youtube.com/watch?v=-xhWDNm3XvY
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -72,6 +82,11 @@ export function flujoUsuariosPromesas(idInicial = 1) {
 }
 
 // ===== Bloque 3.3 — Reescritura con async/await =====
+// Videos de apoyo (ficha 3.4 del README del día):
+//   - Promesas y async-await: then y catch – JS desde cero #16: https://www.youtube.com/watch?v=ksg6SDwllDs
+//   - Callback, Promesas, Async Await y Try Catch | JavaScript: https://www.youtube.com/watch?v=p3Oq3AfuteA
+//   - JavaScript asíncrono con Async Await: https://www.youtube.com/watch?v=za8Z6saKVdw
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -84,6 +99,11 @@ export async function flujoUsuariosParalelo() {
 }
 
 // ===== Bloque 3.4 — Cliente de API con manejo de errores =====
+// Videos de apoyo (ficha 3.5 del README del día):
+//   - Cómo consumir una API REST con Fetch + Promises con gestión de errores: https://www.youtube.com/watch?v=FJ-w0tf3d_w
+//   - Curso de JavaScript: API fetch – manejo de errores: https://www.youtube.com/watch?v=U0Qoq3hYPZA
+//   - Javascript Fetch API: qué es y cómo consumir un API: https://www.youtube.com/watch?v=lkMq_qzCV_M
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
