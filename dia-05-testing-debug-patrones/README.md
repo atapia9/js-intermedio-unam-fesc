@@ -105,7 +105,7 @@ Idea del día: el código funcional resuelve el problema de hoy; el código robu
 
 Testing permite comprobar; debugging, comprender; la arquitectura, evolucionar. Ruta del curso: Día 1 entender JavaScript → Día 2 organizar el código → Día 3 coordinar lo asíncrono → Día 4 construir interfaces → Día 5 probar, depurar y estructurar.
 
-**Proyecto integrador** — ver [proyecto-integrador/README.md](../proyecto-integrador/README.md). Presentación de 5 minutos con defensa técnica. Siguientes pasos: sube tu código a un repositorio público, explora proyectos Open Source y convierte tus ejercicios en portafolio.
+**Proyecto integrador** — ver [proyecto-integrador/README.md](../proyecto-integrador/README.md). Presentación de 5 minutos con defensa técnica. Enunciado, criterios y verificador en [`ejercicios/04-actividad-5`](ejercicios/04-actividad-5/README.md). Siguientes pasos: sube tu código a un repositorio público, explora proyectos Open Source y convierte tus ejercicios en portafolio.
 
 ## Ejercicios
 
@@ -120,6 +120,18 @@ Testing permite comprobar; debugging, comprender; la arquitectura, evolucionar. 
    - Video: [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4)
    - Video: [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8)
 3. [`ejercicios/03-singleton-config.js`](ejercicios/03-singleton-config.js) — implementar un Singleton de configuración.
+   - Video: [Patrón Singleton – Patrones de diseño – Programación en español](https://www.youtube.com/watch?v=YRLvJfItAT4)
+   - Video: [#1 Singleton – Patrones de diseño con JavaScript](https://www.youtube.com/watch?v=OuKl1HwD1x8)
+   - Video: [Patrón Module en JavaScript: ejemplo paso a paso](https://www.youtube.com/watch?v=uNBZ8ohLnxM)
+4. [`ejercicios/04-actividad-5/`](ejercicios/04-actividad-5/README.md) — **Actividad 5 (evaluable):** proyecto integrador BIS. Verificador de los criterios del anexo (`node verificar.mjs`) y guía de entrega.
+   - Video: [Aprende en 3 minutos: pruebas unitarias y pruebas de integración](https://www.youtube.com/watch?v=UwoCR0eJNgo)
+   - Video: [Pruebas unitarias y de integración – Curso de Tester de Software](https://www.youtube.com/watch?v=4Ulc8FcmfnQ)
+   - Video: [Jest JS tutorial en español para principiantes – Curso de Testing](https://www.youtube.com/watch?v=tgWBQZNCOT0)
+   - Video: [Introducción al Testing desde cero con Jest](https://www.youtube.com/watch?v=_DzBez4qMi0)
+   - Video: [¿Cómo se escribe una buena prueba unitaria en JavaScript? 10 buenas prácticas](https://www.youtube.com/watch?v=Rqyg8kjpzX0)
+   - Video: [Debugging como un profesional en JavaScript con DevTools del navegador – Programación en español](https://www.youtube.com/watch?v=ps1WhgelV_E)
+   - Video: [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4)
+   - Video: [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8)
    - Video: [Patrón Singleton – Patrones de diseño – Programación en español](https://www.youtube.com/watch?v=YRLvJfItAT4)
    - Video: [#1 Singleton – Patrones de diseño con JavaScript](https://www.youtube.com/watch?v=OuKl1HwD1x8)
    - Video: [Patrón Module en JavaScript: ejemplo paso a paso](https://www.youtube.com/watch?v=uNBZ8ohLnxM)
