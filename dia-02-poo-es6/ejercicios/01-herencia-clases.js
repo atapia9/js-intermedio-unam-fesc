@@ -2,8 +2,11 @@
 //
 // Videos de apoyo (ficha 2.2 y 2.3 del README del día):
 //   - Herencia prototípica en JavaScript (POO): https://www.youtube.com/watch?v=S_bDXnLnDs8
+//   - Curso JavaScript: 23. Herencia prototípica – jonmircha: https://www.youtube.com/watch?v=1-m7xtwvH1E
+//   - Prototypes a profundidad – herencia prototípica: https://www.youtube.com/watch?v=KrzlS0_HQuQ
 //   - Las clases y sus métodos: constructor, getters y setters – JS desde cero #12: https://www.youtube.com/watch?v=M0FfjG4mhZg
 //   - Herencia de clases: extends y super – JS desde cero #13: https://www.youtube.com/watch?v=-0p9MIqChK0
+//   - Curso JavaScript: 25. Métodos estáticos, getters y setters – jonmircha: https://www.youtube.com/watch?v=TEzu31q9MVA
 //
 // Enunciado:
 // Crea una clase `Vehiculo` con constructor(marca, modelo) y un método

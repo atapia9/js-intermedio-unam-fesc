@@ -2,6 +2,7 @@
 //
 // Videos de apoyo (ficha 2.4 del README del día):
 //   - JavaScript moderno: Desestructuración y Operador Spread: https://www.youtube.com/watch?v=aBcYXgtlH4E
+//   - Curso JavaScript Moderno (ES6) #16 – Destructuring: https://www.youtube.com/watch?v=PQinHHCFsVc
 //   - Desestructuración avanzada en JavaScript: parámetros Rest: https://www.youtube.com/watch?v=8OmDRKk1PSE
 //
 // Enunciado:

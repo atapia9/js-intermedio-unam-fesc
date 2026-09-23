@@ -121,14 +121,19 @@ Prototipos (el motor) → Clases (el modelo) → Desestructuración / Spread / R
 
 1. [`ejercicios/01-herencia-clases.js`](ejercicios/01-herencia-clases.js) — modelar `Vehiculo` → `Auto`/`Motocicleta` con `extends`.
    - Video: [Herencia prototípica en JavaScript (POO)](https://www.youtube.com/watch?v=S_bDXnLnDs8)
+   - Video: [Curso JavaScript: 23. Herencia prototípica – jonmircha](https://www.youtube.com/watch?v=1-m7xtwvH1E)
+   - Video: [Prototypes a profundidad – herencia prototípica](https://www.youtube.com/watch?v=KrzlS0_HQuQ)
    - Video: [Las clases y sus métodos: constructor, getters y setters – JS desde cero #12](https://www.youtube.com/watch?v=M0FfjG4mhZg)
    - Video: [Herencia de clases: extends y super – JS desde cero #13](https://www.youtube.com/watch?v=-0p9MIqChK0)
+   - Video: [Curso JavaScript: 25. Métodos estáticos, getters y setters – jonmircha](https://www.youtube.com/watch?v=TEzu31q9MVA)
 2. [`ejercicios/02-destructuring-practico.js`](ejercicios/02-destructuring-practico.js) — refactorizar código usando destructuring y spread/rest.
    - Video: [JavaScript moderno: Desestructuración y Operador Spread](https://www.youtube.com/watch?v=aBcYXgtlH4E)
+   - Video: [Curso JavaScript Moderno (ES6) #16 – Destructuring](https://www.youtube.com/watch?v=PQinHHCFsVc)
    - Video: [Desestructuración avanzada en JavaScript: parámetros Rest](https://www.youtube.com/watch?v=8OmDRKk1PSE)
 3. [`ejercicios/03-modulos/`](ejercicios/03-modulos/) — dividir un archivo monolítico en módulos ESM.
    - Video: [Import y Export en JavaScript (ES Modules) – Explicación](https://www.youtube.com/watch?v=0t-Le4kdaMg)
    - Video: [Javascript #14: Módulos (export, export default, import)](https://www.youtube.com/watch?v=ATBCZz7eWU0)
+   - Video: [Curso JavaScript: 33. Módulos (import / export) – jonmircha](https://www.youtube.com/watch?v=0GEUyQXe3NI)
 
 ## Hacia el proyecto integrador
 
