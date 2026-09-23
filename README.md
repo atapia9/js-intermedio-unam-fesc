@@ -18,7 +18,7 @@ Desarrollar en los participantes las habilidades necesarias para aplicar concept
 ├── dia-03-asincronia/             Callbacks, promesas, async/await, Fetch API
 ├── dia-04-dom-storage-forms/      DOM eficiente, delegación de eventos, Web Storage, formularios
 ├── dia-05-testing-debug-patrones/ Jest, DevTools, patrones Singleton y Módulo
-├── proyecto-integrador/           Task Manager: proyecto final que integra los 5 temas
+├── proyecto-integrador/           BIS: Bitácora de Incidentes de Soporte — proyecto final que integra los 5 temas
 └── anexos/                        Glosario y bibliografía del manual
 ```
 
@@ -67,12 +67,27 @@ Calificación mínima aprobatoria: **8.00** (escala 0–10, dos decimales).
 | [Día 3](dia-03-asincronia/README.md) | Callbacks, Promesas, Async/Await, Fetch API |
 | [Día 4](dia-04-dom-storage-forms/README.md) | DOM eficiente, Delegación de eventos, Web Storage, Formularios |
 | [Día 5](dia-05-testing-debug-patrones/README.md) | Testing con Jest, Debugging con DevTools, Patrones de diseño |
-| [Proyecto integrador](proyecto-integrador/README.md) | Task Manager — aplicación que integra los 5 temas |
+| [Proyecto integrador](proyecto-integrador/README.md) | BIS — Bitácora de Incidentes de Soporte, aplicación que integra los 5 temas |
 
 ## Anexos
 
 - [Glosario de términos](anexos/glosario.md)
 - [Bibliografía y referencias recomendadas](anexos/bibliografia.md)
+
+## Ecosistema de repositorios
+
+El proyecto integrador de este curso es la mitad ejecutable de un caso compartido con
+otros dos cursos de Educación Continua FESC. Ver
+[proyecto-integrador/docs/00-caso.md](proyecto-integrador/docs/00-caso.md) para el
+detalle.
+
+| Repositorio | Qué aporta al caso BIS |
+|---|---|
+| `PIG` | Política de respuesta a incidentes (fuente de verdad documental) |
+| `CursoGitHub` | Actividades y guía de evaluación del proyecto integrador, con el flujo de ramas/PR |
+| **`js-intermedio-unam-fesc`** *(este repo)* | La aplicación BIS que implementa la política |
+| `CursoGitHub-autoevaluacion` | Preguntas de autoevaluación sobre trazabilidad y buenas prácticas de Git |
+| `bis-plantilla` | Plantilla reutilizable del scaffold para generar un proyecto BIS propio |
 
 ## Licencia y uso
 

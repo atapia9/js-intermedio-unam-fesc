@@ -66,3 +66,7 @@ El event loop determina el orden real de ejecución cuando hay asincronía de po
 1. [`ejercicios/01-orden-ejecucion.js`](ejercicios/01-orden-ejecucion.js) — predecir el orden de ejecución con `setTimeout` y promesas.
 2. [`ejercicios/02-contador-privado.js`](ejercicios/02-contador-privado.js) — construir un contador con estado privado usando closures.
 3. [`ejercicios/03-this-practico.js`](ejercicios/03-this-practico.js) — corregir el valor de `this` en distintos contextos.
+
+## Hacia el proyecto integrador
+
+Este tema aterriza en [`proyecto-integrador/src/nucleo/almacenamiento.js`](../proyecto-integrador/src/nucleo/almacenamiento.js): la clave de `localStorage` queda encapsulada en un closure, y solo se exponen `cargar()`/`guardar()` — mínimo privilegio aplicado a código real.

@@ -44,3 +44,19 @@ Abre [`ejemplos/04-formularios.html`](ejemplos/04-formularios.html).
 1. [`ejercicios/01-lista-tareas-fragment.html`](ejercicios/01-lista-tareas-fragment.html) — insertar 100 elementos usando `DocumentFragment`.
 2. [`ejercicios/02-delegacion-practica.html`](ejercicios/02-delegacion-practica.html) — lista dinámica con un solo listener delegado.
 3. [`ejercicios/03-persistir-preferencias.html`](ejercicios/03-persistir-preferencias.html) — guardar preferencias de usuario en `localStorage`.
+
+## Hacia el proyecto integrador
+
+Este tema aterriza en [`proyecto-integrador/src/nucleo/app.js`](../proyecto-integrador/src/nucleo/app.js) (delegación de eventos con un único listener) y en [`proyecto-integrador/src/nucleo/sanitizar.js`](../proyecto-integrador/src/nucleo/sanitizar.js), la capa de seguridad de este día.
+
+**Contraste `textContent` vs `innerHTML`:** un incidente con descripción `<img src=x onerror="alert(1)">` se debe mostrar como texto plano, nunca ejecutarse. Compara:
+
+```js
+// Inseguro: si `descripcion` viene de un usuario, esto ejecuta el payload
+elemento.innerHTML = descripcion;
+
+// Seguro: el navegador nunca interpreta el contenido como HTML
+elemento.textContent = descripcion;
+```
+
+`app.js` usa `textContent`/`createElement` para todo contenido dinámico del usuario. La prueba que verifica este payload específico está en [`proyecto-integrador/tests/sanitizar.test.js`](../proyecto-integrador/tests/sanitizar.test.js).
