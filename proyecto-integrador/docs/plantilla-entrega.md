@@ -23,7 +23,8 @@ guion en la exposición de 5 minutos.
 - [ ] Carga inicial con `fetch` + `async/await`, con validación de esquema y datos
       de respaldo sin conexión.
 - [ ] Delegación de eventos: un único listener para toda la lista.
-- [ ] Entidad de dominio modelada como clase ES6 que extiende `Registro`.
+- [ ] Entidad de dominio modelada como clase ES6 que extiende `Registro`, con al menos
+      un campo privado (`#campo`).
 - [ ] Sanitización de todo texto libre (escape de HTML + enmascarado de PII) antes de
       guardar o mostrar.
 - [ ] Mínimo 3 pruebas por variante con Jest (puntaje con casos frontera, payload XSS,

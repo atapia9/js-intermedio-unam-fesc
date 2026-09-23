@@ -29,4 +29,13 @@ describe('Incidente', () => {
     expect(reconstruido).toBeInstanceOf(Incidente);
     expect(reconstruido.categoria).toBe('phishing');
   });
+
+  test('estado es privado: no se puede asignar desde fuera y solo cambia por transiciones válidas', async () => {
+    const { default: Incidente } = await import('../src/variantes/a-incidentes/Incidente.js');
+    const incidente = new Incidente({ categoria: 'otro', descripcion: 'x', reportantePseudonimo: 'r-9', impacto: 1, urgencia: 1 });
+    try { incidente.estado = 'cerrado'; } catch { /* en modo estricto lanza TypeError */ }
+    expect(incidente.estado).toBe('nuevo');
+    expect(Object.keys(incidente)).not.toContain('estado');
+    expect(JSON.parse(JSON.stringify(incidente)).estado).toBe('nuevo');
+  });
 });

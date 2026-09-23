@@ -52,7 +52,7 @@ proyecto-integrador/
 │   ├── main.js               Punto de entrada: conecta núcleo + variante activa
 │   ├── variante.js           Una línea: qué variante está activa
 │   ├── nucleo/                Idéntico entre variantes
-│   │   ├── Registro.js           Clase base ES6 (id, estado, timestamps)
+│   │   ├── Registro.js           Clase base ES6 (id, #estado privado, timestamps)
 │   │   ├── almacenamiento.js     Closure que encapsula la clave de localStorage
 │   │   ├── sanitizar.js          Escape de HTML + enmascarado de PII
 │   │   ├── api.js                Carga del feed inicial con validación de esquema

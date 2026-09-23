@@ -21,7 +21,7 @@ Esta actividad se evalúa, por eso el repositorio incluye un verificador de crit
 | 5 | Depuración con DevTools | tu demostración | manual: en tu exposición |
 | — | Presentación de 5 minutos con defensa técnica | guion en la plantilla de entrega | manual: instructor |
 
-El scaffold ya cumple casi todos los criterios comprobables; lo que falte es tu parte. Por ejemplo, hoy **ninguna clase usa campos privados** (`#campo`), y el anexo los pide en el Tema 2: protege al menos un dato de tu entidad (por ejemplo un `#estado` con su getter y un método que valide los cambios).
+El scaffold ya cumple los criterios comprobables del verificador; lo que falte es tu parte. `Registro` ya protege su `#estado` con un campo privado y un getter (solo `cambiarEstado()` lo modifica), que es el ejemplo a seguir: cuando definas la entidad de tu variante, protege también sus datos sensibles con campos privados, y conserva esa protección al extender el proyecto.
 
 ## Qué debes hacer
 

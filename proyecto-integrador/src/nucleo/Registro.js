@@ -2,14 +2,21 @@
 let siguienteIdAutogenerado = 1;
 
 export default class Registro {
+  // Campo privado: solo cambiarEstado() lo modifica, y valida cada transición.
+  #estado;
+
   constructor(estado, id = `local-${siguienteIdAutogenerado++}`) {
     if (new.target === Registro) {
       throw new Error('Registro es una clase base; usa una clase de variante (Incidente, Correo, Equipo)');
     }
     this.id = id;
-    this.estado = estado;
+    this.#estado = estado;
     this.creadoEn = new Date().toISOString();
     this.actualizadoEn = this.creadoEn;
+  }
+
+  get estado() {
+    return this.#estado;
   }
 
   cambiarEstado(nuevoEstado, transicionesValidas) {
@@ -17,8 +24,8 @@ export default class Registro {
     if (!permitidos.includes(nuevoEstado)) {
       throw new Error(`Transición inválida: ${this.estado} → ${nuevoEstado}`);
     }
-    this.estado = nuevoEstado;
+    this.#estado = nuevoEstado;
     this.actualizadoEn = new Date().toISOString();
-    return this.estado;
+    return this.#estado;
   }
 }

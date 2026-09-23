@@ -152,4 +152,4 @@ Prototipos (el motor) → Clases (el modelo) → Desestructuración / Spread / R
 
 ## Hacia el proyecto integrador
 
-Este tema aterriza en [`proyecto-integrador/src/nucleo/Registro.js`](../proyecto-integrador/src/nucleo/Registro.js) (clase base ES6) y en [`proyecto-integrador/src/variantes/a-incidentes/Incidente.js`](../proyecto-integrador/src/variantes/a-incidentes/Incidente.js), que la extiende con los campos y transiciones de estado de un incidente.
+Este tema aterriza en [`proyecto-integrador/src/nucleo/Registro.js`](../proyecto-integrador/src/nucleo/Registro.js) (clase base ES6) y en [`proyecto-integrador/src/variantes/a-incidentes/Incidente.js`](../proyecto-integrador/src/variantes/a-incidentes/Incidente.js), que la extiende con los campos y transiciones de estado de un incidente. `Registro` protege su `#estado` con un campo privado y un getter, de modo que solo `cambiarEstado()` puede modificarlo.

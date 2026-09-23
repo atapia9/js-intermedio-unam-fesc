@@ -17,6 +17,10 @@ sustituto de ella. Complétala conforme avanzas.
   directo); cada variante extiende con su propia entidad.
 - **Por qué:** las tres variantes comparten `id`/`estado`/timestamps y transición de
   estado validada, pero difieren en campos de dominio.
+- **Decisión:** `estado` es un campo privado (`#estado`) con getter; solo
+  `cambiarEstado()` lo modifica.
+- **Por qué:** nadie puede saltarse el flujo de la política asignando el estado
+  directamente; toda transición pasa por la validación.
 
 ## Día 3
 
