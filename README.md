@@ -8,6 +8,8 @@ Este repositorio acompaña el manual con **ejemplos de código ejecutables y eje
 
 > El manual es un documento de trabajo sujeto a ajustes del instructor titular según el ritmo del grupo. Este repositorio se actualiza en paralelo al avance del curso.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Objetivo general del curso
 
 Desarrollar en los participantes las habilidades necesarias para aplicar conceptos intermedios y avanzados de JavaScript: modelo de ejecución del lenguaje, programación orientada a objetos con ES6+, asincronía, manipulación eficiente del DOM y buenas prácticas de desarrollo y pruebas.
