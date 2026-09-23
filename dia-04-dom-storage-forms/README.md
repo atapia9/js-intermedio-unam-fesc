@@ -101,7 +101,7 @@ Idea del día: actualiza solo lo necesario, escucha desde el lugar adecuado, con
 
 Datos → `DocumentFragment` (pintado óptimo) → DOM → Delegación (escucha inteligente) → Estado ↔ Web Storage (persistencia). Y por otro lado: Formulario → `FormData` → Validación → datos listos.
 
-**Actividad 4:** (individual) lista de tareas con un solo listener delegado, persistencia en `localStorage` (guardar, cargar y limpiar) y un formulario validado con `FormData`, mostrando los errores en la interfaz (sin `alert`).
+**Actividad 4:** (individual) lista de tareas con un solo listener delegado, persistencia en `localStorage` (guardar, cargar y limpiar) y un formulario validado con `FormData`, mostrando los errores en la interfaz (sin `alert`). Enunciado, esqueleto y verificador en [`ejercicios/04-actividad-4`](ejercicios/04-actividad-4/README.md).
 
 ## Ejercicios
 
@@ -116,6 +116,18 @@ Datos → `DocumentFragment` (pintado óptimo) → DOM → Delegación (escucha 
    - Video: [LocalStorage y SessionStorage ¿cómo funcionan? – Curso JavaScript #48](https://www.youtube.com/watch?v=ZlpA2hez92Y)
    - Video: [Guarda objetos y arrays en LocalStorage como un PRO (JSON explicado fácil)](https://www.youtube.com/watch?v=EZWY9EOzzG4)
    - Video: [API localStorage – guardar y recuperar objetos con formato JSON](https://www.youtube.com/watch?v=sL0RHt_QK3I)
+4. [`ejercicios/04-actividad-4/`](ejercicios/04-actividad-4/README.md) — **Actividad 4 (individual, evaluable):** lista de tareas con un solo listener delegado, persistencia en `localStorage` (guardar, cargar y limpiar) y formulario validado con `FormData`, sin `alert`. Verificador local con `npm install` y `node verificar.mjs`.
+   - Video: [DOM – Curso JavaScript Moderno #04: Fragment + createElement](https://www.youtube.com/watch?v=kUpx6ovPILc)
+   - Video: [DocumentFragment en JavaScript (short)](https://www.youtube.com/shorts/o21LBIEn8EA)
+   - Video: [Delegación de eventos en JavaScript con ejemplo práctico](https://www.youtube.com/watch?v=M48MZv60ZPs)
+   - Video: [¿Cómo funciona el Event Bubbling? – JavaScript DOM](https://www.youtube.com/watch?v=xlci1S08Cww)
+   - Video: [¿Qué es y para qué sirve la delegación de eventos en JavaScript?](https://www.youtube.com/watch?v=5MUHJNSCeGU)
+   - Video: [LocalStorage y SessionStorage ¿cómo funcionan? – Curso JavaScript #48](https://www.youtube.com/watch?v=ZlpA2hez92Y)
+   - Video: [Guarda objetos y arrays en LocalStorage como un PRO (JSON explicado fácil)](https://www.youtube.com/watch?v=EZWY9EOzzG4)
+   - Video: [API localStorage – guardar y recuperar objetos con formato JSON](https://www.youtube.com/watch?v=sL0RHt_QK3I)
+   - Video: [FormData en JavaScript: cómo, cuándo y por qué usarlo](https://www.youtube.com/watch?v=HSj1CRba8tg)
+   - Video: [preventDefault en JavaScript: evitando el comportamiento por defecto](https://www.youtube.com/watch?v=i_7WLzT0oEY)
+   - Video: [Aprende a validar formularios con JavaScript y expresiones regulares](https://www.youtube.com/watch?v=s3pC93LgP18)
 
 ## Hacia el proyecto integrador
 

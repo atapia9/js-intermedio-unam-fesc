@@ -1,0 +1,10 @@
+{
+  "name": "actividad-4-verificador-dom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Verificador local de la Actividad 4 (simula el navegador con jsdom)",
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
