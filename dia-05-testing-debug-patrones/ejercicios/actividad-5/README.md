@@ -36,7 +36,7 @@ El scaffold ya cumple los criterios comprobables del verificador; lo que falte e
 ## Qué debes hacer
 
 1. Elige tu variante y decláralo ([docs/01-variantes.md](../../../proyecto-integrador/docs/01-variantes.md)).
-2. Trabaja en tu propia copia del proyecto (rama y Pull Request, como en el curso de Git y GitHub).
+2. Genera tu propio proyecto desde la plantilla [`bis-plantilla`](https://github.com/atapia9/bis-plantilla) (**Use this template**) y trabaja en él con ramas y Pull Requests, como en el curso de Git y GitHub.
 3. Corre el verificador y resuelve lo pendiente.
 4. Copia [docs/plantilla-entrega.md](../../../proyecto-integrador/docs/plantilla-entrega.md) como `docs/entrega.md` en tu proyecto y complétala: checklist, trazabilidad, decisiones por día, evidencia de seguridad, **evidencia de depuración con DevTools** y extensión propia.
 5. Prepara una demostración de **depuración con DevTools**: un bug real que encontraste, con un breakpoint, el panel Scope, Call Stack o Network. Documéntalo en la sección 6 de tu `docs/entrega.md`.

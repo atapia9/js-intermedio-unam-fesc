@@ -133,11 +133,11 @@ detalle.
 
 | Repositorio | Qué aporta al caso BIS |
 |---|---|
-| `PIG` | Política de respuesta a incidentes (fuente de verdad documental) |
-| `CursoGitHub` | Actividades y guía de evaluación del proyecto integrador, con el flujo de ramas/PR |
+| [`PIG`](https://github.com/atapia9/PIG) | Política de respuesta a incidentes (fuente de verdad documental) |
+| [`CursoGitHub`](https://github.com/atapia9/CursoGitHub) | Actividades y guía de evaluación del proyecto integrador, con el flujo de ramas/PR |
 | **`js-intermedio-unam-fesc`** *(este repo)* | La aplicación BIS que implementa la política |
-| `CursoGitHub-autoevaluacion` | Preguntas de autoevaluación sobre trazabilidad y buenas prácticas de Git |
-| `bis-plantilla` | Plantilla reutilizable del scaffold para generar un proyecto BIS propio |
+| [`CursoGitHub-autoevaluacion`](https://github.com/atapia9/CursoGitHub-autoevaluacion) | Preguntas de autoevaluación sobre trazabilidad y buenas prácticas de Git |
+| [`bis-plantilla`](https://github.com/atapia9/bis-plantilla) | Plantilla reutilizable del scaffold para generar un proyecto BIS propio |
 
 ## Licencia y uso
 
