@@ -9,6 +9,8 @@ BIS no es un caso aislado: es la mitad ejecutable de un caso que también cursas
 Git y GitHub (la política escrita) y en Ciberseguridad para personal de soporte (el
 contenido). Ver [docs/00-caso.md](docs/00-caso.md).
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Las tres variantes
 
 Este scaffold trae lista y funcional la **variante A — Triage de incidentes**
