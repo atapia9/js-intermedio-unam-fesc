@@ -49,12 +49,14 @@ node verificar.mjs ruta/a/tu/proyecto    # revisa tu propia copia
 node verificar.mjs --sin-pruebas         # solo la auditoría estática, sin ejecutar npm test
 ```
 
-El verificador hace dos cosas:
+El verificador hace tres cosas:
 
 1. **Audita el código** de `src/` y de las pruebas de forma estática y muestra cada criterio como `ok` o `FALLA` con el motivo.
 2. **Ejecuta `npm test`** y da `FALLA` si alguna prueba falla, si faltan las dependencias o si tardan más de 3 minutos. Busca el `package.json` con el script `test` desde tu proyecto hacia arriba; si está en una carpeta superior (como en este repositorio), ejecuta solo las pruebas de tu proyecto.
 
-Al final lista lo que debes revisar tú a mano y, si ya copiaste la plantilla como `docs/entrega.md`, **avisa (`pend`) si la sección 6 de DevTools sigue sin completar**: falta la sección, algún campo está vacío o no marcaste ninguna herramienta. Es solo un aviso: no cambia el resultado del verificador ni verifica que la evidencia sea real, eso lo valora el instructor en tu exposición.
+3. **Exige la captura de DevTools** cuando ya copiaste la plantilla como `docs/entrega.md`: el archivo debe tener la sección 6 y, en el campo "Captura de pantalla", la ruta de un archivo (imagen o video) que **exista y no esté vacío dentro de `docs/evidencias/`**. Acepta la ruta completa (`docs/evidencias/network-404.png`), solo el nombre del archivo o una imagen en Markdown; un enlace externo no vale. Si falta algo de eso, sale `FALLA`. Mientras no exista `docs/entrega.md`, este paso se omite.
+
+Al final lista lo que debes revisar tú a mano y avisa (`pend`) si los demás campos de la sección 6 (síntoma, herramienta marcada, qué observaste, causa y corrección) siguen sin completar. Esos avisos no cambian el resultado del verificador, y el verificador no puede juzgar si lo que escribiste es verdad: eso lo valora el instructor en tu exposición.
 
 ## Qué se evalúa
 

@@ -1,11 +1,12 @@
 // Verificador local de la Actividad 5 (proyecto integrador). Ejecuta: node verificar.mjs [ruta-al-proyecto] [--sin-pruebas]
 // Sin argumentos revisa ../../../proyecto-integrador. Node.js 18+, sin dependencias propias.
 // Audita de forma ESTÁTICA los criterios del anexo (Temas 1 a 5) y además EJECUTA `npm test` (necesita `npm install` previo;
-// con --sin-pruebas solo hace la auditoría estática). No sustituye tu exposición ni la revisión del instructor.
+// con --sin-pruebas solo hace la auditoría estática). Si existe docs/entrega.md, exige la captura de DevTools en docs/evidencias/.
+// No sustituye tu exposición ni la revisión del instructor.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { dirname, join, resolve, relative } from 'node:path';
+import { dirname, join, resolve, relative, basename } from 'node:path';
 
 const aqui = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -21,6 +22,7 @@ const sinComentarios = (s) => s.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/
 const src = listar(join(raiz, 'src'), /\.js$/).filter((f) => !/\.test\.js$/.test(f)).map((f) => ({ f: relative(raiz, f), crudo: readFileSync(f, 'utf8') })).map((x) => ({ ...x, c: sinComentarios(x.crudo) }));
 const pruebas = listar(raiz, /\.test\.js$/).map((f) => ({ f: relative(raiz, f), c: sinComentarios(readFileSync(f, 'utf8')) }));
 const donde = (re) => src.filter((x) => re.test(x.c)).map((x) => x.f);
+const entregaTexto = existsSync(join(raiz, 'docs', 'entrega.md')) ? readFileSync(join(raiz, 'docs', 'entrega.md'), 'utf8') : null;
 
 let fallos = 0;
 const ok = (n, extra = '') => console.log(`  ok    ${n}${extra ? `  (${extra})` : ''}`);
@@ -89,6 +91,18 @@ console.log('\nTema 5 — pruebas con Jest');
   revisa('hay pruebas de casos frontera del puntaje', pruebas.some((x) => /puntaje|riesgo|score/i.test(x.f + x.c)), 'prueba la función de puntaje con valores límite');
 }
 
+console.log('\nEvidencia de depuración con DevTools (docs/entrega.md)');
+if (!entregaTexto) console.log('  omitido  (todavía no existe docs/entrega.md; se exige en cuanto lo copies de la plantilla)');
+else {
+  const dt = analizarDevTools(entregaTexto);
+  if (!dt.seccion) mal('docs/entrega.md incluye la sección de depuración con DevTools', 'agrégala desde la plantilla actual (sección 6)');
+  else {
+    ok('docs/entrega.md incluye la sección de depuración con DevTools');
+    const c = buscarCaptura(dt.captura);
+    revisa('la captura de DevTools existe en docs/evidencias/', c.ok, c.motivo, c.ruta);
+  }
+}
+
 console.log('\nEjecución de las pruebas (npm test)');
 if (sinPruebas) console.log('  omitido  (--sin-pruebas)');
 else {
@@ -120,34 +134,58 @@ else {
   }
 }
 
-// Aviso (no cambia el resultado): ¿la sección de DevTools de docs/entrega.md sigue sin completar?
-function revisarSeccionDevTools(texto) {
+// --- docs/entrega.md: sección 6 (DevTools) --------------------------------------------------------
+
+// Devuelve { seccion, faltan, captura }: si la sección existe, qué campos de texto siguen vacíos y qué escribió en "Captura".
+function analizarDevTools(texto) {
   const lineas = texto.replace(/<!--[\s\S]*?-->/g, '').split('\n');
   const i = lineas.findIndex((l) => /^##\s+\d+\.\s.*DevTools/i.test(l));
-  if (i < 0) return { estado: 'sin-seccion', faltan: [] };
+  if (i < 0) return { seccion: false, faltan: [], captura: '' };
   let j = lineas.findIndex((l, k) => k > i && /^##\s/.test(l)); if (j < 0) j = lineas.length;
   const bloques = lineas.slice(i + 1, j).join('\n').split(/\n(?=- \*\*)/).filter((b) => /^- \*\*/.test(b));
+  const etiqueta = (b) => b.match(/^- \*\*([^*]+)\*\*/)?.[1] ?? '';
+  const contenidoDe = (b) => b.replace(/^- \*\*[^*]+\*\*/, '').replace(/^\s*\([^)]*\)/, '').replace(/^\s*:/, '').trim();
   const requeridos = [['Síntoma', /Síntoma/i], ['Herramienta(s)', /Herramienta/i], ['Qué observaste', /observaste/i],
-    ['Causa', /^Causa/i], ['Corrección', /Correcci[oó]n/i], ['Captura de pantalla', /Captura/i]];
+    ['Causa', /^Causa/i], ['Corrección', /Correcci[oó]n/i]];
   const faltan = [];
   for (const [nombre, re] of requeridos) {
-    const b = bloques.find((x) => re.test(x.match(/^- \*\*([^*]+)\*\*/)?.[1] ?? ''));
+    const b = bloques.find((x) => re.test(etiqueta(x)));
     if (!b) { faltan.push(nombre); continue; }
     if (nombre === 'Herramienta(s)') { if (!/^\s*-\s*\[[xX]\]/m.test(b)) faltan.push('Herramienta(s): marca al menos una'); continue; }
-    const contenido = b.replace(/^- \*\*[^*]+\*\*/, '').replace(/^\s*\([^)]*\)/, '').replace(/^\s*:/, '').trim();
-    if (!contenido || /^(TODO|\.\.\.|-|_+)$/i.test(contenido)) faltan.push(nombre);
+    const c = contenidoDe(b);
+    if (!c || /^(TODO|\.\.\.|-|_+)$/i.test(c)) faltan.push(nombre);
   }
-  return { estado: faltan.length ? 'incompleta' : 'completa', faltan };
+  const bc = bloques.find((x) => /Captura/i.test(etiqueta(x)));
+  return { seccion: true, faltan, captura: bc ? contenidoDe(bc) : '' };
+}
+
+// La captura debe ser un archivo real, no vacío, dentro de docs/evidencias/. Acepta ruta o imagen en Markdown.
+function buscarCaptura(captura) {
+  const dirEv = join(raiz, 'docs', 'evidencias');
+  const tokens = captura.match(/[^\s()<>\[\]`"']+\.(?:png|jpe?g|gif|webp|svg|bmp|mp4|webm)\b/gi) ?? [];
+  if (!tokens.length) return { ok: false, motivo: 'escribe en el campo "Captura de pantalla" el archivo de la captura (por ejemplo docs/evidencias/network-404.png)' };
+  const locales = tokens.filter((t) => !/^https?:/i.test(t));
+  if (!locales.length) return { ok: false, motivo: 'la captura debe ser un archivo guardado en docs/evidencias/, no un enlace externo' };
+  let fuera = null, vacio = null;
+  for (const t of locales) {
+    for (const c of [join(raiz, t), join(raiz, 'docs', t), join(dirEv, basename(t))]) {
+      if (!existsSync(c) || !statSync(c).isFile()) continue;
+      if (statSync(c).size === 0) { vacio = t; continue; }
+      if (relative(dirEv, c).startsWith('..')) { fuera = t; continue; }
+      return { ok: true, ruta: relative(raiz, c) };
+    }
+  }
+  if (vacio) return { ok: false, motivo: `el archivo ${vacio} está vacío` };
+  if (fuera) return { ok: false, motivo: `${fuera} existe, pero debe guardarse dentro de docs/evidencias/` };
+  return { ok: false, motivo: `no existe ningún archivo para: ${locales.join(', ')} (guárdalo en docs/evidencias/)` };
 }
 
 console.log('\nRevisión manual (el verificador no puede comprobarlo)');
-const entrega = ['docs/entrega.md'].find((f) => existsSync(join(raiz, f)));
-console.log(`  ver   docs/entrega.md: ${entrega ? 'encontrado, revisa que lo hayas completado' : 'no existe todavía (copia docs/plantilla-entrega.md como docs/entrega.md y complétalo)'}`);
-if (entrega) {
-  const r = revisarSeccionDevTools(readFileSync(join(raiz, entrega), 'utf8'));
-  if (r.estado === 'sin-seccion') console.log('  pend  docs/entrega.md no tiene la sección de depuración con DevTools: agrégala desde la plantilla actual (sección 6)');
-  else if (r.estado === 'incompleta') console.log(`  pend  sección 6 (DevTools) de docs/entrega.md sin completar: ${r.faltan.join('; ')}`);
-  else console.log('  ok    sección 6 (DevTools) de docs/entrega.md completa (revisa que la evidencia sea real)');
+console.log(`  ver   docs/entrega.md: ${entregaTexto ? 'encontrado, revisa que lo hayas completado' : 'no existe todavía (copia docs/plantilla-entrega.md como docs/entrega.md y complétalo)'}`);
+if (entregaTexto) {
+  const dt = analizarDevTools(entregaTexto);
+  if (dt.seccion && dt.faltan.length) console.log(`  pend  sección 6 (DevTools) de docs/entrega.md sin completar: ${dt.faltan.join('; ')}`);
+  else if (dt.seccion) console.log('  ok    campos de texto de la sección 6 (DevTools) completos (revisa que lo escrito sea real)');
 }
 console.log('  ver   depuración con DevTools: prepara una demostración (breakpoint, panel Scope, Call Stack o Network) con un bug real y documéntala en la sección 6 de docs/entrega.md');
 console.log('  ver   CI en verde en el último Pull Request');

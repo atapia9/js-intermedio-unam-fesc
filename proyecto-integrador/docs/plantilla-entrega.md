@@ -85,7 +85,7 @@ exposición.
   de la petición, con evidencia, no con suposiciones):
 - **Causa** (dónde se originó el error; puede ser distinta de dónde lo veías):
 - **Corrección** (enlace al commit o Pull Request):
-- **Captura de pantalla** (guardar en `docs/evidencias/`):
+- **Captura de pantalla** (guarda el archivo en `docs/evidencias/` y escribe aquí su ruta, por ejemplo `docs/evidencias/network-404.png`):
 
 ## 7. Extensión propia
 
