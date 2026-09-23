@@ -1,5 +1,9 @@
 // Ejercicio 2 — Refactoriza usando destructuring, spread y rest
 //
+// Videos de apoyo (ficha 2.4 del README del día):
+//   - JavaScript moderno: Desestructuración y Operador Spread: https://www.youtube.com/watch?v=aBcYXgtlH4E
+//   - Desestructuración avanzada en JavaScript: parámetros Rest: https://www.youtube.com/watch?v=8OmDRKk1PSE
+//
 // Enunciado:
 // Refactoriza las tres funciones de abajo para que usen destructuring,
 // spread y/o rest en vez de acceder a propiedades/índices manualmente.

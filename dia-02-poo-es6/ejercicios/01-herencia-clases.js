@@ -1,5 +1,10 @@
 // Ejercicio 1 — Herencia con clases ES6
 //
+// Videos de apoyo (ficha 2.2 y 2.3 del README del día):
+//   - Herencia prototípica en JavaScript (POO): https://www.youtube.com/watch?v=S_bDXnLnDs8
+//   - Las clases y sus métodos: constructor, getters y setters – JS desde cero #12: https://www.youtube.com/watch?v=M0FfjG4mhZg
+//   - Herencia de clases: extends y super – JS desde cero #13: https://www.youtube.com/watch?v=-0p9MIqChK0
+//
 // Enunciado:
 // Crea una clase `Vehiculo` con constructor(marca, modelo) y un método
 // `describir()` que devuelva "marca modelo".

@@ -1,5 +1,9 @@
 Enunciado — Ejercicio 3: dividir un archivo en módulos ESM
 
+Videos de apoyo (ficha 2.5 del README del día):
+  - Import y Export en JavaScript (ES Modules) – Explicación: https://www.youtube.com/watch?v=0t-Le4kdaMg
+  - Javascript #14: Módulos (export, export default, import): https://www.youtube.com/watch?v=ATBCZz7eWU0
+
 El siguiente código vive hoy en un solo archivo. Sepáralo en:
   - validaciones.js  -> exports nombrados: esCorreoValido, esTelefonoValido
   - Formulario.js     -> export default de la clase Formulario
