@@ -124,7 +124,7 @@ Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona e
 
 Tiempo (Event Loop) · Espacio (Scope) · Contexto (`this`) → los closures son la memoria que une estos tres.
 
-**Actividad 1:** entrega un archivo `.js` con los ejercicios 1.1 a 1.4. Cada bloque debe incluir comentarios que expliquen qué hace, por qué funciona y qué concepto demuestra. Entrégalo antes de la Sesión 2.
+**Actividad 1:** entrega un archivo `.js` con los ejercicios 1.1 a 1.4. Cada bloque debe incluir comentarios que expliquen qué hace, por qué funciona y qué concepto demuestra. Entrégalo antes de la Sesión 2. Enunciado, esqueleto y verificador en [`ejercicios/04-actividad-1`](ejercicios/04-actividad-1/README.md).
 
 ## Ejercicios
 
@@ -137,6 +137,18 @@ Tiempo (Event Loop) · Espacio (Scope) · Contexto (`this`) → los closures son
    - Video: [3 ejemplos REALES de Closures en JavaScript](https://www.youtube.com/watch?v=ubS-ejTrSRc)
    - Video: [¿Qué son los Closures y por qué dan tanto miedo?](https://www.youtube.com/watch?v=bPZpjI2tzRo)
 3. [`ejercicios/03-this-practico.js`](ejercicios/03-this-practico.js) — corregir el valor de `this` en distintos contextos.
+   - Video: [This en JavaScript (bind, call, apply y más)](https://www.youtube.com/watch?v=bS71_W_BDFE)
+   - Video: [¿Para qué sirve call(), bind() y apply()?](https://www.youtube.com/watch?v=OZ02GSH9QkY)
+   - Video: [¿Cómo usar call, apply y bind? This a profundidad](https://www.youtube.com/watch?v=j1Zs_o32uo4)
+4. [`ejercicios/04-actividad-1/`](ejercicios/04-actividad-1/README.md) — **Actividad 1 (evaluable):** un archivo `.js` con los bloques 1.1 a 1.4, cada uno con sus tres explicaciones (qué hace, por qué funciona y qué concepto demuestra). Verificador local con `node verificar.mjs`.
+   - Video: [La pila de ejecución (Call Stack) – JS en Español](https://www.youtube.com/watch?v=ygA5U7Wgsg8)
+   - Video: [Entiende el Event Loop de JavaScript en 10 minutos](https://www.youtube.com/watch?v=XdzDDRF8_mY)
+   - Video: [Qué es el Event Loop en JavaScript – paso a paso](https://www.youtube.com/watch?v=rvzItyLuh28)
+   - Video: [VAR, LET o CONST: ¿cuál debería usar? – JS en Español](https://www.youtube.com/watch?v=bvkY9ey83yY)
+   - Video: [Diferencia entre var, let y const – Curso JS desde cero #4](https://www.youtube.com/watch?v=a8SJJPvkGIE)
+   - Video: [Closures en JavaScript: qué son y cómo funcionan](https://www.youtube.com/watch?v=xa8lhVwQBw4)
+   - Video: [3 ejemplos REALES de Closures en JavaScript](https://www.youtube.com/watch?v=ubS-ejTrSRc)
+   - Video: [¿Qué son los Closures y por qué dan tanto miedo?](https://www.youtube.com/watch?v=bPZpjI2tzRo)
    - Video: [This en JavaScript (bind, call, apply y más)](https://www.youtube.com/watch?v=bS71_W_BDFE)
    - Video: [¿Para qué sirve call(), bind() y apply()?](https://www.youtube.com/watch?v=OZ02GSH9QkY)
    - Video: [¿Cómo usar call, apply y bind? This a profundidad](https://www.youtube.com/watch?v=j1Zs_o32uo4)
