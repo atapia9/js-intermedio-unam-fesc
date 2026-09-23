@@ -11,7 +11,7 @@ const { formatearFecha, RUTA_VERIFICACION } = require('../scripts/generar-indice
 const respuesta = (status, { json, texto } = {}) => ({ status, json: async () => json, text: async () => texto ?? '' });
 const PAGINA_REPRODUCIBLE = '<title>Mi video &amp; m&#39;s - YouTube</title>..."playabilityStatus":{"status":"OK","playableInEmbed":false}';
 const PAGINA_PRIVADA = '<title>YouTube</title>..."playabilityStatus":{"status":"LOGIN_REQUIRED"}';
-const V = (n) => `https://www.youtube.com/watch?v=video${n}`;
+const V = (n) => `https://www.youtube.com/watch?v=vid${String(n).padStart(8, '0')}`; // 11 caracteres, como un id real
 
 // fetch simulado: responde según la URL que se le pide
 const simulado = (reglas) => async (url) => {
@@ -29,15 +29,32 @@ describe('comprobar(url)', () => {
   });
 
   test('401 pero la página del video es reproducible: cuenta como funcionando, sin inserción', async () => {
-    const r = await comprobar(V(2), simulado({ oembed: respuesta(401), 'watch?v=video2': respuesta(200, { texto: PAGINA_REPRODUCIBLE }) }));
+    const r = await comprobar(V(2), simulado({ oembed: respuesta(401), 'watch?v=vid00000002': respuesta(200, { texto: PAGINA_REPRODUCIBLE }) }));
     expect(r.estado).toBe('ok-sin-insercion');
     expect(r.tituloReal).toBe("Mi video & m's");
   });
 
   test('401 y la página pide iniciar sesión (video privado): es un problema', async () => {
-    const r = await comprobar(V(3), simulado({ oembed: respuesta(401), 'watch?v=video3': respuesta(200, { texto: PAGINA_PRIVADA }) }));
+    const r = await comprobar(V(3), simulado({ oembed: respuesta(401), 'watch?v=vid00000003': respuesta(200, { texto: PAGINA_PRIVADA }) }));
     expect(r.estado).toBe('problema');
     expect(r.detalle).toMatch(/401/);
+  });
+
+  test('401 y la página no dice nada útil (muro de consentimiento) pero la miniatura existe: se acepta', async () => {
+    const r = await comprobar(V(7), simulado({ oembed: respuesta(401), 'watch?v=vid00000007': respuesta(200, { texto: '<title>Antes de ir a YouTube</title>' }), 'i.ytimg.com': respuesta(200) }));
+    expect(r).toMatchObject({ estado: 'ok-sin-insercion', nota: 'confirmado por la miniatura' });
+  });
+
+  test('401, la página no dice nada útil y la miniatura no existe: es un problema con el título de la página como pista', async () => {
+    const r = await comprobar(V(8), simulado({ oembed: respuesta(401), 'watch?v=vid00000008': respuesta(200, { texto: '<title>Antes de ir a YouTube</title>' }), 'i.ytimg.com': respuesta(404) }));
+    expect(r.estado).toBe('problema');
+    expect(r.detalle).toMatch(/Antes de ir a YouTube/);
+  });
+
+  test('401 y YouTube dice explícitamente que no se reproduce (ERROR): es un problema aunque haya miniatura', async () => {
+    const r = await comprobar(V(9), simulado({ oembed: respuesta(401), 'watch?v=vid00000009': respuesta(200, { texto: '"playabilityStatus":{"status":"ERROR"}' }), 'i.ytimg.com': respuesta(200) }));
+    expect(r.estado).toBe('problema');
+    expect(r.detalle).toMatch(/ERROR/);
   });
 
   test('404: el video no existe', async () => {
@@ -64,9 +81,9 @@ describe('verificarTodos(videos)', () => {
 
   test('cuenta problemas, títulos que cambiaron y videos sin inserción; ignora URLs repetidas', async () => {
     const fetchFn = simulado({
-      'video1': respuesta(200, { json: { title: 'Event Loop en 10 minutos' } }),
-      'video2': respuesta(200, { json: { title: 'Un video totalmente distinto' } }),
-      'video3': respuesta(404),
+      'vid00000001': respuesta(200, { json: { title: 'Event Loop en 10 minutos' } }),
+      'vid00000002': respuesta(200, { json: { title: 'Un video totalmente distinto' } }),
+      'vid00000003': respuesta(404),
       playlist: respuesta(200),
     });
     const r = await verificarTodos([video(1, 'Event Loop en 10 minutos'), video(2, 'Closures en JavaScript'), video(3, 'Video borrado'), video(1, 'Event Loop en 10 minutos')], fetchFn);
@@ -78,7 +95,7 @@ describe('verificarTodos(videos)', () => {
   });
 
   test('marca un problema si la lista de reproducción no responde', async () => {
-    const r = await verificarTodos([video(1, 'Event Loop')], simulado({ video1: respuesta(200, { json: { title: 'Event Loop' } }), playlist: respuesta(404) }));
+    const r = await verificarTodos([video(1, 'Event Loop')], simulado({ vid00000001: respuesta(200, { json: { title: 'Event Loop' } }), playlist: respuesta(404) }));
     expect(r.lista).toMatchObject({ estado: 'problema' });
   });
 

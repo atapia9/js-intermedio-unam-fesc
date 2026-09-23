@@ -21,11 +21,13 @@ function coincidenciaDeTitulos(escrito, real) {
 }
 const decodificar = (s) => s.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
-async function pedir(fetchFn, url, ms) {
+async function pedir(fetchFn, url, ms, metodo = 'GET') {
   const control = new AbortController();
   const reloj = setTimeout(() => control.abort(), ms);
-  try { return await fetchFn(url, { headers: CABECERAS, signal: control.signal }); } finally { clearTimeout(reloj); }
+  try { return await fetchFn(url, { method: metodo, headers: CABECERAS, signal: control.signal }); } finally { clearTimeout(reloj); }
 }
+
+const idDeVideo = (url) => /(?:[?&]v=|shorts\/)([\w-]{11})/.exec(url)?.[1];
 
 // estado: 'ok' | 'ok-sin-insercion' (se reproduce, pero el autor desactivó insertarlo) | 'problema'
 async function comprobar(url, fetchFn = fetch, { ms = 15000 } = {}) {
@@ -33,12 +35,20 @@ async function comprobar(url, fetchFn = fetch, { ms = 15000 } = {}) {
     const r = await pedir(fetchFn, `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(url)}`, ms);
     if (r.status === 200) return { url, estado: 'ok', tituloReal: (await r.json()).title ?? '' };
     if (r.status === 401 || r.status === 403) {
+      // 401 es ambiguo: video privado, o video público con la inserción desactivada. Se decide con la página del video.
       const pagina = await (await pedir(fetchFn, url, ms)).text();
-      if (/"playabilityStatus":\{"status":"OK"/.test(pagina)) {
-        const t = /<title>([^<]*)<\/title>/.exec(pagina)?.[1] ?? '';
-        return { url, estado: 'ok-sin-insercion', tituloReal: decodificar(t).replace(/ - YouTube$/, '') };
+      const estadoPagina = /"playabilityStatus":\{"status":"([A-Z_]+)"/.exec(pagina)?.[1];
+      const titulo = decodificar(/<title>([^<]*)<\/title>/.exec(pagina)?.[1] ?? '').replace(/ - YouTube$/, '');
+      if (estadoPagina === 'OK') return { url, estado: 'ok-sin-insercion', tituloReal: titulo };
+      if (estadoPagina) return { url, estado: 'problema', detalle: `HTTP ${r.status}: YouTube indica que no se reproduce (${estadoPagina})` };
+      // La página no dijo nada útil (desde un servidor, YouTube puede mostrar un muro de consentimiento o de bots):
+      // se confirma con la miniatura, que sale de un CDN sin esos muros y no existe para videos borrados.
+      const id = idDeVideo(url);
+      if (id) {
+        const m = await pedir(fetchFn, `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, ms, 'HEAD');
+        if (m.status === 200) return { url, estado: 'ok-sin-insercion', tituloReal: '', nota: 'confirmado por la miniatura' };
       }
-      return { url, estado: 'problema', detalle: `HTTP ${r.status}: privado, eliminado o no reproducible` };
+      return { url, estado: 'problema', detalle: `HTTP ${r.status} y no se pudo confirmar que se reproduzca (título de la página: "${titulo || 'vacío'}")` };
     }
     return { url, estado: 'problema', detalle: `HTTP ${r.status}: el video no existe o no está disponible` };
   } catch (e) {
