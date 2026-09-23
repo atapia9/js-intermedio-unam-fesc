@@ -79,7 +79,7 @@ Idea del día: el código funcional resuelve el problema de hoy; el código robu
 
 | Tipo | Video |
 |---|---|
-| Principal | [Basta de console.log(): domina el debugger del navegador paso a paso](https://www.youtube.com/watch?v=ps1WhgelV_E) |
+| Principal | [Debugging como un profesional en JavaScript con DevTools del navegador – Programación en español](https://www.youtube.com/watch?v=ps1WhgelV_E) |
 | Refuerzo | [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4) |
 | Refuerzo | [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8) |
 
@@ -114,7 +114,7 @@ Testing permite comprobar; debugging, comprender; la arquitectura, evolucionar. 
    - Video: [Introducción al Testing desde cero con Jest](https://www.youtube.com/watch?v=_DzBez4qMi0)
    - Video: [¿Cómo se escribe una buena prueba unitaria en JavaScript? 10 buenas prácticas](https://www.youtube.com/watch?v=Rqyg8kjpzX0)
 2. [`ejercicios/02-debug-bug.js`](ejercicios/02-debug-bug.js) — encontrar y corregir un bug usando `debugger;`/breakpoints.
-   - Video: [Basta de console.log(): domina el debugger del navegador paso a paso](https://www.youtube.com/watch?v=ps1WhgelV_E)
+   - Video: [Debugging como un profesional en JavaScript con DevTools del navegador – Programación en español](https://www.youtube.com/watch?v=ps1WhgelV_E)
    - Video: [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4)
    - Video: [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8)
 3. [`ejercicios/03-singleton-config.js`](ejercicios/03-singleton-config.js) — implementar un Singleton de configuración.
