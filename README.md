@@ -141,4 +141,6 @@ detalle.
 
 ## Licencia y uso
 
-Material de apoyo elaborado para el curso de Educación Continua FESC — REDEC, UNAM. Uso educativo para los participantes del curso.
+Este material (textos, ejemplos, ejercicios y código) se distribuye bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**: el texto completo está en [LICENSE](LICENSE) y aquí su [resumen](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es). Puedes compartirlo y adaptarlo citando la fuente (*JavaScript Intermedio*, Educación Continua FESC, REDEC-UNAM), sin fines comerciales y con la misma licencia.
+
+Material de apoyo elaborado para el curso de Educación Continua FESC — REDEC, UNAM.
