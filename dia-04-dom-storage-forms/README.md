@@ -39,6 +39,68 @@ Validación programática más allá de `required`/`pattern`/`type="email"`, y r
 
 Abre [`ejemplos/04-formularios.html`](ejemplos/04-formularios.html).
 
+## Videos de apoyo
+
+Idea del día: actualiza solo lo necesario, escucha desde el lugar adecuado, conserva el estado que corresponde y valida antes de enviar. Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona el tema con el caso de uso y responde la pregunta. Los videos marcados como opcional (inglés) se pueden ver con subtítulos. Fuente: [Anexo de videos de apoyo](../documentos/Anexo_Videos_JS_Intermedio.pdf) (sesión 4, 1 de octubre de 2026).
+
+### 4.1 · Interacción eficiente: `DocumentFragment`
+
+*Idea clave:* prepara todo en una «mesa de trabajo» y entrégalo al DOM de una sola vez.
+
+| Tipo | Video |
+|---|---|
+| Principal | [DOM – Curso JavaScript Moderno #04: Fragment + createElement](https://www.youtube.com/watch?v=kUpx6ovPILc) |
+| Breve | [DocumentFragment en JavaScript (short)](https://www.youtube.com/shorts/o21LBIEn8EA) |
+| Opcional (inglés) | [What is reflow & repaint in the browser?](https://www.youtube.com/watch?v=PK4bzxWLOfo) |
+
+*Caso de uso real:* mostrar un catálogo de 500 productos traídos de una API: se arma la lista completa en memoria y se inserta en la página en un solo paso.  
+*Pregunta para pensar:* ¿qué parte del proceso ocurre fuera de lo que el usuario ve?
+
+### 4.2 · Propagación y delegación de eventos
+
+*Idea clave:* un solo listener en el contenedor atiende a todos los hijos, incluso a los que se agreguen después.
+
+| Tipo | Video |
+|---|---|
+| Principal | [Delegación de eventos en JavaScript con ejemplo práctico](https://www.youtube.com/watch?v=M48MZv60ZPs) |
+| Bubbling | [¿Cómo funciona el Event Bubbling? – JavaScript DOM](https://www.youtube.com/watch?v=xlci1S08Cww) |
+| Refuerzo | [¿Qué es y para qué sirve la delegación de eventos en JavaScript?](https://www.youtube.com/watch?v=5MUHJNSCeGU) |
+
+*Caso de uso real:* una lista de tareas donde cada una tiene botones «Completar» y «Eliminar»: la lista escucha los clics y `closest('li')` identifica qué tarea se tocó.  
+*Pregunta para pensar:* si agrego una tarea nueva después, ¿en qué momento se registró su listener?
+
+### 4.3 · Web Storage: `localStorage`, `sessionStorage` y JSON
+
+*Idea clave:* una variable se pierde al recargar; Web Storage guarda texto, así que los objetos viajan con `JSON.stringify` y `JSON.parse`.
+
+| Tipo | Video |
+|---|---|
+| Principal | [LocalStorage y SessionStorage ¿cómo funcionan? – Curso JavaScript #48](https://www.youtube.com/watch?v=ZlpA2hez92Y) |
+| JSON | [Guarda objetos y arrays en LocalStorage como un PRO (JSON explicado fácil)](https://www.youtube.com/watch?v=EZWY9EOzzG4) |
+| Refuerzo | [API localStorage – guardar y recuperar objetos con formato JSON](https://www.youtube.com/watch?v=sL0RHt_QK3I) |
+
+*Caso de uso real:* tus tareas y el «modo oscuro» siguen ahí al presionar F5. Pero contraseñas o tokens nunca se guardan ahí: `localStorage` no es una caja fuerte.  
+*Pregunta para pensar:* ¿qué pasa si guardas un arreglo en `localStorage` sin convertirlo a JSON?
+
+### 4.4 · Formularios: `preventDefault`, `FormData` y validación
+
+*Idea clave:* validar no es impedir: es ayudar al usuario a producir datos que la aplicación pueda usar.
+
+| Tipo | Video |
+|---|---|
+| Principal | [FormData en JavaScript: cómo, cuándo y por qué usarlo](https://www.youtube.com/watch?v=HSj1CRba8tg) |
+| preventDefault | [preventDefault en JavaScript: evitando el comportamiento por defecto](https://www.youtube.com/watch?v=i_7WLzT0oEY) |
+| Validación | [Aprende a validar formularios con JavaScript y expresiones regulares](https://www.youtube.com/watch?v=s3pC93LgP18) |
+
+*Caso de uso real:* un formulario de contacto que muestra todos los errores junto a cada campo (sin `alert`) y, si todo está bien, genera un objeto listo para enviar.  
+*Pregunta para pensar:* ¿por qué conviene juntar todos los errores en un arreglo en lugar de detenerse en el primero?
+
+### Cierre: ¿cómo se conecta todo?
+
+Datos → `DocumentFragment` (pintado óptimo) → DOM → Delegación (escucha inteligente) → Estado ↔ Web Storage (persistencia). Y por otro lado: Formulario → `FormData` → Validación → datos listos.
+
+**Actividad 4:** (individual) lista de tareas con un solo listener delegado, persistencia en `localStorage` (guardar, cargar y limpiar) y un formulario validado con `FormData`, mostrando los errores en la interfaz (sin `alert`).
+
 ## Ejercicios
 
 1. [`ejercicios/01-lista-tareas-fragment.html`](ejercicios/01-lista-tareas-fragment.html) — insertar 100 elementos usando `DocumentFragment`.

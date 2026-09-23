@@ -76,7 +76,7 @@ Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona e
 | Refuerzo | [Qué es el Event Loop en JavaScript – paso a paso](https://www.youtube.com/watch?v=rvzItyLuh28) |
 | Opcional (inglés) | [What the heck is the event loop anyway? – Philip Roberts](https://www.youtube.com/watch?v=8aGhZQkoFbQ) |
 
-*Caso de uso real:* un botón de «Descargar reporte» sigue respondiendo mientras llegan los datos del servidor: la página no se congela.
+*Caso de uso real:* un botón de «Descargar reporte» sigue respondiendo mientras llegan los datos del servidor: la página no se congela.  
 *Pregunta para pensar:* ¿por qué `setTimeout(fn, 0)` no se ejecuta «inmediatamente»?
 
 ### 1.2 · Hoisting y Scope: `var`, `let`, `const`
@@ -89,7 +89,7 @@ Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona e
 | Refuerzo | [Diferencia entre var, let y const – Curso JS desde cero #4](https://www.youtube.com/watch?v=a8SJJPvkGIE) |
 | Opcional (inglés) | [Scope vs Closure vs Hoisting](https://www.youtube.com/watch?v=sDmn6p4lRHk) |
 
-*Caso de uso real:* una lista de productos con botón «Agregar»: con `var` todos los botones agregan el mismo producto.
+*Caso de uso real:* una lista de productos con botón «Agregar»: con `var` todos los botones agregan el mismo producto.  
 *Pregunta para pensar:* ¿por qué cambiar `var` por `let` en el ciclo corrige el error?
 
 ### 1.3 · Closures
@@ -102,7 +102,7 @@ Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona e
 | Casos reales | [3 ejemplos REALES de Closures en JavaScript](https://www.youtube.com/watch?v=ubS-ejTrSRc) |
 | Refuerzo | [¿Qué son los Closures y por qué dan tanto miedo?](https://www.youtube.com/watch?v=bPZpjI2tzRo) |
 
-*Caso de uso real:* el saldo de una cuenta bancaria que solo cambia con `depositar()` y `retirar()`, nunca «desde afuera».
+*Caso de uso real:* el saldo de una cuenta bancaria que solo cambia con `depositar()` y `retirar()`, nunca «desde afuera».  
 *Pregunta para pensar:* ¿por qué la cuenta de Ana y la de Luis no comparten saldo?
 
 ### 1.4 · `this`, `call`, `apply` y `bind`
@@ -115,7 +115,7 @@ Antes de ver cada video, intenta predecir qué va a pasar; después, relaciona e
 | Práctico | [¿Para qué sirve call(), bind() y apply()?](https://www.youtube.com/watch?v=OZ02GSH9QkY) |
 | Refuerzo | [¿Cómo usar call, apply y bind? This a profundidad](https://www.youtube.com/watch?v=j1Zs_o32uo4) |
 
-*Caso de uso real:* un temporizador que «olvida» a qué objeto pertenece cuando se pasa como callback a `setInterval`.
+*Caso de uso real:* un temporizador que «olvida» a qué objeto pertenece cuando se pasa como callback a `setInterval`.  
 *Pregunta para pensar:* ¿cuándo usarías `bind` y cuándo una arrow function para conservar el contexto?
 
 ### Cierre: ¿cómo se conecta todo?
