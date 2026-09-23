@@ -4,6 +4,8 @@ Este repositorio es material educativo del curso JavaScript Intermedio (UNAM · 
 Cuautitlán · REDEC). El proyecto integrador (BIS) incluye una capa de seguridad
 aplicada como parte del aprendizaje, no como un producto en producción.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Minimización de datos
 
 El proyecto integrador **no debe** contener nombres reales, correos, teléfonos u
