@@ -75,6 +75,7 @@ Calificación mínima aprobatoria: **8.00** (escala 0–10, dos decimales).
 
 - [Glosario de términos](anexos/glosario.md)
 - [Bibliografía y referencias recomendadas](anexos/bibliografia.md)
+- [Anexo de videos de apoyo (PDF)](documentos/Anexo_Videos_JS_Intermedio.pdf) y la [lista de reproducción del curso en YouTube](https://www.youtube.com/playlist?list=PLBN8bJQ3f4w4)
 
 ## Ecosistema de repositorios
 
