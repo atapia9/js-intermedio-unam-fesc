@@ -4,6 +4,8 @@ Estos nombres son el contrato compartido con la política del curso de Git y Git
 con el contenido de Ciberseguridad. Si algo se renombra aquí, debe renombrarse también
 en la política escrita — no al revés.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Entidad `Incidente`
 
 - Campos: `id`, `fechaReporte`, `categoria`, `descripcion`, `reportantePseudonimo`,

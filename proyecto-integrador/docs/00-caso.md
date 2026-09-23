@@ -4,6 +4,8 @@ El proyecto integrador ya no es un "Task Manager" genérico: es **BIS**, una bit
 el personal de soporte usa para registrar y dar seguimiento a incidentes de seguridad
 reportados por usuarios (correos sospechosos, equipos extraviados, accesos anómalos, etc.).
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 Este caso conecta tres cursos:
 
 - **Git y GitHub** redacta la política que dice *qué* se hace con un incidente.

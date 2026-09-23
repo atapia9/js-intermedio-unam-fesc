@@ -4,6 +4,8 @@ Copia este archivo a `docs/entrega.md` en tu propio repo (generado desde `bis-pl
 o clonado de este scaffold) y complétalo antes de la sesión 5. Es lo que usarás como
 guion en la exposición de 5 minutos.
 
+> **Nota de divulgación:** Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. El contenido que tú completes es de tu autoría.
+
 ---
 
 ## 1. Datos

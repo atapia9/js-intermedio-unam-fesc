@@ -3,6 +3,8 @@
 Una entrada por día de curso — el molde para tu propia bitácora de decisiones, no un
 sustituto de ella. Complétala conforme avanzas.
 
+> **Nota de divulgación:** Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. El contenido que tú completes es de tu autoría.
+
 ## Día 1
 
 - **Decisión:** la clave de `localStorage` se encapsula con un closure en

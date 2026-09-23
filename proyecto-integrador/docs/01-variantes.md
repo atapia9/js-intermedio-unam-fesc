@@ -3,6 +3,8 @@
 Un solo motor (`src/nucleo/`), tres dominios posibles. Eliges una al declarar tu
 proyecto (ver el `README.md` de tu propio repo generado desde la plantilla).
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 | | Variante | Entidad | Qué hace el usuario | Función de puntaje |
 |---|---|---|---|---|
 | **A** | **Triage de incidentes** *(predeterminada, la que trae este scaffold)* | `Incidente` | Registra, clasifica y cierra incidentes reportados por usuarios | Matriz impacto × urgencia → severidad |
