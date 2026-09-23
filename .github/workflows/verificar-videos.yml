@@ -1,0 +1,77 @@
+# Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+#
+# Revisión semanal de los enlaces de los videos (mismo comando que "npm run verificar-videos").
+# Si algún enlace falla, abre un issue con la etiqueta "videos" (o agrega un comentario al que ya esté abierto);
+# cuando una revisión posterior sale limpia, cierra ese issue. También se puede lanzar a mano desde la pestaña Actions.
+
+name: Verificar videos
+
+on:
+  schedule:
+    - cron: '17 14 * * 1'   # lunes 14:17 UTC (08:17 en Ciudad de México)
+  workflow_dispatch:
+    inputs:
+      publicar_aviso:
+        description: 'Abrir o cerrar el issue según el resultado (desmarca para una prueba sin efectos)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PUBLICAR: ${{ github.event_name == 'schedule' || inputs.publicar_aviso }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verificar los enlaces
+        id: verificar
+        run: |
+          set +e
+          node scripts/verificar-videos.js > resultado.txt 2>&1
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+          cat resultado.txt
+
+      - name: Abrir, actualizar o cerrar el issue
+        if: env.PUBLICAR == 'true'
+        env:
+          CODIGO: ${{ steps.verificar.outputs.codigo }}
+          EJECUCION: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create videos --description "Enlaces de videos con problema" --color d93f0b 2>/dev/null || true
+          abierto=$(gh issue list --label videos --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ "$CODIGO" = "1" ]; then
+            {
+              echo "La revisión semanal de los videos encontró enlaces con problema."
+              echo
+              echo '```'
+              cat resultado.txt
+              echo '```'
+              echo
+              echo "Cómo corregirlo: edita el enlace en el README del día que corresponda, ejecuta \`npm run indice\` y sube el cambio."
+              echo "Este issue se cierra solo cuando una revisión posterior no encuentre problemas."
+              echo
+              echo "Ejecución: $EJECUCION"
+            } > cuerpo.md
+            if [ -n "$abierto" ]; then
+              gh issue comment "$abierto" --body-file cuerpo.md
+            else
+              gh issue create --title "Enlaces de videos con problema" --label videos --body-file cuerpo.md
+            fi
+          elif [ "$CODIGO" = "0" ] && [ -n "$abierto" ]; then
+            gh issue comment "$abierto" --body "Todos los enlaces funcionan de nuevo ($EJECUCION). Se cierra el aviso."
+            gh issue close "$abierto"
+          else
+            echo "Sin cambios en los avisos (código $CODIGO)."
+          fi
+
+      - name: Terminar con el resultado de la verificación
+        run: exit ${{ steps.verificar.outputs.codigo }}
