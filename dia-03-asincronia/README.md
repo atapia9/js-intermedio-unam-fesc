@@ -114,7 +114,7 @@ Hoy la pregunta clave es: ¿cuándo empieza esta operación, cuándo termina y q
 
 No bloquear → Callbacks (solución histórica) → Promesas (cadena plana, errores centralizados) → Async/Await (lectura secuencial) → Fetch (datos reales, validando HTTP). Conecta con la Sesión 1: microtareas antes que `setTimeout`.
 
-**Actividad 3:** construye un cliente API en tres versiones comentadas: callbacks, Promises y async/await. Debe distinguir error de red y error HTTP, y explicar por qué la versión final es más legible y fácil de mantener.
+**Actividad 3:** construye un cliente API en tres versiones comentadas: callbacks, Promises y async/await. Debe distinguir error de red y error HTTP, y explicar por qué la versión final es más legible y fácil de mantener. Enunciado, esqueleto y verificador en [`ejercicios/04-actividad-3`](ejercicios/04-actividad-3/README.md).
 
 ## Ejercicios
 
@@ -130,6 +130,22 @@ No bloquear → Callbacks (solución histórica) → Promesas (cadena plana, err
    - Video: [Cómo usar promesas en JavaScript – JS en Español](https://www.youtube.com/watch?v=urapbZL9knY)
    - Video: [Promesas: métodos Promise.all y race en JavaScript](https://www.youtube.com/watch?v=-xhWDNm3XvY)
 3. [`ejercicios/03-consumir-api.js`](ejercicios/03-consumir-api.js)
+   - Video: [Promesas y async-await: then y catch – JS desde cero #16](https://www.youtube.com/watch?v=ksg6SDwllDs)
+   - Video: [Callback, Promesas, Async Await y Try Catch | JavaScript](https://www.youtube.com/watch?v=p3Oq3AfuteA)
+   - Video: [JavaScript asíncrono con Async Await](https://www.youtube.com/watch?v=za8Z6saKVdw)
+   - Video: [Cómo consumir una API REST con Fetch + Promises con gestión de errores](https://www.youtube.com/watch?v=FJ-w0tf3d_w)
+   - Video: [Curso de JavaScript: API fetch – manejo de errores](https://www.youtube.com/watch?v=U0Qoq3hYPZA)
+   - Video: [Javascript Fetch API: qué es y cómo consumir un API](https://www.youtube.com/watch?v=lkMq_qzCV_M)
+4. [`ejercicios/04-actividad-3/`](ejercicios/04-actividad-3/README.md) — **Actividad 3 (evaluable):** cliente API en tres versiones (callbacks, Promises y async/await) que distingue error de red y error HTTP, con verificador local (`node verificar.mjs`).
+   - Video: [¿Qué es código asíncrono y síncrono en JavaScript? (con ejemplos simples)](https://www.youtube.com/watch?v=Vt9MLvaG278)
+   - Video: [¿Qué es la programación asíncrona en JavaScript? Explicación fácil](https://www.youtube.com/watch?v=Y4HYnHsOfvI)
+   - Video: [JavaScript asíncrono: síncrono vs. asíncrono – descripción gráfica](https://www.youtube.com/watch?v=UDk7QYO0ZpM)
+   - Video: [Asincronismo en JS: ¿qué es el Callback Hell? – JS desde cero #15](https://www.youtube.com/watch?v=iAq9SOEODvo)
+   - Video: [Callbacks: ¿qué son y cómo utilizarlos? – Evitar callback hell](https://www.youtube.com/watch?v=WYVOvwTZ7Bo)
+   - Video: [Qué es el antipatrón Callback Hell en JavaScript](https://www.youtube.com/watch?v=TcEjFk1cDzU)
+   - Video: [Promesas: new Promise, resolve, reject, then, catch](https://www.youtube.com/watch?v=W-HPYsmHG6U)
+   - Video: [Cómo usar promesas en JavaScript – JS en Español](https://www.youtube.com/watch?v=urapbZL9knY)
+   - Video: [Promesas: métodos Promise.all y race en JavaScript](https://www.youtube.com/watch?v=-xhWDNm3XvY)
    - Video: [Promesas y async-await: then y catch – JS desde cero #16](https://www.youtube.com/watch?v=ksg6SDwllDs)
    - Video: [Callback, Promesas, Async Await y Try Catch | JavaScript](https://www.youtube.com/watch?v=p3Oq3AfuteA)
    - Video: [JavaScript asíncrono con Async Await](https://www.youtube.com/watch?v=za8Z6saKVdw)
