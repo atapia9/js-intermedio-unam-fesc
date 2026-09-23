@@ -2,6 +2,8 @@
 
 Esta sesión regresa al navegador como entorno de ejecución: cómo interactuar de forma eficiente con la interfaz, optimizar el manejo de eventos mediante delegación, persistir datos en el cliente y procesar formularios de forma moderna.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Agenda de la sesión
 
 1. Interacción eficiente con la interfaz de usuario

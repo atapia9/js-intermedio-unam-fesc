@@ -2,6 +2,8 @@
 
 La asincronía es, para muchos participantes, el tema más retador del curso. Esta sesión construye el conocimiento de forma progresiva: primero se entiende por qué se necesita, luego se recorre su evolución histórica (callbacks → promesas → async/await) y finalmente se aplica al consumo real de APIs con Fetch.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Agenda de la sesión
 
 1. Gestión de operaciones que no bloquean el hilo principal

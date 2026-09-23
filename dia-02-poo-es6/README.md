@@ -2,6 +2,8 @@
 
 Esta sesión explora cómo JavaScript implementa la orientación a objetos a través de prototipos, y cómo la sintaxis de clases de ES6 ofrece una forma más clara de expresar herencia. También se cubre destructuring, spread/rest y módulos ESM.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Agenda de la sesión
 
 1. Dominio de la estructura moderna del lenguaje (ES6+)

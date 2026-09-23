@@ -2,6 +2,8 @@
 
 Esta primera sesión sienta las bases teóricas del curso: cómo ejecuta JavaScript el código internamente, por qué `var`, `let` y `const` se comportan de forma distinta, qué son los closures y cómo se resuelve el valor de `this` en distintos contextos.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Agenda de la sesión
 
 1. Contexto de ejecución: Call Stack y Event Loop

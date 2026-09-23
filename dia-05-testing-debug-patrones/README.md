@@ -2,6 +2,8 @@
 
 La sesión de cierre del curso conecta todo lo aprendido con prácticas profesionales: pruebas unitarias, depuración eficiente y patrones de diseño comunes. Culmina con el proyecto integrador.
 
+> **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+
 ## Agenda de la sesión
 
 1. Garantizar la calidad y estabilidad del código
