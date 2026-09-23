@@ -9,6 +9,8 @@ Este repositorio acompaña el manual con **ejemplos de código ejecutables y eje
 > El manual es un documento de trabajo sujeto a ajustes del instructor titular según el ritmo del grupo. Este repositorio se actualiza en paralelo al avance del curso.
 
 > **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
+>
+> Esta nota cubre también los archivos que genera npm y que no admiten comentarios, como `package-lock.json`.
 
 ## Objetivo general del curso
 
