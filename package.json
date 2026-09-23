@@ -6,7 +6,8 @@
   "description": "Ejemplos y ejercicios del curso JavaScript Intermedio (UNAM · FES Cuautitlán · REDEC)",
   "type": "commonjs",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "indice": "node scripts/generar-indice-videos.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"

@@ -4,6 +4,8 @@ Los 67 videos del [Anexo de videos de apoyo](Anexo_Videos_JS_Intermedio.pdf) del
 
 Todos están también en la [lista de reproducción del curso](https://www.youtube.com/playlist?list=PLBN8bJQ3f4w4).
 
+Este índice se genera a partir de los README de los días con `npm run indice`; no lo edites a mano.
+
 > **Nota de divulgación:** Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 
 | Día | Videos |
