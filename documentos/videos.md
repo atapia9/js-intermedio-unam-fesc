@@ -19,7 +19,7 @@ Este índice se genera a partir de los README de los días con `npm run indice`;
 
 Antes de cada video, intenta predecir qué va a pasar; después, relaciona el tema con el caso de uso del README del día y responde la pregunta.
 
-**Sobre los enlaces:** se verificaron el 23 de septiembre de 2026 y los 67 funcionan. Pueden cambiar o dejar de estar disponibles con el tiempo, como advierte el anexo; conviene revisarlos antes de cada edición del curso. El video «JavaScript asíncrono: síncrono vs. asíncrono» (ficha 3.1) no permite insertarse en otros sitios, pero se abre con normalidad en YouTube.
+**Sobre los enlaces:** se verificaron el 23 de septiembre de 2026 y los 67 funcionan. Pueden cambiar o dejar de estar disponibles con el tiempo, como advierte el anexo; conviene revisarlos antes de cada edición del curso con `npm run verificar-videos`. El video «JavaScript asíncrono: síncrono vs. asíncrono» (ficha 3.1) no permite insertarse en otros sitios, pero se abre con normalidad en YouTube.
 
 ## Día 1 — Fundamentos avanzados
 

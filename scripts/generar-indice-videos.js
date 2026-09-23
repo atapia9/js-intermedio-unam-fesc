@@ -7,7 +7,8 @@ const path = require('path');
 
 const RAIZ = path.join(__dirname, '..');
 const RUTA_SALIDA = path.join(RAIZ, 'documentos', 'videos.md');
-const FECHA_VERIFICACION = '23 de septiembre de 2026';
+const RUTA_VERIFICACION = path.join(RAIZ, 'documentos', 'videos-verificacion.json');
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 const DIAS = [
   ['dia-01-fundamentos', 'Día 1 — Fundamentos avanzados', '28 de septiembre de 2026'],
   ['dia-02-poo-es6', 'Día 2 — POO y ES6+', '29 de septiembre de 2026'],
@@ -19,6 +20,13 @@ const LISTA = 'https://www.youtube.com/playlist?list=PLBN8bJQ3f4w4';
 const FILA = /^\| ([^|]+?) \| \[(.+?)\]\((https[^)]+)\) \|$/gm;
 
 const leer = (ruta) => fs.readFileSync(path.join(RAIZ, ruta), 'utf8');
+
+// '2026-09-23' -> '23 de septiembre de 2026' (sin depender de ICU ni de la zona horaria)
+function formatearFecha(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) throw new Error(`Fecha inválida: "${iso}" (se espera AAAA-MM-DD)`);
+  return `${Number(m[3])} de ${MESES[Number(m[2]) - 1]} de ${m[1]}`;
+}
 
 // Cabecera y filas [tipo, título, url] de cada ficha de la sección "Videos de apoyo" de un README de día.
 function leerFichas(carpeta) {
@@ -55,6 +63,7 @@ function anclaDe(titulo) {
 }
 
 function generar() {
+  const fechaVerificacion = formatearFecha(JSON.parse(fs.readFileSync(RUTA_VERIFICACION, 'utf8')).fecha);
   let total = 0;
   const secciones = [];
   for (const [carpeta, titulo, fecha] of DIAS) {
@@ -97,13 +106,13 @@ ${tabla}
 
 Antes de cada video, intenta predecir qué va a pasar; después, relaciona el tema con el caso de uso del README del día y responde la pregunta.
 
-**Sobre los enlaces:** se verificaron el ${FECHA_VERIFICACION} y los ${total} funcionan. Pueden cambiar o dejar de estar disponibles con el tiempo, como advierte el anexo; conviene revisarlos antes de cada edición del curso. El video «JavaScript asíncrono: síncrono vs. asíncrono» (ficha 3.1) no permite insertarse en otros sitios, pero se abre con normalidad en YouTube.
+**Sobre los enlaces:** se verificaron el ${fechaVerificacion} y los ${total} funcionan. Pueden cambiar o dejar de estar disponibles con el tiempo, como advierte el anexo; conviene revisarlos antes de cada edición del curso con \`npm run verificar-videos\`. El video «JavaScript asíncrono: síncrono vs. asíncrono» (ficha 3.1) no permite insertarse en otros sitios, pero se abre con normalidad en YouTube.
 
 ` + secciones.map((s) => s.texto).join('\n');
   return doc.replace(/\n+$/, '') + '\n';
 }
 
-module.exports = { generar, leerFichas, DIAS, RUTA_SALIDA, RAIZ };
+module.exports = { generar, leerFichas, formatearFecha, DIAS, RUTA_SALIDA, RUTA_VERIFICACION, RAIZ };
 
 if (require.main === module) {
   fs.writeFileSync(RUTA_SALIDA, generar());
