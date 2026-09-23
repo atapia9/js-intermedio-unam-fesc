@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Actividad 4 — Tareas y contacto</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 520px; margin: 2rem auto; }
+    form { display: grid; gap: .5rem; margin-bottom: 1rem; }
+    label { display: grid; gap: .2rem; }
+    [data-error] { color: #b00020; font-size: .85rem; min-height: 1em; }
+    #lista-tareas li { display: flex; gap: .5rem; align-items: center; padding: .3rem 0; }
+    #lista-tareas li span { flex: 1; cursor: pointer; }
+    #lista-tareas li.completada span { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Mis tareas</h1>
+
+  <!-- Ejercicios 4.1 y 4.2: lista de tareas con UN listener delegado y persistencia en localStorage -->
+  <form id="form-tarea" novalidate>
+    <input name="texto" placeholder="Nueva tarea" />
+    <button type="submit">Agregar</button>
+  </form>
+  <ul id="lista-tareas"></ul>
+  <button id="btn-limpiar" type="button">Limpiar todo</button>
+
+  <h2>Contacto</h2>
+
+  <!-- Ejercicio 4.3: formulario de contacto validado con FormData. novalidate: la validación la haces TÚ en JavaScript. -->
+  <form id="form-contacto" novalidate>
+    <label>Nombre
+      <input name="nombre" />
+      <span data-error="nombre"></span>
+    </label>
+    <label>Correo
+      <input name="correo" />
+      <span data-error="correo"></span>
+    </label>
+    <label>Teléfono (opcional)
+      <input name="telefono" />
+      <span data-error="telefono"></span>
+    </label>
+    <label>Mensaje
+      <textarea name="mensaje"></textarea>
+      <span data-error="mensaje"></span>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Script clásico (sin type="module"): así lo puede ejecutar el verificador. -->
+  <script src="app.js" defer></script>
+</body>
+</html>

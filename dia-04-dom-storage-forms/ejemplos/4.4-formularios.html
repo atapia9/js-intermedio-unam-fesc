@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos. -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ficha 4.4 — Formularios y FormData</title>
+</head>
+<body>
+  <!-- Ejemplo del manual, ficha 4.4. Abre esta página en el navegador y la consola (F12). El script es el del manual. -->
+  <h1>Ficha 4.4 — Formularios y FormData</h1>
+  <form id="form-registro">
+    <input name="nombre" placeholder="Nombre" />
+    <input name="correo" placeholder="Correo" />
+    <button type="submit">Registrar</button>
+  </form>
+  <p>El resultado de la validación aparece en la consola (F12).</p>
+  <script>
+    const formulario = document.querySelector('#form-registro');
+
+    formulario.addEventListener('submit', (evento) => {
+      evento.preventDefault();
+
+      const datos = new FormData(formulario);
+      const objeto = Object.fromEntries(datos.entries());
+
+      const errores = [];
+      if (!objeto.nombre || objeto.nombre.trim().length < 2) {
+        errores.push('El nombre debe tener al menos 2 caracteres.');
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(objeto.correo)) {
+        errores.push('El correo no tiene un formato válido.');
+      }
+
+      if (errores.length > 0) {
+        console.error('Errores de validación:', errores);
+        return;
+      }
+
+      console.log('Formulario válido, listo para enviar:', objeto);
+    });
+  </script>
+</body>
+</html>

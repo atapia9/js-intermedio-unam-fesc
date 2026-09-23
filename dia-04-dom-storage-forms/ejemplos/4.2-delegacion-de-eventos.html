@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos. -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ficha 4.2 — Delegación de eventos</title>
+<style>.seleccionado { background: #ffe9a8; }</style>
+</head>
+<body>
+  <!-- Ejemplo del manual, ficha 4.2. Abre esta página en el navegador y la consola (F12). El script es el del manual. -->
+  <h1>Ficha 4.2 — Delegación de eventos</h1>
+  <p>Haz clic en un producto: un solo listener atiende a todos, también a los que se agreguen después.</p>
+  <ul id="lista-productos">
+    <li>Teclado — $350</li>
+    <li>Mouse — $150</li>
+    <li>Monitor — $2800</li>
+  </ul>
+  <button id="agregar">Agregar otro producto</button>
+  <script>
+    const lista = document.querySelector('#lista-productos');
+
+    lista.addEventListener('click', (evento) => {
+      const item = evento.target.closest('li');
+      if (!item) return; // el clic no fue sobre un <li>
+      console.log('Producto seleccionado:', item.textContent);
+      item.classList.toggle('seleccionado');
+    });
+
+    // Este único listener funciona incluso con <li> agregados después,
+    // sin necesidad de volver a registrar manejadores.
+
+    // --- agregado para la demostración: un <li> nuevo sin registrar otro listener ---
+    document.querySelector('#agregar').addEventListener('click', () => {
+      const li = document.createElement('li');
+      li.textContent = 'Producto nuevo — $99';
+      lista.appendChild(li);
+    });
+  </script>
+</body>
+</html>

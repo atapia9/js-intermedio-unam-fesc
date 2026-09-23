@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos. -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ficha 4.3 — Web Storage</title>
+</head>
+<body>
+  <!-- Ejemplo del manual, ficha 4.3. Abre esta página en el navegador y la consola (F12). El script es el del manual. -->
+  <h1>Ficha 4.3 — Web Storage</h1>
+  <p>Recarga la página: la tarea guardada en localStorage sigue ahí. Revísalo en DevTools, pestaña Application.</p>
+  <pre id="salida"></pre>
+  <script>
+    function guardarTareas(tareas) {
+      localStorage.setItem('tareas', JSON.stringify(tareas));
+    }
+
+    function cargarTareas() {
+      const datos = localStorage.getItem('tareas');
+      return datos ? JSON.parse(datos) : [];
+    }
+
+    let tareas = cargarTareas();
+    tareas.push({ texto: 'Estudiar Web Storage', completada: false });
+    guardarTareas(tareas);
+
+    // --- agregado para la demostración ---
+    document.querySelector('#salida').textContent = JSON.stringify(tareas, null, 2);
+  </script>
+</body>
+</html>

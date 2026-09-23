@@ -34,7 +34,7 @@ Sesión del 28 de septiembre de 2026. Detalle, casos de uso y preguntas en el [R
 | Refuerzo | [Qué es el Event Loop en JavaScript – paso a paso](https://www.youtube.com/watch?v=rvzItyLuh28) |
 | Opcional (inglés) | [What the heck is the event loop anyway? – Philip Roberts](https://www.youtube.com/watch?v=8aGhZQkoFbQ) |
 
-Se usa en: [Ejercicio 1](../dia-01-fundamentos/ejercicios/01-orden-ejecucion.js), [Actividad 1](../dia-01-fundamentos/ejercicios/04-actividad-1/README.md).
+Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/actividad-1/README.md).
 
 ### 1.2 · Hoisting y Scope: `var`, `let`, `const`
 
@@ -44,7 +44,7 @@ Se usa en: [Ejercicio 1](../dia-01-fundamentos/ejercicios/01-orden-ejecucion.js)
 | Refuerzo | [Diferencia entre var, let y const – Curso JS desde cero #4](https://www.youtube.com/watch?v=a8SJJPvkGIE) |
 | Opcional (inglés) | [Scope vs Closure vs Hoisting](https://www.youtube.com/watch?v=sDmn6p4lRHk) |
 
-Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/04-actividad-1/README.md).
+Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/actividad-1/README.md).
 
 ### 1.3 · Closures
 
@@ -54,7 +54,7 @@ Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/04-actividad-1/README.
 | Casos reales | [3 ejemplos REALES de Closures en JavaScript](https://www.youtube.com/watch?v=ubS-ejTrSRc) |
 | Refuerzo | [¿Qué son los Closures y por qué dan tanto miedo?](https://www.youtube.com/watch?v=bPZpjI2tzRo) |
 
-Se usa en: [Ejercicio 2](../dia-01-fundamentos/ejercicios/02-contador-privado.js), [Actividad 1](../dia-01-fundamentos/ejercicios/04-actividad-1/README.md).
+Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/actividad-1/README.md).
 
 ### 1.4 · `this`, `call`, `apply` y `bind`
 
@@ -64,7 +64,7 @@ Se usa en: [Ejercicio 2](../dia-01-fundamentos/ejercicios/02-contador-privado.js
 | Práctico | [¿Para qué sirve call(), bind() y apply()?](https://www.youtube.com/watch?v=OZ02GSH9QkY) |
 | Refuerzo | [¿Cómo usar call, apply y bind? This a profundidad](https://www.youtube.com/watch?v=j1Zs_o32uo4) |
 
-Se usa en: [Ejercicio 3](../dia-01-fundamentos/ejercicios/03-this-practico.js), [Actividad 1](../dia-01-fundamentos/ejercicios/04-actividad-1/README.md).
+Se usa en: [Actividad 1](../dia-01-fundamentos/ejercicios/actividad-1/README.md).
 
 ### Cierre: ¿cómo se conecta todo?
 
@@ -91,7 +91,7 @@ Sesión del 29 de septiembre de 2026. Detalle, casos de uso y preguntas en el [R
 | Refuerzo | [Curso JavaScript: 23. Herencia prototípica – jonmircha](https://www.youtube.com/watch?v=1-m7xtwvH1E) |
 | Profundidad | [Prototypes a profundidad – herencia prototípica](https://www.youtube.com/watch?v=KrzlS0_HQuQ) |
 
-Se usa en: [Ejercicio 1](../dia-02-poo-es6/ejercicios/01-herencia-clases.js), [Actividad 2](../dia-02-poo-es6/ejercicios/04-actividad-2/README.md).
+Se usa en: [Actividad 2](../dia-02-poo-es6/ejercicios/actividad-2/README.md), [Ejercicio 2.1](../dia-02-poo-es6/ejercicios/ejercicio-2.1-funcion-constructora-a-prototipo.js).
 
 ### 2.3 · Clases ES6: constructor, getters/setters, privados, `extends` y `super`
 
@@ -101,7 +101,7 @@ Se usa en: [Ejercicio 1](../dia-02-poo-es6/ejercicios/01-herencia-clases.js), [A
 | Herencia | [Herencia de clases: extends y super – JS desde cero #13](https://www.youtube.com/watch?v=-0p9MIqChK0) |
 | Refuerzo | [Curso JavaScript: 25. Métodos estáticos, getters y setters – jonmircha](https://www.youtube.com/watch?v=TEzu31q9MVA) |
 
-Se usa en: [Ejercicio 1](../dia-02-poo-es6/ejercicios/01-herencia-clases.js), [Actividad 2](../dia-02-poo-es6/ejercicios/04-actividad-2/README.md).
+Se usa en: [Actividad 2](../dia-02-poo-es6/ejercicios/actividad-2/README.md).
 
 ### 2.4 · Desestructuración, Spread y Rest
 
@@ -111,7 +111,7 @@ Se usa en: [Ejercicio 1](../dia-02-poo-es6/ejercicios/01-herencia-clases.js), [A
 | Refuerzo | [Curso JavaScript Moderno (ES6) #16 – Destructuring](https://www.youtube.com/watch?v=PQinHHCFsVc) |
 | Rest | [Desestructuración avanzada en JavaScript: parámetros Rest](https://www.youtube.com/watch?v=8OmDRKk1PSE) |
 
-Se usa en: [Ejercicio 2](../dia-02-poo-es6/ejercicios/02-destructuring-practico.js), [Actividad 2](../dia-02-poo-es6/ejercicios/04-actividad-2/README.md).
+Se usa en: [Actividad 2](../dia-02-poo-es6/ejercicios/actividad-2/README.md), [Ejercicio 2.3](../dia-02-poo-es6/ejercicios/ejercicio-2.3-normalizacion-de-datos.js).
 
 ### 2.5 · Módulos ESM: `import` / `export`
 
@@ -121,7 +121,7 @@ Se usa en: [Ejercicio 2](../dia-02-poo-es6/ejercicios/02-destructuring-practico.
 | Refuerzo | [Javascript #14: Módulos (export, export default, import)](https://www.youtube.com/watch?v=ATBCZz7eWU0) |
 | Refuerzo | [Curso JavaScript: 33. Módulos (import / export) – jonmircha](https://www.youtube.com/watch?v=0GEUyQXe3NI) |
 
-Se usa en: [Ejercicio 3](../dia-02-poo-es6/ejercicios/03-modulos/monolito-original.txt), [Actividad 2](../dia-02-poo-es6/ejercicios/04-actividad-2/README.md).
+Se usa en: [Actividad 2](../dia-02-poo-es6/ejercicios/actividad-2/README.md).
 
 ### Cierre: ¿cómo se conecta todo?
 
@@ -140,7 +140,7 @@ Sesión del 30 de septiembre de 2026. Detalle, casos de uso y preguntas en el [R
 | Refuerzo | [¿Qué es la programación asíncrona en JavaScript? Explicación fácil](https://www.youtube.com/watch?v=Y4HYnHsOfvI) |
 | Visual | [JavaScript asíncrono: síncrono vs. asíncrono – descripción gráfica](https://www.youtube.com/watch?v=UDk7QYO0ZpM) |
 
-Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.md).
+Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/actividad-3/README.md).
 
 ### 3.2 · Callbacks y Callback Hell
 
@@ -150,7 +150,7 @@ Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.m
 | Refuerzo | [Callbacks: ¿qué son y cómo utilizarlos? – Evitar callback hell](https://www.youtube.com/watch?v=WYVOvwTZ7Bo) |
 | Refuerzo | [Qué es el antipatrón Callback Hell en JavaScript](https://www.youtube.com/watch?v=TcEjFk1cDzU) |
 
-Se usa en: [Ejercicio 1](../dia-03-asincronia/ejercicios/01-refactor-callback-a-promesa.js), [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.md).
+Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/actividad-3/README.md).
 
 ### 3.3 · Promesas: `then`, `catch`, `finally`, `Promise.all` y `race`
 
@@ -160,7 +160,7 @@ Se usa en: [Ejercicio 1](../dia-03-asincronia/ejercicios/01-refactor-callback-a-
 | Refuerzo | [Cómo usar promesas en JavaScript – JS en Español](https://www.youtube.com/watch?v=urapbZL9knY) |
 | Paralelo | [Promesas: métodos Promise.all y race en JavaScript](https://www.youtube.com/watch?v=-xhWDNm3XvY) |
 
-Se usa en: [Ejercicio 1](../dia-03-asincronia/ejercicios/01-refactor-callback-a-promesa.js), [Ejercicio 2](../dia-03-asincronia/ejercicios/02-promise-all.js), [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.md).
+Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/actividad-3/README.md).
 
 ### 3.4 · Async / Await y `try` / `catch`
 
@@ -170,7 +170,7 @@ Se usa en: [Ejercicio 1](../dia-03-asincronia/ejercicios/01-refactor-callback-a-
 | Comparativo | [Callback, Promesas, Async Await y Try Catch | JavaScript](https://www.youtube.com/watch?v=p3Oq3AfuteA) |
 | Refuerzo | [JavaScript asíncrono con Async Await](https://www.youtube.com/watch?v=za8Z6saKVdw) |
 
-Se usa en: [Ejercicio 3](../dia-03-asincronia/ejercicios/03-consumir-api.js), [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.md).
+Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/actividad-3/README.md).
 
 ### 3.5 · Fetch API y manejo de errores
 
@@ -180,7 +180,7 @@ Se usa en: [Ejercicio 3](../dia-03-asincronia/ejercicios/03-consumir-api.js), [A
 | Errores | [Curso de JavaScript: API fetch – manejo de errores](https://www.youtube.com/watch?v=U0Qoq3hYPZA) |
 | Refuerzo | [Javascript Fetch API: qué es y cómo consumir un API](https://www.youtube.com/watch?v=lkMq_qzCV_M) |
 
-Se usa en: [Ejercicio 3](../dia-03-asincronia/ejercicios/03-consumir-api.js), [Actividad 3](../dia-03-asincronia/ejercicios/04-actividad-3/README.md).
+Se usa en: [Actividad 3](../dia-03-asincronia/ejercicios/actividad-3/README.md).
 
 ### Cierre: ¿cómo se conecta todo?
 
@@ -199,7 +199,7 @@ Sesión del 1 de octubre de 2026. Detalle, casos de uso y preguntas en el [READM
 | Breve | [DocumentFragment en JavaScript (short)](https://www.youtube.com/shorts/o21LBIEn8EA) |
 | Opcional (inglés) | [What is reflow & repaint in the browser?](https://www.youtube.com/watch?v=PK4bzxWLOfo) |
 
-Se usa en: [Ejercicio 1](../dia-04-dom-storage-forms/ejercicios/01-lista-tareas-fragment.html), [Actividad 4](../dia-04-dom-storage-forms/ejercicios/04-actividad-4/README.md).
+Se usa en: [Actividad 4](../dia-04-dom-storage-forms/ejercicios/actividad-4/README.md).
 
 ### 4.2 · Propagación y delegación de eventos
 
@@ -209,7 +209,7 @@ Se usa en: [Ejercicio 1](../dia-04-dom-storage-forms/ejercicios/01-lista-tareas-
 | Bubbling | [¿Cómo funciona el Event Bubbling? – JavaScript DOM](https://www.youtube.com/watch?v=xlci1S08Cww) |
 | Refuerzo | [¿Qué es y para qué sirve la delegación de eventos en JavaScript?](https://www.youtube.com/watch?v=5MUHJNSCeGU) |
 
-Se usa en: [Ejercicio 2](../dia-04-dom-storage-forms/ejercicios/02-delegacion-practica.html), [Actividad 4](../dia-04-dom-storage-forms/ejercicios/04-actividad-4/README.md).
+Se usa en: [Actividad 4](../dia-04-dom-storage-forms/ejercicios/actividad-4/README.md).
 
 ### 4.3 · Web Storage: `localStorage`, `sessionStorage` y JSON
 
@@ -219,7 +219,7 @@ Se usa en: [Ejercicio 2](../dia-04-dom-storage-forms/ejercicios/02-delegacion-pr
 | JSON | [Guarda objetos y arrays en LocalStorage como un PRO (JSON explicado fácil)](https://www.youtube.com/watch?v=EZWY9EOzzG4) |
 | Refuerzo | [API localStorage – guardar y recuperar objetos con formato JSON](https://www.youtube.com/watch?v=sL0RHt_QK3I) |
 
-Se usa en: [Ejercicio 3](../dia-04-dom-storage-forms/ejercicios/03-persistir-preferencias.html), [Actividad 4](../dia-04-dom-storage-forms/ejercicios/04-actividad-4/README.md).
+Se usa en: [Actividad 4](../dia-04-dom-storage-forms/ejercicios/actividad-4/README.md).
 
 ### 4.4 · Formularios: `preventDefault`, `FormData` y validación
 
@@ -229,7 +229,7 @@ Se usa en: [Ejercicio 3](../dia-04-dom-storage-forms/ejercicios/03-persistir-pre
 | preventDefault | [preventDefault en JavaScript: evitando el comportamiento por defecto](https://www.youtube.com/watch?v=i_7WLzT0oEY) |
 | Validación | [Aprende a validar formularios con JavaScript y expresiones regulares](https://www.youtube.com/watch?v=s3pC93LgP18) |
 
-Se usa en: [Actividad 4](../dia-04-dom-storage-forms/ejercicios/04-actividad-4/README.md).
+Se usa en: [Actividad 4](../dia-04-dom-storage-forms/ejercicios/actividad-4/README.md).
 
 ### Cierre: ¿cómo se conecta todo?
 
@@ -248,7 +248,7 @@ Sesión del 2 de octubre de 2026. Detalle, casos de uso y preguntas en el [READM
 | Refuerzo | [Pruebas unitarias y de integración – Curso de Tester de Software](https://www.youtube.com/watch?v=4Ulc8FcmfnQ) |
 | Opcional (inglés) | [Testing Pyramid – Unit Test, Integration Test and E2E Test](https://www.youtube.com/watch?v=VO0Qbl-wzOQ) |
 
-Se usa en: [Ejercicio 1](../dia-05-testing-debug-patrones/ejercicios/01-pruebas-validaciones.test.js), [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/04-actividad-5/README.md).
+Se usa en: [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/actividad-5/README.md).
 
 ### 5.2 · Jest: `describe`, `test`, `expect` y matchers
 
@@ -258,7 +258,7 @@ Se usa en: [Ejercicio 1](../dia-05-testing-debug-patrones/ejercicios/01-pruebas-
 | Refuerzo | [Introducción al Testing desde cero con Jest](https://www.youtube.com/watch?v=_DzBez4qMi0) |
 | Buenas prácticas | [¿Cómo se escribe una buena prueba unitaria en JavaScript? 10 buenas prácticas](https://www.youtube.com/watch?v=Rqyg8kjpzX0) |
 
-Se usa en: [Ejercicio 1](../dia-05-testing-debug-patrones/ejercicios/01-pruebas-validaciones.test.js), [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/04-actividad-5/README.md).
+Se usa en: [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/actividad-5/README.md), [Ejercicio 5.1](../dia-05-testing-debug-patrones/ejercicios/ejercicio-5.1-suite-de-pruebas/carrito.test.js).
 
 ### 5.3 · Depuración profesional con Chrome DevTools
 
@@ -268,7 +268,7 @@ Se usa en: [Ejercicio 1](../dia-05-testing-debug-patrones/ejercicios/01-pruebas-
 | Refuerzo | [Curso de JavaScript #10: Debug y DevTools](https://www.youtube.com/watch?v=Oz3InVBI_K4) |
 | Refuerzo | [Depurar JavaScript con el navegador y con Visual Studio Code](https://www.youtube.com/watch?v=CRXMli2ZkS8) |
 
-Se usa en: [Ejercicio 2](../dia-05-testing-debug-patrones/ejercicios/02-debug-bug.js), [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/04-actividad-5/README.md).
+Se usa en: [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/actividad-5/README.md), [Ejercicio 5.2](../dia-05-testing-debug-patrones/ejercicios/ejercicio-5.2-caceria-de-bugs.js).
 
 ### 5.4 · Patrones de diseño: Singleton y Módulo
 
@@ -278,7 +278,7 @@ Se usa en: [Ejercicio 2](../dia-05-testing-debug-patrones/ejercicios/02-debug-bu
 | Singleton | [#1 Singleton – Patrones de diseño con JavaScript](https://www.youtube.com/watch?v=OuKl1HwD1x8) |
 | Módulo | [Patrón Module en JavaScript: ejemplo paso a paso](https://www.youtube.com/watch?v=uNBZ8ohLnxM) |
 
-Se usa en: [Ejercicio 3](../dia-05-testing-debug-patrones/ejercicios/03-singleton-config.js), [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/04-actividad-5/README.md).
+Se usa en: [Actividad 5](../dia-05-testing-debug-patrones/ejercicios/actividad-5/README.md), [Ejercicio 5.3](../dia-05-testing-debug-patrones/ejercicios/ejercicio-5.3-singleton-notificaciones.js).
 
 ### Cierre del curso: ¿cómo se conecta todo?
 

@@ -52,10 +52,10 @@ function archivosDeEjercicios(carpeta) {
 }
 
 function etiqueta(ruta) {
-  const act = ruta.match(/ejercicios\/04-actividad-(\d)\//);
+  const act = ruta.match(/ejercicios\/actividad-(\d)\//);
   if (act) return [`Actividad ${act[1]}`, ruta.endsWith('README.md') ? `../${ruta}` : null];
-  const ej = ruta.match(/ejercicios\/(\d\d)-/);
-  return [ej ? `Ejercicio ${Number(ej[1])}` : null, `../${ruta}`];
+  const ej = ruta.match(/ejercicios\/ejercicio-(\d\.\d)-/);
+  return [ej ? `Ejercicio ${ej[1]}` : null, `../${ruta}`];
 }
 
 function anclaDe(titulo) {
@@ -76,7 +76,7 @@ function generar() {
       nDia += filas.length;
       const usos = new Map();
       for (const f of Object.keys(archivos).sort()) {
-        if (f.endsWith('/README.md') && !f.includes('04-actividad-')) continue;
+        if (f.endsWith('/README.md') && !f.includes('/actividad-')) continue;
         if (filas.some(([, , u]) => archivos[f].includes(u))) {
           const [et, ln] = etiqueta(f);
           if (et && !usos.has(et)) usos.set(et, ln);

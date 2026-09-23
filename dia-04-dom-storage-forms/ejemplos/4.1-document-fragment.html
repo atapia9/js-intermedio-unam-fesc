@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos. -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ficha 4.1 — DocumentFragment</title>
+</head>
+<body>
+  <!-- Ejemplo del manual, ficha 4.1. Abre esta página en el navegador y la consola (F12). El script es el del manual. -->
+  <h1>Ficha 4.1 — DocumentFragment</h1>
+  <ul id="lista-productos"></ul>
+  <script>
+    const productos = [
+      { nombre: 'Teclado', precio: 350 },
+      { nombre: 'Mouse', precio: 150 },
+      { nombre: 'Monitor', precio: 2800 },
+    ];
+
+    const lista = document.querySelector('#lista-productos');
+    const fragmento = document.createDocumentFragment();
+
+    productos.forEach((prod) => {
+      const li = document.createElement('li');
+      li.textContent = `${prod.nombre} — $${prod.precio}`;
+      fragmento.appendChild(li);
+    });
+
+    lista.appendChild(fragmento); // una sola inserción real al DOM
+  </script>
+</body>
+</html>
