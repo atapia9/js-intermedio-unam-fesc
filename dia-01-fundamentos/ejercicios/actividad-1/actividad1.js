@@ -8,6 +8,11 @@
 // Nota de divulgación: Esta plantilla fue elaborada con asistencia de Claude (Anthropic) y revisada por Jesús Armando Tapia Gallegos. Tu código es de tu autoría.
 
 // ===== Bloque 1.1 — Predicción de salida =====
+// Videos de apoyo (ficha 1.1 del README del día):
+//   - La pila de ejecución (Call Stack) – JS en Español: https://www.youtube.com/watch?v=ygA5U7Wgsg8
+//   - Entiende el Event Loop de JavaScript en 10 minutos: https://www.youtube.com/watch?v=XdzDDRF8_mY
+//   - Qué es el Event Loop en JavaScript – paso a paso: https://www.youtube.com/watch?v=rvzItyLuh28
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -23,6 +28,10 @@ export function ejercicio11Modificado() {
 }
 
 // ===== Bloque 1.2 — Refactor de var a let/const =====
+// Videos de apoyo (ficha 1.2 del README del día):
+//   - VAR, LET o CONST: ¿cuál debería usar? – JS en Español: https://www.youtube.com/watch?v=bvkY9ey83yY
+//   - Diferencia entre var, let y const – Curso JS desde cero #4: https://www.youtube.com/watch?v=a8SJJPvkGIE
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -50,6 +59,11 @@ export function crearManejadoresConConst(n) {
 }
 
 // ===== Bloque 1.3 — Módulo con estado privado =====
+// Videos de apoyo (ficha 1.3 del README del día):
+//   - Closures en JavaScript: qué son y cómo funcionan: https://www.youtube.com/watch?v=xa8lhVwQBw4
+//   - 3 ejemplos REALES de Closures en JavaScript: https://www.youtube.com/watch?v=ubS-ejTrSRc
+//   - ¿Qué son los Closures y por qué dan tanto miedo?: https://www.youtube.com/watch?v=bPZpjI2tzRo
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
@@ -58,6 +72,11 @@ export function crearCuentaBancaria(saldoInicial) {
 }
 
 // ===== Bloque 1.4 — Corrección de contexto perdido =====
+// Videos de apoyo (ficha 1.4 del README del día):
+//   - This en JavaScript (bind, call, apply y más): https://www.youtube.com/watch?v=bS71_W_BDFE
+//   - ¿Para qué sirve call(), bind() y apply()?: https://www.youtube.com/watch?v=OZ02GSH9QkY
+//   - ¿Cómo usar call, apply y bind? This a profundidad: https://www.youtube.com/watch?v=j1Zs_o32uo4
+//
 // Qué hace: TODO
 // Por qué funciona: TODO
 // Concepto: TODO
