@@ -15,7 +15,6 @@ function esquemaValido(item) {
 }
 
 iniciarApp({
-  ClaseRegistro,
   almacenamiento,
   campos,
   calcularPuntaje,
