@@ -115,7 +115,7 @@ Las actividades de aprendizaje son evaluables e individuales: [Actividad 1](dia-
 | [Día 3](dia-03-asincronia/README.md) | Programación Asíncrona: Callbacks, Promesas, Async/Await, Fetch API |
 | [Día 4](dia-04-dom-storage-forms/README.md) | Manipulación Avanzada del DOM y Eventos: DOM eficiente, Delegación, Web Storage, Formularios |
 | [Día 5](dia-05-testing-debug-patrones/README.md) | Testing y Buenas Prácticas: Jest, DevTools, patrones de diseño |
-| [Proyecto integrador](proyecto-integrador/README.md) | BIS (Bitácora de Incidentes de Soporte): aplicación que integra los 5 temas |
+| [Proyecto integrador](proyecto-integrador/README.md) | BIS (Bitácora de Incidentes de Soporte): aplicación que integra los 5 temas — [demo pública](https://atapia9.github.io/js-intermedio-unam-fesc/) |
 
 ## Anexos
 
