@@ -1,9 +1,13 @@
 # Nota de divulgación: Este material fue elaborado con asistencia de Claude (Anthropic) y revisado por Jesús Armando Tapia Gallegos.
 #
 # Publica proyecto-integrador/ (la app BIS) en GitHub Pages usando módulos ESM nativos,
-# sin build. En el primer despliegue, configure-pages activa Pages automáticamente con
-# origen "GitHub Actions" si aún no estaba activado. También se puede lanzar a mano desde
-# la pestaña Actions.
+# sin build. También se puede lanzar a mano desde la pestaña Actions.
+#
+# Paso único antes del primer despliegue: activa Pages en Settings → Pages →
+# "Build and deployment" → Source → "GitHub Actions". configure-pages NO lo hace
+# por sí solo (su input `enablement` es false por defecto y, aun activado, exige
+# un token distinto al GITHUB_TOKEN con permiso de administración del repo). Ese
+# paso es de una sola vez: una vez activado, cada push despliega solo.
 
 name: Publicar proyecto integrador en Pages
 
