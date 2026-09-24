@@ -65,6 +65,10 @@ proyecto-integrador/
 
 ## Cómo ejecutar
 
+- **Demo pública:** <https://atapia9.github.io/js-intermedio-unam-fesc/>. Se publica
+  sola con cada cambio en esta carpeta (workflow
+  [`pages.yml`](../.github/workflows/pages.yml)); como el feed externo no siempre
+  está disponible desde Pages, arranca con los datos de ejemplo de `mock.js`.
 - Sirve la carpeta con un servidor estático (usa módulos ESM nativos, no requiere
   build): por ejemplo `npx serve .` o `python3 -m http.server` desde
   `proyecto-integrador/`, y abre `index.html` en el navegador.
