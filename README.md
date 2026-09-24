@@ -21,7 +21,6 @@ Este repositorio acompaña el manual con **ejemplos de código ejecutables y eje
 | **Duración** | 20 horas (5 sesiones de 4 horas) |
 | **Fechas** | 28 de septiembre al 2 de octubre de 2026 |
 | **Horario** | Lunes a viernes, de 09:00 a 13:00 hrs. |
-| **Sede** | Gladiolas 161, El Rosario, Xochimilco, 16070, Ciudad de México, CDMX |
 | **Dirigido a** | Personal en el área de informática |
 
 **Perfil de ingreso:** dominar lógica de programación, variables, funciones básicas, ciclos, HTML/CSS básico y manejo de computadora.
