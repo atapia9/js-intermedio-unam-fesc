@@ -13,7 +13,16 @@ const TRANSICIONES = {
 };
 
 export default class Incidente extends Registro {
-  constructor({ categoria, descripcion, reportantePseudonimo, impacto, urgencia, estado = 'nuevo', id, fechaReporte }) {
+  constructor({
+    categoria,
+    descripcion,
+    reportantePseudonimo,
+    impacto,
+    urgencia,
+    estado = 'nuevo',
+    id,
+    fechaReporte,
+  }) {
     super(estado, id);
     this.categoria = categoria;
     this.descripcion = descripcion;

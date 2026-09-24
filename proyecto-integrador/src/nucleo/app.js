@@ -5,7 +5,7 @@
 
 import { sanitizarTextoLibre } from './sanitizar.js';
 
-export function iniciarApp({ ClaseRegistro, almacenamiento, cargarInicial, campos, calcularPuntaje }) {
+export function iniciarApp({ almacenamiento, cargarInicial, campos, calcularPuntaje }) {
   const lista = document.querySelector('#lista-registros');
   const form = document.querySelector('#form-nuevo-registro');
 
@@ -44,14 +44,12 @@ export function iniciarApp({ ClaseRegistro, almacenamiento, cargarInicial, campo
     const registro = registros.find((r) => String(r.id) === id);
     if (!registro) return;
 
-    if (evento.target.dataset.accion === 'avanzar') {
-      try {
-        campos.avanzarEstado(registro);
-      } catch (err) {
-        console.warn(err.message);
-        return;
-      }
-    } else {
+    if (evento.target.dataset.accion !== 'avanzar') return;
+
+    try {
+      campos.avanzarEstado(registro);
+    } catch (err) {
+      console.warn(err.message);
       return;
     }
 
